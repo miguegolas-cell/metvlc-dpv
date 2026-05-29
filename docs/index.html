@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>MetVlc · DPV València</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
 
   <style>
     body {
@@ -12,49 +19,252 @@
       color: #263238;
     }
 
-    .contenedor {
-      max-width: 1100px;
-      margin: 40px auto;
+    .page {
+      max-width: 1200px;
+      margin: 25px auto;
       background: #ffffff;
       border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      overflow: hidden;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.14);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #0b2f4f 0%, #0b6fa4 65%, #ff6a2a 100%);
+      color: white;
+      padding: 18px 24px;
       text-align: center;
     }
 
-    h1 {
-      margin: 0 0 10px;
-      color: #0b2f4f;
+    .header h1 {
+      margin: 0;
+      font-size: 25px;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
     }
 
-    p {
-      font-size: 15px;
-      color: #51636d;
+    .header p {
+      margin: 6px 0 0;
+      font-size: 14px;
+      color: #e8f5ff;
     }
 
-    .aviso {
-      margin-top: 20px;
-      padding: 16px;
-      border-radius: 10px;
-      background: #eef6fb;
-      border-left: 6px solid #0b6fa4;
-      text-align: left;
-      line-height: 1.6;
+    #map {
+      width: 100%;
+      height: 720px;
+      background: #dce8ee;
+    }
+
+    .legend {
+      padding: 14px 18px;
+      background: #ffffff;
+      border-top: 1px solid #dfe8ee;
+      font-size: 14px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .legend span {
+      display: inline-block;
+      width: 18px;
+      height: 14px;
+      margin-right: 6px;
+      vertical-align: middle;
+      border: 1px solid rgba(0,0,0,0.15);
+      border-radius: 3px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #51636d;
+      padding: 0 18px 18px;
+      background: #ffffff;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .leaflet-popup-content {
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .popup-title {
+      font-weight: 800;
+      color: #0b2f4f;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .popup-dpv {
+      font-weight: 800;
+      font-size: 16px;
+    }
+
+    .leaflet-control-layers {
+      border-radius: 10px !important;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.18) !important;
+      font-size: 13px;
+    }
+
+    @media screen and (max-width: 900px) {
+      .header h1 {
+        font-size: 21px;
+      }
+
+      #map {
+        height: 560px;
+      }
+
+      .legend {
+        font-size: 13px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="contenedor">
-    <h1>Mapa DPV · València</h1>
-    <p>Visor en preparación para el Déficit de Presión de Vapor con estaciones AVAMET.</p>
+  <div class="page">
 
-    <div class="aviso">
-      Si ves esta página publicada desde GitHub Pages, el primer paso está correcto.
+    <div class="header">
+      <h1>DPV · Déficit de Presión de Vapor</h1>
+      <p>Estaciones AVAMET · Provincia de València · Actualización automática</p>
     </div>
+
+    <div id="map"></div>
+
+    <div class="legend">
+      <b>Leyenda DPV:</b>
+      &nbsp;&nbsp;
+      <span style="background:#2b83ba;"></span> Bajo &lt; 1.0 kPa
+      &nbsp;&nbsp;
+      <span style="background:#fdae61;"></span> Moderado 1.0 - 1.5
+      &nbsp;&nbsp;
+      <span style="background:#f46d43;"></span> Alto 1.5 - 2.5
+      &nbsp;&nbsp;
+      <span style="background:#d7191c;"></span> Muy alto &gt; 2.5
+    </div>
+
+    <div class="meta" id="metadata">
+      Cargando datos...
+    </div>
+
   </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    const map = L.map("map", {
+      preferCanvas: true,
+      zoomControl: true
+    }).setView([39.35, -0.65], 8);
+
+    const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: "&copy; OpenStreetMap"
+    });
+
+    const esriTopo = L.tileLayer(
+      "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
+      {
+        maxZoom: 18,
+        attribution: "Tiles &copy; Esri"
+      }
+    );
+
+    const openTopo = L.tileLayer(
+      "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+      {
+        maxZoom: 17,
+        attribution: "Map data: &copy; OpenStreetMap contributors, SRTM | Map style: &copy; OpenTopoMap"
+      }
+    );
+
+    esriTopo.addTo(map);
+
+    const baseMaps = {
+      "Relieve · Esri": esriTopo,
+      "Topográfico · OpenTopo": openTopo,
+      "Calles · OSM": osm
+    };
+
+    L.control.layers(baseMaps, null, {
+      collapsed: false
+    }).addTo(map);
+
+    function markerRadius(dpv) {
+      if (dpv >= 2.5) return 9;
+      if (dpv >= 1.5) return 8;
+      if (dpv >= 1.0) return 7;
+      return 6;
+    }
+
+    function popupContent(props) {
+      return `
+        <div class="popup-title">${props.estacion}</div>
+        <b>Municipio:</b> ${props.municipio || "—"}<br>
+        <b>Temperatura:</b> ${props.temperatura} ºC<br>
+        <b>Humedad relativa:</b> ${props.humedad} %<br>
+        <b>DPV:</b> <span class="popup-dpv" style="color:${props.color};">${props.dpv} kPa</span><br>
+        <b>Nivel:</b> ${props.nivel}<br>
+        <b>Fuente:</b> ${props.fuente || "AVAMET"}
+      `;
+    }
+
+    function styleFeature(feature) {
+      const p = feature.properties;
+      return {
+        radius: markerRadius(p.dpv),
+        fillColor: p.color || "#666666",
+        color: "#1f2d36",
+        weight: 1.2,
+        opacity: 1,
+        fillOpacity: 0.82
+      };
+    }
+
+    Promise.all([
+      fetch("dpv.geojson?v=" + new Date().getTime()).then(response => {
+        if (!response.ok) throw new Error("No se pudo cargar dpv.geojson");
+        return response.json();
+      }),
+      fetch("metadata.json?v=" + new Date().getTime()).then(response => {
+        if (!response.ok) throw new Error("No se pudo cargar metadata.json");
+        return response.json();
+      })
+    ])
+    .then(([geojson, metadata]) => {
+      const layer = L.geoJSON(geojson, {
+        pointToLayer: function(feature, latlng) {
+          return L.circleMarker(latlng, styleFeature(feature));
+        },
+        onEachFeature: function(feature, lyr) {
+          lyr.bindPopup(popupContent(feature.properties));
+        }
+      }).addTo(map);
+
+      if (geojson.features && geojson.features.length > 0) {
+        map.fitBounds(layer.getBounds(), {
+          padding: [25, 25]
+        });
+      }
+
+      const generado = metadata.generado_utc || "—";
+      const conDatos = metadata.estaciones_con_datos || 0;
+      const base = metadata.estaciones_base || 0;
+
+      document.getElementById("metadata").innerHTML = `
+        <b>Fuente:</b> AVAMET MXO MeteoXarxaOnline ·
+        <b>Estaciones con datos:</b> ${conDatos}/${base}<br>
+        <b>Actualizado UTC:</b> ${generado}<br>
+        El DPV se calcula a partir de temperatura y humedad relativa. Valores altos indican mayor demanda evaporativa y mayor estrés atmosférico sobre combustibles finos.
+      `;
+    })
+    .catch(error => {
+      console.error(error);
+      document.getElementById("metadata").innerHTML =
+        "Error al cargar los datos DPV. Revisa que existan dpv.geojson y metadata.json.";
+    });
+  </script>
 
 </body>
 </html>
