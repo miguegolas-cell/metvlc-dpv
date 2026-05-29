@@ -1,0 +1,22 @@
+{
+  "producto": "DPV - Déficit de Presión de Vapor",
+  "fuente": "AVAMET MXO MeteoXarxaOnline",
+  "url": "https://www.avamet.org/mxo-mxo.php?territori=p46",
+  "generado_utc": "2026-05-29T22:19:04.052664+00:00",
+  "estaciones_base": 63,
+  "estaciones_con_datos": 52,
+  "estaciones_sin_datos": [
+    "ValènciaMicalet",
+    "Picassent Terrabona",
+    "CulleraAjuntament",
+    "Alberic",
+    "Polinyà de Xúquer Muntanyeta de la Font AEMET",
+    "XeracoAyuntamiento",
+    "Vilallonganorte",
+    "Aielo de Malferitcentro",
+    "BenigànimIES les Foies",
+    "QuesaHotel La Rocha",
+    "Chestecentre"
+  ],
+  "formula": "DPV = es - ea; es = 0.6108 * exp((17.27*T)/(T+237.3)); ea = es * HR/100"
+}

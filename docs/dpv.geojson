@@ -1,0 +1,1097 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.21960000000000002,
+          39.652499999999996
+        ]
+      },
+      "properties": {
+        "municipio": "Sagunt",
+        "estacion": "SaguntPuerto de Sagunto",
+        "nombre_avamet": "Sagunt Puerto de Sagunto",
+        "temperatura": 23.4,
+        "humedad": 67.0,
+        "dpv": 0.95,
+        "nivel": "Bajo",
+        "color": "#2b83ba",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3049,
+          39.6467
+        ]
+      },
+      "properties": {
+        "municipio": "Puçol",
+        "estacion": "PuçolUrbanización Alfinach",
+        "nombre_avamet": "Puçol Urbanización Alfinach",
+        "temperatura": 27.7,
+        "humedad": 43.0,
+        "dpv": 2.12,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4602,
+          39.590900000000005
+        ]
+      },
+      "properties": {
+        "municipio": "Bétera",
+        "estacion": "Bétera",
+        "nombre_avamet": "Bétera la Conarda",
+        "temperatura": 25.5,
+        "humedad": 44.0,
+        "dpv": 1.83,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5961361111111112,
+          39.631925
+        ]
+      },
+      "properties": {
+        "municipio": "Llíria",
+        "estacion": "Llíria",
+        "nombre_avamet": "Llíria",
+        "temperatura": 24.3,
+        "humedad": 45.0,
+        "dpv": 1.67,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5125166666666666,
+          39.522841666666665
+        ]
+      },
+      "properties": {
+        "municipio": "Manises",
+        "estacion": "Manisesla Presa",
+        "nombre_avamet": "Manises la Presa",
+        "temperatura": 21.3,
+        "humedad": 65.0,
+        "dpv": 0.89,
+        "nivel": "Bajo",
+        "color": "#2b83ba",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.47775,
+          39.42858333333333
+        ]
+      },
+      "properties": {
+        "municipio": "TorrentAv. al Vedat",
+        "estacion": "TorrentAv. al Vedat",
+        "nombre_avamet": "Torrent Av. al Vedat",
+        "temperatura": 25.6,
+        "humedad": 54.0,
+        "dpv": 1.51,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.31116388888888885,
+          39.202600000000004
+        ]
+      },
+      "properties": {
+        "municipio": "Sueca",
+        "estacion": "Sueca",
+        "nombre_avamet": "Sueca centre",
+        "temperatura": 23.9,
+        "humedad": 81.0,
+        "dpv": 0.56,
+        "nivel": "Bajo",
+        "color": "#2b83ba",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.44302222222222226,
+          39.15194722222222
+        ]
+      },
+      "properties": {
+        "municipio": "Alzira",
+        "estacion": "AlziraAjuntament",
+        "nombre_avamet": "Alzira Ajuntament",
+        "temperatura": 25.5,
+        "humedad": 59.0,
+        "dpv": 1.34,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.44980000000000003,
+          39.121900000000004
+        ]
+      },
+      "properties": {
+        "municipio": "Carcaixent",
+        "estacion": "CarcaixentAjuntament",
+        "nombre_avamet": "Carcaixent Ajuntament",
+        "temperatura": 26.0,
+        "humedad": 11.0,
+        "dpv": 2.99,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5076138888888889,
+          39.229400000000005
+        ]
+      },
+      "properties": {
+        "municipio": "Carlet",
+        "estacion": "Carlet",
+        "nombre_avamet": "Carlet",
+        "temperatura": 23.7,
+        "humedad": 63.0,
+        "dpv": 1.08,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6287722222222223,
+          39.09516666666667
+        ]
+      },
+      "properties": {
+        "municipio": "Sumacàrcer",
+        "estacion": "Sumacàrcer",
+        "nombre_avamet": "Sumacàrcer",
+        "temperatura": 26.6,
+        "humedad": 42.0,
+        "dpv": 2.02,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.17926944444444443,
+          38.96594166666667
+        ]
+      },
+      "properties": {
+        "municipio": "Gandia",
+        "estacion": "GandiaAjuntament",
+        "nombre_avamet": "Gandia Ajuntament",
+        "temperatura": 26.8,
+        "humedad": 55.0,
+        "dpv": 1.59,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.094675,
+          38.932075
+        ]
+      },
+      "properties": {
+        "municipio": "Oliva",
+        "estacion": "OlivaClub Nàutic",
+        "nombre_avamet": "Oliva Club Nàutic",
+        "temperatura": 26.3,
+        "humedad": 54.0,
+        "dpv": 1.57,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2580388888888889,
+          39.07644722222223
+        ]
+      },
+      "properties": {
+        "municipio": "Tavernes de la Valldigna",
+        "estacion": "Tavernes de la ValldignaSequers",
+        "nombre_avamet": "Tavernes de la Valldigna Sequers",
+        "temperatura": 26.4,
+        "humedad": 42.0,
+        "dpv": 2.0,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3014,
+          39.0139
+        ]
+      },
+      "properties": {
+        "municipio": "Barx",
+        "estacion": "Barx",
+        "nombre_avamet": "Barx",
+        "temperatura": 25.8,
+        "humedad": 35.0,
+        "dpv": 2.16,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5253111111111112,
+          38.98836111111111
+        ]
+      },
+      "properties": {
+        "municipio": "Xàtiva",
+        "estacion": "Xàtivacentre",
+        "nombre_avamet": "Xàtiva centre",
+        "temperatura": 27.2,
+        "humedad": 32.0,
+        "dpv": 2.45,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5792972222222222,
+          38.97092777777778
+        ]
+      },
+      "properties": {
+        "municipio": "Canals",
+        "estacion": "CanalsIES Sivera Font",
+        "nombre_avamet": "Canals IES Sivera Font",
+        "temperatura": 26.6,
+        "humedad": 37.0,
+        "dpv": 2.19,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6511111111111111,
+          38.9497
+        ]
+      },
+      "properties": {
+        "municipio": "Montesa",
+        "estacion": "MontesaAjuntament",
+        "nombre_avamet": "Montesa Ajuntament",
+        "temperatura": 25.1,
+        "humedad": 36.0,
+        "dpv": 2.04,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7518111111111111,
+          38.888419444444445
+        ]
+      },
+      "properties": {
+        "municipio": "Moixent",
+        "estacion": "Moixentla Foia",
+        "nombre_avamet": "Moixent la Foia",
+        "temperatura": 23.4,
+        "humedad": 44.0,
+        "dpv": 1.61,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8803555555555556,
+          38.80505
+        ]
+      },
+      "properties": {
+        "municipio": "la Font de la Figuera",
+        "estacion": "la Font de la Figuera les Pebraes",
+        "nombre_avamet": "la Font de la Figuera les Pebraes",
+        "temperatura": 21.6,
+        "humedad": 40.0,
+        "dpv": 1.55,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5961111111111111,
+          38.82222222222222
+        ]
+      },
+      "properties": {
+        "municipio": "Ontinyent",
+        "estacion": "OntinyentIES Jaume I",
+        "nombre_avamet": "Ontinyent IES Jaume I",
+        "temperatura": 25.9,
+        "humedad": 36.0,
+        "dpv": 2.14,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5243500000000001,
+          38.835597222222226
+        ]
+      },
+      "properties": {
+        "municipio": "Albaida",
+        "estacion": "AlbaidaIES J. Segrelles",
+        "nombre_avamet": "Albaida IES J. Segrelles",
+        "temperatura": 25.3,
+        "humedad": 37.0,
+        "dpv": 2.03,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6183388888888889,
+          38.762483333333336
+        ]
+      },
+      "properties": {
+        "municipio": "Bocairent",
+        "estacion": "Bocairentels Vilars",
+        "nombre_avamet": "Bocairent els Vilars",
+        "temperatura": 21.0,
+        "humedad": 24.0,
+        "dpv": 1.89,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3566583333333333,
+          38.942699999999995
+        ]
+      },
+      "properties": {
+        "municipio": "Llutxent",
+        "estacion": "LlutxentAjuntament",
+        "nombre_avamet": "Llutxent Ajuntament",
+        "temperatura": 25.9,
+        "humedad": 7.0,
+        "dpv": 3.11,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3997333333333334,
+          38.94472222222222
+        ]
+      },
+      "properties": {
+        "municipio": "Quatretonda",
+        "estacion": "Quatretonda",
+        "nombre_avamet": "Quatretonda Ajuntament",
+        "temperatura": 23.5,
+        "humedad": 5.0,
+        "dpv": 2.75,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7851555555555555,
+          38.78516666666666
+        ]
+      },
+      "properties": {
+        "municipio": "Fontanars",
+        "estacion": "Fontanarspoble",
+        "nombre_avamet": "Fontanars poble",
+        "temperatura": 23.8,
+        "humedad": 35.0,
+        "dpv": 1.92,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8256166666666667,
+          38.957433333333334
+        ]
+      },
+      "properties": {
+        "municipio": "Enguera",
+        "estacion": "EngueraEl Transformador",
+        "nombre_avamet": "Enguera El Transformador",
+        "temperatura": 21.1,
+        "humedad": 44.0,
+        "dpv": 1.4,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6476388888888889,
+          39.01931388888889
+        ]
+      },
+      "properties": {
+        "municipio": "Anna",
+        "estacion": "Anna",
+        "nombre_avamet": "Anna",
+        "temperatura": 26.1,
+        "humedad": 42.0,
+        "dpv": 1.96,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6618888888888889,
+          39.04422222222222
+        ]
+      },
+      "properties": {
+        "municipio": "Chella",
+        "estacion": "Chella",
+        "nombre_avamet": "Chella",
+        "temperatura": 26.4,
+        "humedad": 32.0,
+        "dpv": 2.34,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7879,
+          39.1317
+        ]
+      },
+      "properties": {
+        "municipio": "BicorpEcomuseo",
+        "estacion": "BicorpEcomuseo",
+        "nombre_avamet": "Bicorp Ecomuseo",
+        "temperatura": 23.2,
+        "humedad": 2.0,
+        "dpv": 2.79,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7728166666666667,
+          39.237430555555555
+        ]
+      },
+      "properties": {
+        "municipio": "Millares",
+        "estacion": "Millares",
+        "nombre_avamet": "Millares",
+        "temperatura": 24.4,
+        "humedad": 42.0,
+        "dpv": 1.77,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9408,
+          39.2456
+        ]
+      },
+      "properties": {
+        "municipio": "Cortes de Pallás",
+        "estacion": "Cortes de PallásAyuntamiento",
+        "nombre_avamet": "Cortes de Pallás Ayuntamiento",
+        "temperatura": 24.9,
+        "humedad": 36.0,
+        "dpv": 2.02,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7986,
+          39.2898
+        ]
+      },
+      "properties": {
+        "municipio": "Dos Aguas",
+        "estacion": "Dos Aguas",
+        "nombre_avamet": "Dos Aguas",
+        "temperatura": 25.3,
+        "humedad": 40.0,
+        "dpv": 1.93,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7906,
+          39.419399999999996
+        ]
+      },
+      "properties": {
+        "municipio": "Buñol",
+        "estacion": "Buñol",
+        "nombre_avamet": "Buñol",
+        "temperatura": 22.6,
+        "humedad": 47.0,
+        "dpv": 1.45,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7211,
+          39.4778
+        ]
+      },
+      "properties": {
+        "municipio": "Chiva",
+        "estacion": "Chiva",
+        "nombre_avamet": "Chiva",
+        "temperatura": 25.4,
+        "humedad": 42.0,
+        "dpv": 1.88,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0808333333333333,
+          39.48861111111111
+        ]
+      },
+      "properties": {
+        "municipio": "Requena",
+        "estacion": "Requena",
+        "nombre_avamet": "Requena Casas del Río",
+        "temperatura": 21.1,
+        "humedad": 46.0,
+        "dpv": 1.35,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2594444444444444,
+          39.669444444444444
+        ]
+      },
+      "properties": {
+        "municipio": "Utiel",
+        "estacion": "UtielLa TorreCoop. S.Antonio",
+        "nombre_avamet": "Utiel La Torre Coop. S.Antonio",
+        "temperatura": 20.8,
+        "humedad": 46.0,
+        "dpv": 1.33,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2291500000000002,
+          39.733069444444446
+        ]
+      },
+      "properties": {
+        "municipio": "Sinarcas",
+        "estacion": "SinarcasLa Raílla",
+        "nombre_avamet": "Sinarcas La Raílla",
+        "temperatura": 20.2,
+        "humedad": 54.0,
+        "dpv": 1.09,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3957,
+          39.6487
+        ]
+      },
+      "properties": {
+        "municipio": "Camporrobles",
+        "estacion": "CamporroblesAyuntamiento",
+        "nombre_avamet": "Camporrobles Ayuntamiento",
+        "temperatura": 22.3,
+        "humedad": 7.0,
+        "dpv": 2.5,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0617,
+          39.232800000000005
+        ]
+      },
+      "properties": {
+        "municipio": "Cofrentes",
+        "estacion": "Cofrentes",
+        "nombre_avamet": "Cofrentes",
+        "temperatura": 25.3,
+        "humedad": 34.0,
+        "dpv": 2.13,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0766694444444445,
+          39.1922
+        ]
+      },
+      "properties": {
+        "municipio": "Jalance",
+        "estacion": "Jalance",
+        "nombre_avamet": "Jalance",
+        "temperatura": 24.3,
+        "humedad": 36.0,
+        "dpv": 1.94,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.102363888888889,
+          38.92916944444444
+        ]
+      },
+      "properties": {
+        "municipio": "Ayora",
+        "estacion": "AyoraSan Benito",
+        "nombre_avamet": "Ayora San Benito",
+        "temperatura": 18.3,
+        "humedad": 53.0,
+        "dpv": 0.99,
+        "nivel": "Bajo",
+        "color": "#2b83ba",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.985,
+          39.7481
+        ]
+      },
+      "properties": {
+        "municipio": "Chelva",
+        "estacion": "Chelva",
+        "nombre_avamet": "Chelva",
+        "temperatura": 22.9,
+        "humedad": 40.0,
+        "dpv": 1.68,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8914,
+          39.6586
+        ]
+      },
+      "properties": {
+        "municipio": "Chulilla",
+        "estacion": "Chulilla",
+        "nombre_avamet": "Chulilla",
+        "temperatura": 23.3,
+        "humedad": 42.0,
+        "dpv": 1.66,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.909088888888889,
+          39.620666666666665
+        ]
+      },
+      "properties": {
+        "municipio": "Sot de Chera",
+        "estacion": "Sot de Chera",
+        "nombre_avamet": "Sot de Chera",
+        "temperatura": 23.8,
+        "humedad": 43.0,
+        "dpv": 1.68,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9734027777777778,
+          39.593561111111114
+        ]
+      },
+      "properties": {
+        "municipio": "Chera",
+        "estacion": "Chera",
+        "nombre_avamet": "Chera",
+        "temperatura": 22.5,
+        "humedad": 47.0,
+        "dpv": 1.44,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0143972222222222,
+          39.885172222222224
+        ]
+      },
+      "properties": {
+        "municipio": "Alpuente",
+        "estacion": "Alpuente",
+        "nombre_avamet": "Alpuente La Torre",
+        "temperatura": 15.2,
+        "humedad": 58.0,
+        "dpv": 0.73,
+        "nivel": "Bajo",
+        "color": "#2b83ba",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0836,
+          39.8667
+        ]
+      },
+      "properties": {
+        "municipio": "Titaguas",
+        "estacion": "TitaguasCosmofísica",
+        "nombre_avamet": "Titaguas Cosmofísica",
+        "temperatura": 21.4,
+        "humedad": 40.0,
+        "dpv": 1.53,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1336111111111111,
+          39.92472222222222
+        ]
+      },
+      "properties": {
+        "municipio": "Aras de los Olmos",
+        "estacion": "Aras de los Olmos",
+        "nombre_avamet": "Aras de los Olmos",
+        "temperatura": 20.8,
+        "humedad": 45.0,
+        "dpv": 1.35,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.285122222222222,
+          40.059977777777775
+        ]
+      },
+      "properties": {
+        "municipio": "Ademuz",
+        "estacion": "AdemuzIES Ademuz",
+        "nombre_avamet": "Ademuz IES Ademuz",
+        "temperatura": 22.3,
+        "humedad": 51.0,
+        "dpv": 1.32,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3041500000000001,
+          40.13113333333333
+        ]
+      },
+      "properties": {
+        "municipio": "Castielfabib",
+        "estacion": "Castielfabib",
+        "nombre_avamet": "Castielfabib",
+        "temperatura": 23.2,
+        "humedad": 39.0,
+        "dpv": 1.73,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1416638888888888,
+          40.04433611111111
+        ]
+      },
+      "properties": {
+        "municipio": "Puebla de San Miguel",
+        "estacion": "Puebla de San Miguel",
+        "nombre_avamet": "Puebla de San Miguel",
+        "temperatura": 21.7,
+        "humedad": 33.0,
+        "dpv": 1.74,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "fuente": "AVAMET"
+      }
+    }
+  ]
+}
