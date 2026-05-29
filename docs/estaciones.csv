@@ -1,0 +1,64 @@
+municipio,estacion,lat,lon,Y,X,n_estaciones_municipio,estacion_original,revision_avamet,nota_revision
+Sagunt,SaguntPuerto de Sagunto,39.652499999999996,-0.21960000000000002,"39°39'9.0"""" N",0°13'10.56 W,4,SaguntVilla Maria AEMET,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Puçol,PuçolUrbanización Alfinach,39.6467,-0.3049,"39°38'48.12"""" N",0°18'17.64 W,3,Puçol,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Bétera,Bétera,39.590900000000005,-0.4602,39 35   27.24   N,0 27 36.72 W,4,Bétera,activa_o_sustituida,sin_cambios
+Llíria,Llíria,39.631925,-0.5961361111111112,39 37   54.93   N,0 35 46.09 W,5,Llíria,activa_o_sustituida,sin_cambios
+València,ValènciaMicalet,39.47545277777778,-0.3763583333333333,39 28   31.63   N,0 22 34.89 W,10,ValènciaViveros AEMET,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Manises,Manisesla Presa,39.522841666666665,-0.5125166666666666,39 31   22.23   N,0 30 45.06 W,1,Manisesla Presa,activa_o_sustituida,sin_cambios
+TorrentAv. al Vedat,TorrentAv. al Vedat,39.42858333333333,-0.47775,39 25   42.90   N,0 28 39.90 W,1,TorrentAv. al Vedat,activa_o_sustituida,sin_cambios
+Picassent,Picassent Terrabona,39.33638888888889,-0.4713888888888889,39 20   11.00   N,0 28 17.00 W,3,Picassent,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Sueca,Sueca,39.202600000000004,-0.31116388888888885,"39°12'9.36"""" N",0°18'40.19 W,7,Sueca,activa_o_sustituida,sin_cambios
+Cullera,CulleraAjuntament,39.16534166666666,-0.2532611111111111,39 9   55.23   N,0 15 11.74 W,3,CulleraAjuntament,activa_o_sustituida,sin_cambios
+Alzira,AlziraAjuntament,39.15194722222222,-0.44302222222222226,39 9   7.01   N,0 26 34.88 W,7,AlziraAjuntament,activa_o_sustituida,sin_cambios
+Carcaixent,CarcaixentAjuntament,39.121900000000004,-0.44980000000000003,"39°7'18.84"""" N",0°26'59.28 W,3,CarcaixentAjuntament,activa_o_sustituida,sin_cambios
+Carlet,Carlet,39.229400000000005,-0.5076138888888889,39 13   45.84   N,0 30 27.41 W,3,Carlet,activa_o_sustituida,sin_cambios
+Alberic,Alberic,39.11686944444445,-0.5182361111111111,39 7   0.73   N,0 31 5.65 W,2,Alberic,activa_o_sustituida,sin_cambios
+Sumacàrcer,Sumacàrcer,39.09516666666667,-0.6287722222222223,39 5   42.60   N,0 37 43.58 W,1,Sumacàrcer,activa_o_sustituida,sin_cambios
+Polinyà de Xúquer,Polinyà de Xúquer Muntanyeta de la Font AEMET,39.1917,-0.37139999999999995,39 11   30.12   N,0 22 17.04 W,2,Polinyà de Xúquer Muntanyeta de la Font AEMET,activa_o_sustituida,sin_cambios
+Gandia,GandiaAjuntament,38.96594166666667,-0.17926944444444443,38 57   57.39   N,0 10 45.37 W,3,GandiaAjuntament,activa_o_sustituida,sin_cambios
+Oliva,OlivaClub Nàutic,38.932075,-0.094675,"38°55'55.47"""" N",0°5'40.83 W,3,Olivapoble,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Tavernes de la Valldigna,Tavernes de la ValldignaSequers,39.07644722222223,-0.2580388888888889,39 4   35.21   N,0 15 28.94 W,5,Tavernes de la ValldignaPoble,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Xeraco,XeracoAyuntamiento,39.03326388888889,-0.21555555555555556,39 1   59.75   N,0 12 56.00 W,2,XeracoAyuntamiento,activa_o_sustituida,sin_cambios
+Barx,Barx,39.0139,-0.3014,"39°0'50.04"""" N",0°18'5.04 W,4,Barx,activa_o_sustituida,sin_cambios
+Vilallonga,Vilallonganorte,38.88749722222222,-0.20801666666666668,38 53   14.99   N,0 12 28.86 W,3,Vilallonganorte,activa_o_sustituida,sin_cambios
+Xàtiva,Xàtivacentre,38.98836111111111,-0.5253111111111112,38 59   18.10   N,0 31 31.12 W,8,XàtivaAjuntament,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Canals,CanalsIES Sivera Font,38.97092777777778,-0.5792972222222222,38 58   15.34   N,0 34 45.47 W,2,Canals,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Montesa,MontesaAjuntament,38.9497,-0.6511111111111111,"38°56'58.92"""" N",0°39'4.0 W,2,MontesaAjuntament,activa_o_sustituida,sin_cambios
+Moixent,Moixentla Foia,38.888419444444445,-0.7518111111111111,38 53   18.31   N,0 45 6.52 W,3,Moixent,activa_o_sustituida,actualizada_nombre_y_coordenadas
+la Font de la Figuera,la Font de la Figuera les Pebraes,38.80505,-0.8803555555555556,38 48   18.18   N,0 52 49.28 W,3,la Font de la FigueraAjuntament,activa_o_sustituida,actualizada_nombre_sin_coord_nueva
+Ontinyent,OntinyentIES Jaume I,38.82222222222222,-0.5961111111111111,38 49   20.00   N,0 35 46.00 W,9,OntinyentFranciscans AEMET,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Albaida,AlbaidaIES J. Segrelles,38.835597222222226,-0.5243500000000001,38 50   8.15   N,0 31 27.66 W,1,AlbaidaIES J. Segrelles,activa_o_sustituida,sin_cambios
+Bocairent,Bocairentels Vilars,38.762483333333336,-0.6183388888888889,38 45   44.94   N,0 37 6.02 W,5,Bocairentels Vilars,activa_o_sustituida,sin_cambios
+Aielo de Malferit,Aielo de Malferitcentro,38.87861111111111,-0.5872222222222223,38 52   43.00   N,0 35 14.00 W,2,Aielo de MalferitAjuntament,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Benigànim,BenigànimIES les Foies,38.937663888888885,-0.4417861111111111,38 56   15.59   N,0 26 30.43 W,2,Benigànim,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Llutxent,LlutxentAjuntament,38.942699999999995,-0.3566583333333333,"38°56'33.72"""" N",0°21'23.97 W,3,Llutxent,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Quatretonda,Quatretonda,38.94472222222222,-0.3997333333333334,38 56   41.00   N,0 23 59.04 W,1,Quatretonda,activa_o_sustituida,sin_cambios
+Fontanars,Fontanarspoble,38.78516666666666,-0.7851555555555555,38 47   6.60   N,0 47 6.56 W,4,Fontanarspoble,activa_o_sustituida,sin_cambios
+Enguera,EngueraEl Transformador,38.957433333333334,-0.8256166666666667,38 57   26.76   N,0 49 32.22 W,5,Enguera,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Anna,Anna,39.01931388888889,-0.6476388888888889,39 1   9.53   N,0 38 51.50 W,1,Anna,activa_o_sustituida,sin_cambios
+Chella,Chella,39.04422222222222,-0.6618888888888889,39 2   39.20   N,0 39 42.80 W,2,Chella,activa_o_sustituida,sin_cambios
+Quesa,QuesaHotel La Rocha,39.11553333333333,-0.7361722222222221,39 6   55.92   N,0 44 10.22 W,1,QuesaHotel La Rocha,activa_o_sustituida,sin_cambios
+BicorpEcomuseo,BicorpEcomuseo,39.1317,-0.7879,"39°7'54.12"""" N",0°47'16.44 W,1,BicorpEcomuseo,activa_o_sustituida,sin_cambios
+Millares,Millares,39.237430555555555,-0.7728166666666667,39 14   14.75   N,0 46 22.14 W,1,Millares,activa_o_sustituida,sin_cambios
+Cortes de Pallás,Cortes de PallásAyuntamiento,39.2456,-0.9408,"39°14'44.16""""  N",0°56'26.88 W,2,Cortes de PallásAyuntamiento,activa_o_sustituida,sin_cambios
+Dos Aguas,Dos Aguas,39.2898,-0.7986,"39°17'23.28"""" N",0°47'54.96 W,1,Dos Aguas,activa_o_sustituida,sin_cambios
+Buñol,Buñol,39.419399999999996,-0.7906,39 25   9.84   N,0 47 26.16 W,3,Buñol,activa_o_sustituida,sin_cambios
+Chiva,Chiva,39.4778,-0.7211,39 28   40.08   N,0 43 15.96 W,2,Chiva,activa_o_sustituida,sin_cambios
+Cheste,Chestecentre,39.49194444444444,-0.6836111111111112,39 29   31.00   N,0 41 1.00 W,2,Chestecentre,activa_o_sustituida,sin_cambios
+Requena,Requena,39.48861111111111,-1.0808333333333333,39 29   19.00   N,1 4 51.00 W,8,Requena,activa_o_sustituida,sin_cambios
+Utiel,UtielLa TorreCoop. S.Antonio,39.669444444444444,-1.2594444444444444,39 40   10.00   N,1 15 34.00 W,3,UtielLa Cubera AEMET,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Sinarcas,SinarcasLa Raílla,39.733069444444446,-1.2291500000000002,39 43   59.05   N,1 13 44.94 W,1,SinarcasLa Raílla,activa_o_sustituida,sin_cambios
+Camporrobles,CamporroblesAyuntamiento,39.6487,-1.3957,"39°38'55.32"""" N",-1°23'44.52 W,1,CamporroblesAyuntamiento,activa_o_sustituida,sin_cambios
+Cofrentes,Cofrentes,39.232800000000005,-1.0617,"39°13'58.08"""" N",-1°3'42.12 W,1,Cofrentes,activa_o_sustituida,sin_cambios
+Jalance,Jalance,39.1922,-1.0766694444444445,"39°11'31.92"""" N",-1°4'36.01 W,2,Jalance,activa_o_sustituida,sin_cambios
+Ayora,AyoraSan Benito,38.92916944444444,-1.102363888888889,38 55   45.01   N,1 6 8.51 W,2,AyoraSan Benito,activa_o_sustituida,sin_cambios
+Chelva,Chelva,39.7481,-0.985,39 44  53.16  N,0 59 6.00 W,2,Chelva,activa_o_sustituida,sin_cambios
+Chulilla,Chulilla,39.6586,-0.8914,"39°39'30.96"""" N",0°53'29.04 W,2,Chulilla,activa_o_sustituida,sin_cambios
+Sot de Chera,Sot de Chera,39.620666666666665,-0.909088888888889,39 37  14.40  N,0 54 32.72 W,1,Sot de Chera,activa_o_sustituida,sin_cambios
+Chera,Chera,39.593561111111114,-0.9734027777777778,39 35   36.82   N,0 58 24.25 W,1,Chera,activa_o_sustituida,sin_cambios
+Alpuente,Alpuente,39.885172222222224,-1.0143972222222222,39 53  6.62  N,1 0 51.83 W,1,Alpuente,activa_o_sustituida,sin_cambios
+Titaguas,TitaguasCosmofísica,39.8667,-1.0836,39 52  0.12  N,1 5 0.96 W,1,TitaguasCosmofísica,activa_o_sustituida,sin_cambios
+Aras de los Olmos,Aras de los Olmos,39.92472222222222,-1.1336111111111111,39 55  29.00  N,1 8 1.00 W,1,Aras de los Olmos,activa_o_sustituida,sin_cambios
+Ademuz,AdemuzIES Ademuz,40.059977777777775,-1.285122222222222,40 3  35.92  N,1 17 6.44 W,2,AdemuzAEMET,activa_o_sustituida,actualizada_nombre_y_coordenadas
+Castielfabib,Castielfabib,40.13113333333333,-1.3041500000000001,40 7  52.08  N,1 18 14.94 W,2,Castielfabib,activa_o_sustituida,sin_cambios
+Puebla de San Miguel,Puebla de San Miguel,40.04433611111111,-1.1416638888888888,40 2  39.61  N,1 8 29.99 W,1,Puebla de San Miguel,activa_o_sustituida,sin_cambios
