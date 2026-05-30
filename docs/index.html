@@ -248,16 +248,31 @@
         });
       }
 
-      const generado = metadata.generado_utc || "—";
-      const conDatos = metadata.estaciones_con_datos || 0;
-      const base = metadata.estaciones_base || 0;
+     const generado = metadata.generado_utc || "";
+const conDatos = metadata.estaciones_con_datos || 0;
+const base = metadata.estaciones_base || 0;
 
-      document.getElementById("metadata").innerHTML = `
-        <b>Fuente:</b> AVAMET MXO MeteoXarxaOnline ·
-        <b>Estaciones con datos:</b> ${conDatos}/${base}<br>
-        <b>Actualizado UTC:</b> ${generado}<br>
-        El DPV se calcula a partir de temperatura y humedad relativa. Valores altos indican mayor demanda evaporativa y mayor estrés atmosférico sobre combustibles finos.
-      `;
+let fechaLocal = "—";
+
+if (generado) {
+  const fecha = new Date(generado);
+
+  fechaLocal = fecha.toLocaleString("es-ES", {
+    timeZone: "Europe/Madrid",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+}
+
+document.getElementById("metadata").innerHTML = `
+  <b>Fuente:</b> AVAMET MXO MeteoXarxaOnline ·
+  <b>Estaciones con datos:</b> ${conDatos}/${base}<br>
+  <b>Actualizado:</b> ${fechaLocal} hora peninsular<br>
+  El DPV se calcula a partir de temperatura y humedad relativa. Valores altos indican mayor demanda evaporativa y mayor estrés atmosférico sobre combustibles finos.
+`;
     })
     .catch(error => {
       console.error(error);
