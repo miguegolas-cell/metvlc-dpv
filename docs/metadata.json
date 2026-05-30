@@ -2,9 +2,9 @@
   "producto": "DPV - Déficit de Presión de Vapor",
   "fuente": "AVAMET MXO MeteoXarxaOnline",
   "url": "https://www.avamet.org/mxo-mxo.php?territori=p46",
-  "generado_utc": "2026-05-29T22:19:04.052664+00:00",
+  "generado_utc": "2026-05-30T06:18:52.888181+00:00",
   "estaciones_base": 63,
-  "estaciones_con_datos": 52,
+  "estaciones_con_datos": 51,
   "estaciones_sin_datos": [
     "ValènciaMicalet",
     "Picassent Terrabona",
@@ -15,6 +15,7 @@
     "Vilallonganorte",
     "Aielo de Malferitcentro",
     "BenigànimIES les Foies",
+    "Fontanarspoble",
     "QuesaHotel La Rocha",
     "Chestecentre"
   ],
