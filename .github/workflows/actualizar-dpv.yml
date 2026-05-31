@@ -1,9 +1,9 @@
 name: Actualizar DPV AVAMET
 
 on:
- schedule:
-  # Prueba temporal: cada 15 minutos
-  - cron: "*/15 * * * *"
+  schedule:
+    # Prueba temporal: cada 15 minutos
+    - cron: "*/15 * * * *"
 
   workflow_dispatch:
 
