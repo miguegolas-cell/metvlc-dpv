@@ -1,0 +1,18 @@
+name: Test schedule DPV
+
+on:
+  schedule:
+    # Prueba temporal: cada 5 minutos
+    - cron: "*/5 * * * *"
+
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar hora UTC
+        run: |
+          echo "Prueba de ejecución automática"
+          date -u
