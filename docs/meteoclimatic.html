@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MetVlc · DPV Meteoclimatic</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #eef3f6;
+      color: #263238;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 25px auto;
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.14);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #0b2f4f 0%, #0b6fa4 65%, #ff6a2a 100%);
+      color: white;
+      padding: 18px 24px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 25px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    .header p {
+      margin: 6px 0 0;
+      font-size: 14px;
+      color: #e8f5ff;
+    }
+
+    #map {
+      width: 100%;
+      height: 720px;
+      background: #dce8ee;
+    }
+
+    .legend {
+      padding: 14px 18px;
+      background: #ffffff;
+      border-top: 1px solid #dfe8ee;
+      font-size: 14px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .legend span {
+      display: inline-block;
+      width: 18px;
+      height: 14px;
+      margin-right: 6px;
+      vertical-align: middle;
+      border: 1px solid rgba(0,0,0,0.15);
+      border-radius: 3px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #51636d;
+      padding: 0 18px 18px;
+      background: #ffffff;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .leaflet-popup-content {
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .popup-title {
+      font-weight: 800;
+      color: #0b2f4f;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .popup-dpv {
+      font-weight: 800;
+      font-size: 16px;
+    }
+
+    .leaflet-control-layers {
+      border-radius: 10px !important;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.18) !important;
+      font-size: 13px;
+    }
+
+    .notice {
+      padding: 10px 18px;
+      background: #fff7ec;
+      border-top: 1px solid #f4d6ad;
+      font-size: 13px;
+      color: #6b3b00;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    @media screen and (max-width: 900px) {
+      .header h1 {
+        font-size: 21px;
+      }
+
+      #map {
+        height: 560px;
+      }
+
+      .legend {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="header">
+      <h1>DPV · Meteoclimatic</h1>
+      <p>Déficit de presión de vapor · Red colaborativa · Provincia de València</p>
+    </div>
+
+    <div id="map"></div>
+
+    <div class="legend">
+      <b>Leyenda DPV:</b>
+      &nbsp;&nbsp;
+      <span style="background:#2b83ba;"></span> Bajo &lt; 1.0 kPa
+      &nbsp;&nbsp;
+      <span style="background:#fdae61;"></span> Moderado 1.0 - 1.5
+      &nbsp;&nbsp;
+      <span style="background:#f46d43;"></span> Alto 1.5 - 2.5
+      &nbsp;&nbsp;
+      <span style="background:#d7191c;"></span> Muy alto &gt; 2.5
+    </div>
+
+    <div class="notice">
+      Producto no oficial. Datos procedentes de la red colaborativa Meteoclimatic.
+      Se muestra una selección filtrada de estaciones para evitar saturación visual.
+    </div>
+
+    <div class="meta" id="metadata">
+      Cargando metadatos...
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    let dpvLayer = null;
+
+    const map = L.map("map", {
+      preferCanvas: true,
+      zoomControl: true
+    }).setView([39.35, -0.35], 8);
+
+    const osm = L.tileLayer(
+      "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      {
+        maxZoom: 19,
+        attribution: "&copy; OpenStreetMap"
+      }
+    );
+
+    const esriTopo = L.tileLayer(
+      "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
+      {
+        maxZoom: 18,
+        attribution: "Tiles &copy; Esri"
+      }
+    );
+
+    const openTopo = L.tileLayer(
+      "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+      {
+        maxZoom: 17,
+        attribution: "Map data: &copy; OpenStreetMap contributors, SRTM | Map style: &copy; OpenTopoMap"
+      }
+    );
+
+    esriTopo.addTo(map);
+
+    const baseMaps = {
+      "Relieve · Esri": esriTopo,
+      "Topográfico · OpenTopo": openTopo,
+      "Calles · OSM": osm
+    };
+
+    L.control.layers(baseMaps, null, {
+      collapsed: false
+    }).addTo(map);
+
+    function markerRadius(dpv) {
+      if (dpv >= 2.5) return 10;
+      if (dpv >= 1.5) return 9;
+      if (dpv >= 1.0) return 8;
+      return 7;
+    }
+
+    function formatMadridTime(isoString) {
+      if (!isoString) return "—";
+
+      const fecha = new Date(isoString);
+
+      if (isNaN(fecha.getTime())) {
+        return isoString;
+      }
+
+      return fecha.toLocaleString("es-ES", {
+        timeZone: "Europe/Madrid",
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    }
+
+    function popupContent(props) {
+      const link = props.url
+        ? `<br><a href="${props.url}" target="_blank" rel="noopener">Ver estación en Meteoclimatic</a>`
+        : "";
+
+      return `
+        <div class="popup-title">${props.estacion}</div>
+        <b>DPV:</b> <span class="popup-dpv" style="color:${props.color};">${props.dpv} kPa</span><br>
+        <b>Nivel:</b> ${props.nivel}<br>
+        <b>Temperatura:</b> ${props.temperatura} ºC<br>
+        <b>Humedad relativa:</b> ${props.humedad} %<br>
+        <b>Actualizado:</b> ${props.actualizado || "—"}<br>
+        <b>Fuente:</b> ${props.fuente || "Meteoclimatic"}
+        ${link}
+      `;
+    }
+
+    function pintarMetadatos(metadata) {
+      const generado = formatMadridTime(metadata.generado_utc);
+
+      document.getElementById("metadata").innerHTML = `
+        <b>Fuente:</b> ${metadata.fuente || "Meteoclimatic RSS"} ·
+        <b>Estaciones con datos:</b> ${metadata.estaciones_con_datos || "—"} /
+        ${metadata.estaciones_seleccionadas || "—"} seleccionadas
+        <br>
+        <b>Generado:</b> ${generado} hora peninsular ·
+        <b>RSS:</b> ${metadata.rss_pubDate || "—"}
+        <br>
+        DPV calculado a partir de temperatura y humedad relativa.
+      `;
+    }
+
+    function cargarDatos() {
+      Promise.all([
+        fetch("dpv_meteoclimatic.geojson?v=" + new Date().getTime()).then(response => {
+          if (!response.ok) {
+            throw new Error("No se pudo cargar dpv_meteoclimatic.geojson");
+          }
+          return response.json();
+        }),
+
+        fetch("metadata_meteoclimatic.json?v=" + new Date().getTime()).then(response => {
+          if (!response.ok) {
+            throw new Error("No se pudo cargar metadata_meteoclimatic.json");
+          }
+          return response.json();
+        })
+      ])
+      .then(([geojson, metadata]) => {
+        if (dpvLayer) {
+          map.removeLayer(dpvLayer);
+        }
+
+        dpvLayer = L.geoJSON(geojson, {
+          pointToLayer: function(feature, latlng) {
+            const props = feature.properties;
+            const dpv = Number(props.dpv);
+
+            return L.circleMarker(latlng, {
+              radius: markerRadius(dpv),
+              fillColor: props.color || "#666666",
+              color: "#1f2d36",
+              weight: 1.2,
+              opacity: 1,
+              fillOpacity: 0.84
+            });
+          },
+
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup(popupContent(feature.properties));
+          }
+        }).addTo(map);
+
+        if (dpvLayer.getBounds().isValid()) {
+          map.fitBounds(dpvLayer.getBounds(), {
+            padding: [30, 30]
+          });
+        }
+
+        pintarMetadatos(metadata);
+      })
+      .catch(error => {
+        console.error(error);
+        document.getElementById("metadata").innerHTML =
+          "Error al cargar el producto DPV Meteoclimatic. Revisa dpv_meteoclimatic.geojson y metadata_meteoclimatic.json.";
+      });
+    }
+
+    cargarDatos();
+  </script>
+
+</body>
+</html>
