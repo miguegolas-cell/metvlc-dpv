@@ -6,7 +6,7 @@ on:
     # 10:05 UTC = 12:05 hora peninsular
     # 14:05 UTC = 16:05 hora peninsular
     # 16:05 UTC = 18:05 hora peninsular
-    - cron: "5 10,14,16 * * *"
+    - cron: "6 10,14,16 * * *"
 
   workflow_dispatch:
 
