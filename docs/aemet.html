@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MetVlc · DPV AEMET</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #eef3f6;
+      color: #263238;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 25px auto;
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.14);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #0b2f4f 0%, #0b6fa4 65%, #ff6a2a 100%);
+      color: white;
+      padding: 18px 24px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 25px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    .header p {
+      margin: 6px 0 0;
+      font-size: 14px;
+      color: #e8f5ff;
+    }
+
+    #map {
+      width: 100%;
+      height: 720px;
+      background: #dce8ee;
+    }
+
+    .legend {
+      padding: 14px 18px;
+      background: #ffffff;
+      border-top: 1px solid #dfe8ee;
+      font-size: 14px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .legend span {
+      display: inline-block;
+      width: 18px;
+      height: 14px;
+      margin-right: 6px;
+      vertical-align: middle;
+      border: 1px solid rgba(0,0,0,0.15);
+      border-radius: 3px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #51636d;
+      padding: 0 18px 18px;
+      background: #ffffff;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .leaflet-popup-content {
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    @media screen and (max-width: 900px) {
+      .header h1 {
+        font-size: 21px;
+      }
+
+      #map {
+        height: 560px;
+      }
+
+      .legend {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="header">
+      <h1>DPV · AEMET</h1>
+      <p>Déficit de presión de vapor · Últimos datos horarios · Comunitat Valenciana</p>
+    </div>
+
+    <div id="map"></div>
+
+    <div class="legend">
+      <b>Leyenda DPV:</b>
+      &nbsp;&nbsp;
+      <span style="background:#2b83ba;"></span> Bajo &lt; 0,8 kPa
+      &nbsp;&nbsp;
+      <span style="background:#abdda4;"></span> Moderado 0,8-1,2
+      &nbsp;&nbsp;
+      <span style="background:#fdae61;"></span> Alto 1,2-1,6
+      &nbsp;&nbsp;
+      <span style="background:#f46d43;"></span> Muy alto 1,6-2,0
+      &nbsp;&nbsp;
+      <span style="background:#d7191c;"></span> Extremo &gt; 2,0
+    </div>
+
+    <div class="meta" id="metadata">
+      Cargando metadatos...
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    let dpvLayer = null;
+
+    const map = L.map("map", {
+      preferCanvas: true,
+      zoomControl: true
+    }).setView([39.35, -0.35], 8);
+
+    const osm = L.tileLayer(
+      "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      {
+        maxZoom: 19,
+        attribution: "&copy; OpenStreetMap"
+      }
+    );
+
+    const esriTopo = L.tileLayer(
+      "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
+      {
+        maxZoom: 18,
+        attribution: "Tiles &copy; Esri"
+      }
+    );
+
+    const openTopo = L.tileLayer(
+      "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+      {
+        maxZoom: 17,
+        attribution: "Map data: &copy; OpenStreetMap contributors, SRTM | Map style: &copy; OpenTopoMap"
+      }
+    );
+
+    esriTopo.addTo(map);
+
+    const baseMaps = {
+      "Relieve · Esri": esriTopo,
+      "Topográfico · OpenTopo": openTopo,
+      "Calles · OSM": osm
+    };
+
+    L.control.layers(baseMaps, null, {
+      collapsed: false
+    }).addTo(map);
+
+    function radioPorDPV(dpv) {
+      if (dpv >= 2.0) return 12;
+      if (dpv >= 1.6) return 11;
+      if (dpv >= 1.2) return 10;
+      if (dpv >= 0.8) return 9;
+      return 8;
+    }
+
+    function formatMadridTime(isoString) {
+      if (!isoString) return "—";
+
+      const fecha = new Date(isoString);
+
+      if (isNaN(fecha.getTime())) {
+        return isoString;
+      }
+
+      return fecha.toLocaleString("es-ES", {
+        timeZone: "Europe/Madrid",
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    }
+
+    function pintarMetadatos(metadata) {
+      const generado = formatMadridTime(metadata.generado_utc);
+
+      document.getElementById("metadata").innerHTML = `
+        <b>Fuente:</b> ${metadata.fuente || "AEMET últimos datos horarios"} ·
+        <b>Estaciones con datos:</b> ${metadata.estaciones_con_datos || "—"} / ${metadata.estaciones_csv || "—"}<br>
+        <b>Datos AEMET:</b> ${metadata.fecha_hora_aemet || "—"} ·
+        <b>Generado:</b> ${generado} hora peninsular<br>
+        <b>Producto:</b> DPV calculado a partir de temperatura y humedad relativa.
+        Coordenadas aproximadas/manuales asociadas a las estaciones AEMET.
+      `;
+    }
+
+    function popupContent(props) {
+      return `
+        <b>${props.estacion}</b><br>
+        <b>Provincia:</b> ${props.provincia || "—"}<br>
+        <hr>
+        <b>DPV:</b> ${props.dpv} kPa<br>
+        <b>Nivel:</b> ${props.nivel}<br>
+        <b>Temperatura:</b> ${props.temperatura} ºC<br>
+        <b>Humedad relativa:</b> ${props.humedad} %
+      `;
+    }
+
+    function cargarDatos() {
+      Promise.all([
+        fetch("dpv_aemet.geojson?v=" + new Date().getTime()).then(response => {
+          if (!response.ok) {
+            throw new Error("No se pudo cargar dpv_aemet.geojson");
+          }
+          return response.json();
+        }),
+
+        fetch("metadata_aemet.json?v=" + new Date().getTime()).then(response => {
+          if (!response.ok) {
+            throw new Error("No se pudo cargar metadata_aemet.json");
+          }
+          return response.json();
+        })
+      ])
+      .then(([geojson, metadata]) => {
+        if (dpvLayer) {
+          map.removeLayer(dpvLayer);
+        }
+
+        dpvLayer = L.geoJSON(geojson, {
+          pointToLayer: function(feature, latlng) {
+            const props = feature.properties;
+            const dpv = Number(props.dpv);
+
+            return L.circleMarker(latlng, {
+              radius: radioPorDPV(dpv),
+              fillColor: props.color || "#666666",
+              color: "#1f2d36",
+              weight: 1.2,
+              opacity: 1,
+              fillOpacity: 0.85
+            });
+          },
+
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup(popupContent(feature.properties));
+          }
+        }).addTo(map);
+
+        if (dpvLayer.getBounds().isValid()) {
+          map.fitBounds(dpvLayer.getBounds(), {
+            padding: [30, 30]
+          });
+        }
+
+        pintarMetadatos(metadata);
+      })
+      .catch(error => {
+        console.error(error);
+        document.getElementById("metadata").innerHTML =
+          "Error al cargar el producto DPV AEMET. Revisa dpv_aemet.geojson y metadata_aemet.json.";
+      });
+    }
+
+    cargarDatos();
+  </script>
+
+</body>
+</html>
