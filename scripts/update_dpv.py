@@ -95,14 +95,50 @@ def cargar_estaciones_base():
 
 
 def descargar_html_avamet():
+    """
+    Descarga la página de AVAMET con varios intentos.
+    AVAMET a veces tarda o no responde desde GitHub Actions.
+    """
+    import time
+
     headers = {
-        "User-Agent": "MetVlc-DPV/1.0"
+        "User-Agent": "Mozilla/5.0 (compatible; MetVlc-DPV/1.0; +https://metvlc.blogspot.com)"
     }
 
-    response = requests.get(URL_AVAMET, headers=headers, timeout=120)
-    response.raise_for_status()
+    errores = []
 
-    return response.text
+    for intento in range(1, 4):
+        try:
+            print(f"Intento {intento}/3 descargando AVAMET...")
+
+            response = requests.get(
+                URL_AVAMET,
+                headers=headers,
+                timeout=(30, 120)
+            )
+
+            response.raise_for_status()
+
+            if not response.text or len(response.text) < 1000:
+                raise RuntimeError("Respuesta de AVAMET demasiado corta o vacía.")
+
+            print("Descarga AVAMET correcta.")
+            return response.text
+
+        except Exception as e:
+            error = f"Intento {intento} fallido: {repr(e)}"
+            print(error)
+            errores.append(error)
+
+            if intento < 3:
+                espera = intento * 30
+                print(f"Esperando {espera} segundos antes de reintentar...")
+                time.sleep(espera)
+
+    raise RuntimeError(
+        "No se pudo descargar AVAMET tras 3 intentos. "
+        + " | ".join(errores)
+    )
 
 
 def extraer_filas_desde_html(html):
