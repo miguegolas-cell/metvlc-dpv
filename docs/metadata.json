@@ -2,7 +2,7 @@
   "producto": "DPV - Déficit de Presión de Vapor",
   "fuente": "AVAMET MXO MeteoXarxaOnline",
   "url": "https://www.avamet.org/mxo-mxo.php?territori=p46",
-  "generado_utc": "2026-06-01T13:44:23.380449+00:00",
+  "generado_utc": "2026-06-01T19:16:30.572218+00:00",
   "estaciones_base": 63,
   "estaciones_con_datos": 51,
   "estaciones_sin_datos": [
