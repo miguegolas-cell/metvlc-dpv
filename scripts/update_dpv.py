@@ -3,7 +3,9 @@ from datetime import datetime, timezone
 import csv
 import json
 import math
+import os
 import re
+import time
 import unicodedata
 
 import requests
@@ -16,6 +18,11 @@ DOCS_DIR = Path("docs")
 ESTACIONES_CSV = DOCS_DIR / "estaciones.csv"
 DPV_GEOJSON = DOCS_DIR / "dpv.geojson"
 METADATA_JSON = DOCS_DIR / "metadata.json"
+
+
+class AvametBloqueoError(Exception):
+    """Error usado cuando AVAMET responde con bloqueo o rate limit."""
+    pass
 
 
 def normalizar(texto):
@@ -38,7 +45,10 @@ def limpiar_numero(valor):
     texto = texto.replace(",", ".")
     texto = texto.replace("−", "-")
 
-    if texto in ["", "-", "--", "nan", "None"]:
+    if texto in ["", "-", "--"]:
+        return None
+
+    if texto.lower() in ["nan", "none"]:
         return None
 
     match = re.search(r"[-+]?\d+(?:\.\d+)?", texto)
@@ -53,7 +63,12 @@ def limpiar_numero(valor):
 
 def calcular_dpv(temp_c, hr):
     """
-    DPV en kPa.
+    Calcula el DPV en kPa.
+
+    Fórmula:
+    es = 0.6108 * exp((17.27*T)/(T+237.3))
+    ea = es * HR/100
+    DPV = es - ea
     """
     es = 0.6108 * math.exp((17.27 * temp_c) / (temp_c + 237.3))
     ea = es * (hr / 100.0)
@@ -96,13 +111,24 @@ def cargar_estaciones_base():
 
 def descargar_html_avamet():
     """
-    Descarga la página de AVAMET con varios intentos.
-    AVAMET a veces tarda o no responde desde GitHub Actions.
+    Descarga la página de AVAMET de forma prudente.
+
+    - Hace como máximo 3 intentos.
+    - Usa un User-Agent identificable.
+    - No insiste si AVAMET devuelve 403 o 429.
+    - Evita timeouts excesivamente largos.
     """
-    import time
+
+    user_agent = os.getenv(
+        "AVAMET_USER_AGENT",
+        "MetVlc-DPV/1.0 uso divulgativo no comercial - Fuente AVAMET - https://metvlc.blogspot.com"
+    )
 
     headers = {
-        "User-Agent": "Mozilla/5.0 (compatible; MetVlc-DPV/1.0; +https://metvlc.blogspot.com)"
+        "User-Agent": user_agent,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "ca,es;q=0.9,en;q=0.8",
+        "Connection": "close",
     }
 
     errores = []
@@ -110,12 +136,21 @@ def descargar_html_avamet():
     for intento in range(1, 4):
         try:
             print(f"Intento {intento}/3 descargando AVAMET...")
+            print(f"URL: {URL_AVAMET}")
 
             response = requests.get(
                 URL_AVAMET,
                 headers=headers,
-                timeout=(30, 120)
+                timeout=(10, 30)
             )
+
+            print(f"Código HTTP AVAMET: {response.status_code}")
+
+            if response.status_code in (403, 429):
+                raise AvametBloqueoError(
+                    f"AVAMET ha rechazado la petición con código {response.status_code}. "
+                    "Se detiene el proceso para no insistir sobre el servidor."
+                )
 
             response.raise_for_status()
 
@@ -124,6 +159,12 @@ def descargar_html_avamet():
 
             print("Descarga AVAMET correcta.")
             return response.text
+
+        except AvametBloqueoError as e:
+            error = f"Bloqueo/rate limit detectado: {repr(e)}"
+            print(error)
+            errores.append(error)
+            break
 
         except Exception as e:
             error = f"Intento {intento} fallido: {repr(e)}"
@@ -136,7 +177,7 @@ def descargar_html_avamet():
                 time.sleep(espera)
 
     raise RuntimeError(
-        "No se pudo descargar AVAMET tras 3 intentos. "
+        "No se pudo descargar AVAMET. "
         + " | ".join(errores)
     )
 
@@ -172,10 +213,11 @@ def extraer_filas_desde_html(html):
             continue
 
         # Estructura aproximada:
-        # altitud, tendencia/opcional, temperatura, mínima, máxima, punto rocío, humedad...
+        # altitud, tendencia/opcional, temperatura, mínima, máxima,
+        # punto de rocío, humedad...
         datos = numeros[1:]
 
-        # Saltar posible tendencia justo después de altitud
+        # Saltar posible tendencia justo después de altitud.
         if datos and abs(datos[0]) <= 60 and float(datos[0]).is_integer() and len(datos) >= 7:
             datos = datos[1:]
 
@@ -248,7 +290,9 @@ def generar_geojson(estaciones_base, registros_avamet):
                 "dpv": round(dpv, 2),
                 "nivel": nivel,
                 "color": color,
-                "fuente": "AVAMET"
+                "fuente": "AVAMET",
+                "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+                "uso": "Divulgativo no comercial",
             }
         })
 
@@ -258,6 +302,21 @@ def generar_geojson(estaciones_base, registros_avamet):
     }
 
     return geojson, sin_datos
+
+
+def guardar_json(path, contenido):
+    """
+    Guarda JSON de forma segura.
+    Primero escribe un archivo temporal y luego reemplaza el definitivo.
+    """
+    tmp_path = path.with_suffix(path.suffix + ".tmp")
+
+    tmp_path.write_text(
+        json.dumps(contenido, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+
+    tmp_path.replace(path)
 
 
 def main():
@@ -275,26 +334,23 @@ def main():
     print("Generando DPV GeoJSON...")
     geojson, sin_datos = generar_geojson(estaciones_base, registros)
 
-    DPV_GEOJSON.write_text(
-        json.dumps(geojson, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
-
     metadata = {
         "producto": "DPV - Déficit de Presión de Vapor",
         "fuente": "AVAMET MXO MeteoXarxaOnline",
+        "fuente_entidad": "AVAMET - Associació Valenciana de Meteorologia",
         "url": URL_AVAMET,
+        "uso": "Divulgativo no comercial",
         "generado_utc": datetime.now(timezone.utc).isoformat(),
         "estaciones_base": len(estaciones_base),
         "estaciones_con_datos": len(geojson["features"]),
         "estaciones_sin_datos": sin_datos,
-        "formula": "DPV = es - ea; es = 0.6108 * exp((17.27*T)/(T+237.3)); ea = es * HR/100"
+        "formula": "DPV = es - ea; es = 0.6108 * exp((17.27*T)/(T+237.3)); ea = es * HR/100",
+        "nota": "Cálculo y visualización realizados por MetVLC a partir de datos publicados por AVAMET."
     }
 
-    METADATA_JSON.write_text(
-        json.dumps(metadata, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
+    print("Guardando archivos...")
+    guardar_json(DPV_GEOJSON, geojson)
+    guardar_json(METADATA_JSON, metadata)
 
     print(f"Estaciones con datos: {len(geojson['features'])}")
     print(f"Estaciones sin datos: {len(sin_datos)}")
