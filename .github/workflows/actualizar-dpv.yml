@@ -3,9 +3,7 @@ name: Actualizar DPV AVAMET
 on:
   workflow_dispatch:
 
-  workflow_dispatch:
-
-permissions:
+  permissions:
   contents: write
 
 env:
