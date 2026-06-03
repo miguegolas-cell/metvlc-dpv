@@ -2,20 +2,17 @@
   "producto": "DPV - Déficit de Presión de Vapor AEMET",
   "fuente": "AEMET últimos datos horarios",
   "url": "https://www.aemet.es/es/eltiempo/observacion/ultimosdatos_comunitat-valenciana_datos-horarios.csv?k=val&datos=det&w=0&f=temperatura&x=h24",
-  "generado_utc": "2026-06-03T09:30:35.053550+00:00",
-  "actualizado_aemet": "miércoles, 03 junio 2026 a las 11:22 hora oficial",
-  "fecha_hora_aemet": "miércoles, 03 junio 2026 a las 11:00",
+  "generado_utc": "2026-06-03T11:03:59.702885+00:00",
+  "actualizado_aemet": "miércoles, 03 junio 2026 a las 12:42 hora oficial",
+  "fecha_hora_aemet": "miércoles, 03 junio 2026 a las 12:00",
   "estaciones_csv": 43,
-  "estaciones_con_datos": 23,
+  "estaciones_con_datos": 26,
   "estaciones_sin_datos": [
     "Ademuz",
-    "Atzeneta del Maestrat",
     "Barx",
     "Bejís",
-    "Benidorm",
-    "Bicorp",
+    "Carcaixent",
     "Elx/Elche",
-    "Fontanars dels Alforins",
     "Jalance",
     "La Pobla de Benifassà-Fredes",
     "Montanejos",
@@ -23,13 +20,14 @@
     "Ontinyent",
     "Orihuela",
     "Pego",
-    "Rojales",
     "Sagunt/Sagunto",
+    "Segorbe",
     "Torreblanca",
-    "Turís",
-    "Villena"
+    "Turís"
   ],
-  "estaciones_sin_coordenadas": [],
+  "estaciones_sin_coordenadas": [
+    "Vinaṛs-Viveros Alcanar"
+  ],
   "formula": "DPV = es - ea; es = 0.6108 * exp((17.27*T)/(T+237.3)); ea = es * HR/100",
   "nota": "Coordenadas aproximadas/manuales asociadas a las estaciones AEMET."
 }
