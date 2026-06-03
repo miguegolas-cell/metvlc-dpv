@@ -15,6 +15,7 @@ permissions:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  AVAMET_USER_AGENT: "MetVLC-DPV/1.0 uso divulgativo no comercial - Fuente AVAMET - https://metvlc.blogspot.com"
 
 jobs:
   actualizar-dpv:
