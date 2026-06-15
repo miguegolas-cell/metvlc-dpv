@@ -4,7 +4,7 @@ import csv
 import io
 import json
 import math
-import re
+import unicodedata
 
 import requests
 
@@ -18,8 +18,6 @@ OUT_GEOJSON = DOCS_DIR / "dpv_aemet.geojson"
 OUT_METADATA = DOCS_DIR / "metadata_aemet.json"
 
 
-# Coordenadas aproximadas de estaciones/municipios AEMET.
-# Formato: "Estación": [latitud, longitud]
 COORDS = {
     "Ademuz": [40.0613, -1.2866],
     "Alacant/Alicante": [38.3452, -0.4810],
@@ -67,6 +65,34 @@ COORDS = {
 }
 
 
+def normalizar_texto(texto):
+    texto = str(texto or "").strip().lower()
+    texto = unicodedata.normalize("NFKD", texto)
+    texto = "".join(c for c in texto if not unicodedata.combining(c))
+    texto = texto.replace("º", "").replace("°", "")
+    texto = texto.replace("(", " ").replace(")", " ")
+    texto = " ".join(texto.split())
+    return texto
+
+
+def buscar_columna(row, posibles):
+    columnas = list(row.keys())
+
+    columnas_norm = {
+        normalizar_texto(col): col
+        for col in columnas
+    }
+
+    for posible in posibles:
+        posible_norm = normalizar_texto(posible)
+
+        for col_norm, col_original in columnas_norm.items():
+            if posible_norm in col_norm:
+                return col_original
+
+    return None
+
+
 def limpiar_numero(valor):
     if valor is None:
         return None
@@ -83,15 +109,9 @@ def limpiar_numero(valor):
 
 
 def calcular_dpv(temp_c, hr):
-    """
-    DPV en kPa.
-    es = presión de vapor de saturación
-    ea = presión real de vapor
-    """
     es = 0.6108 * math.exp((17.27 * temp_c) / (temp_c + 237.3))
     ea = es * (hr / 100.0)
-    dpv = es - ea
-    return dpv
+    return es - ea
 
 
 def nivel_dpv(dpv):
@@ -128,8 +148,8 @@ def descargar_csv_aemet():
     response = requests.get(URL_AEMET, headers=headers, timeout=120)
     response.raise_for_status()
 
-    # AEMET suele entregar este CSV en latin1/cp1252.
-    response.encoding = response.apparent_encoding or "latin1"
+    # Forzamos latin1 para evitar problemas con acentos y símbolo de grados.
+    response.encoding = "latin1"
 
     return response.text
 
@@ -140,7 +160,7 @@ def extraer_fecha_hora(texto_csv):
     actualizado = ""
     fecha_hora = ""
 
-    for linea in lineas[:5]:
+    for linea in lineas[:8]:
         if linea.startswith("Actualizado:"):
             actualizado = linea.replace("Actualizado:", "").strip()
         if linea.startswith("Fecha y hora:"):
@@ -152,10 +172,9 @@ def extraer_fecha_hora(texto_csv):
 def leer_datos(texto_csv):
     lineas = texto_csv.splitlines()
 
-    # El encabezado real empieza en la primera línea que contiene "Estación".
     idx_header = None
     for i, linea in enumerate(lineas):
-        if '"Estación"' in linea or "Estación" in linea:
+        if "Estación" in linea or "Estacion" in linea:
             idx_header = i
             break
 
@@ -166,12 +185,16 @@ def leer_datos(texto_csv):
     f = io.StringIO(contenido)
 
     reader = csv.DictReader(f)
+    filas = list(reader)
 
-    filas = []
-    for row in reader:
-        filas.append(row)
+    if not filas:
+        raise RuntimeError("El CSV de AEMET no contiene filas de estaciones.")
 
-    return filas
+    print("Columnas detectadas en el CSV:")
+    for col in reader.fieldnames:
+        print(" -", repr(col))
+
+    return filas, reader.fieldnames
 
 
 def main():
@@ -183,18 +206,39 @@ def main():
     print("Actualizado AEMET:", actualizado_txt)
     print("Fecha y hora AEMET:", fecha_hora_txt)
 
-    filas = leer_datos(texto_csv)
+    filas, columnas = leer_datos(texto_csv)
+
+    primera_fila = filas[0]
+
+    col_estacion = buscar_columna(primera_fila, ["estacion"])
+    col_provincia = buscar_columna(primera_fila, ["provincia"])
+    col_temp = buscar_columna(primera_fila, ["temperatura"])
+    col_hr = buscar_columna(primera_fila, ["humedad"])
+
+    print("Columna estación:", col_estacion)
+    print("Columna provincia:", col_provincia)
+    print("Columna temperatura:", col_temp)
+    print("Columna humedad:", col_hr)
+
+    if not col_estacion:
+        raise RuntimeError("No se ha detectado la columna de estación.")
+
+    if not col_temp:
+        raise RuntimeError("No se ha detectado la columna de temperatura.")
+
+    if not col_hr:
+        raise RuntimeError("No se ha detectado la columna de humedad.")
 
     features = []
     sin_coordenadas = []
     sin_datos = []
 
     for row in filas:
-        estacion = row.get("Estación", "").strip()
-        provincia = row.get("Provincia", "").strip()
+        estacion = str(row.get(col_estacion, "")).strip()
+        provincia = str(row.get(col_provincia, "")).strip() if col_provincia else ""
 
-        temp = limpiar_numero(row.get("Temperatura (ºC)"))
-        hr = limpiar_numero(row.get("Humedad (%)"))
+        temp = limpiar_numero(row.get(col_temp))
+        hr = limpiar_numero(row.get(col_hr))
 
         if estacion not in COORDS:
             sin_coordenadas.append(estacion)
@@ -220,7 +264,8 @@ def main():
                 "humedad": round(hr, 0),
                 "dpv": round(dpv, 2),
                 "nivel": nivel_dpv(dpv),
-                "color": color_dpv(dpv)
+                "color": color_dpv(dpv),
+                "fuente": "AEMET"
             }
         })
 
@@ -245,6 +290,9 @@ def main():
         "estaciones_con_datos": len(features),
         "estaciones_sin_datos": sin_datos,
         "estaciones_sin_coordenadas": sin_coordenadas,
+        "columnas_detectadas": columnas,
+        "columna_temperatura_usada": col_temp,
+        "columna_humedad_usada": col_hr,
         "formula": "DPV = es - ea; es = 0.6108 * exp((17.27*T)/(T+237.3)); ea = es * HR/100",
         "nota": "Coordenadas aproximadas/manuales asociadas a las estaciones AEMET."
     }
