@@ -234,7 +234,18 @@ def extraer_coordenadas(item):
 
 def main():
     print("Descargando RSS Meteoclimatic...")
+    try:
     contenido, url_usada = descargar_rss_meteoclimatic()
+
+except Exception as e:
+    print("Meteoclimatic no está accesible desde GitHub Actions.")
+    print("Se conserva la última actualización válida del visor.")
+    print("Error:", repr(e))
+
+    # No borramos ni regeneramos:
+    # docs/dpv_meteoclimatic.geojson
+    # docs/metadata_meteoclimatic.json
+    return
 
     root = ET.fromstring(contenido)
     channel = root.find("channel")
