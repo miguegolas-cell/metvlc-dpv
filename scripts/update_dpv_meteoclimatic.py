@@ -147,7 +147,15 @@ def color_dpv(dpv):
 
 def descargar_rss_meteoclimatic():
     headers = {
-        "User-Agent": "Mozilla/5.0 (compatible; MetVlc-DPV-Meteoclimatic/1.0; +https://metvlc.blogspot.com)"
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/125.0 Safari/537.36"
+        ),
+        "Accept": "application/rss+xml, application/xml, text/xml, text/html,*/*",
+        "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
+        "Referer": "https://www.meteoclimatic.net/",
+        "Connection": "keep-alive",
     }
 
     errores = []
@@ -234,18 +242,19 @@ def extraer_coordenadas(item):
 
 def main():
     print("Descargando RSS Meteoclimatic...")
+
     try:
-    contenido, url_usada = descargar_rss_meteoclimatic()
+        contenido, url_usada = descargar_rss_meteoclimatic()
 
-except Exception as e:
-    print("Meteoclimatic no está accesible desde GitHub Actions.")
-    print("Se conserva la última actualización válida del visor.")
-    print("Error:", repr(e))
+    except Exception as e:
+        print("Meteoclimatic no está accesible desde GitHub Actions.")
+        print("Se conserva la última actualización válida del visor.")
+        print("Error:", repr(e))
 
-    # No borramos ni regeneramos:
-    # docs/dpv_meteoclimatic.geojson
-    # docs/metadata_meteoclimatic.json
-    return
+        # No borramos ni regeneramos:
+        # docs/dpv_meteoclimatic.geojson
+        # docs/metadata_meteoclimatic.json
+        return
 
     root = ET.fromstring(contenido)
     channel = root.find("channel")
@@ -333,6 +342,7 @@ except Exception as e:
         "estaciones_con_datos": len(features),
         "estaciones_sin_datos": sin_datos,
         "estaciones_sin_coordenadas": sin_coordenadas,
+        "estaciones_no_seleccionadas": len(no_seleccionadas),
         "formula": "DPV = es - ea; es = 0.6108 * exp((17.27*T)/(T+237.3)); ea = es * HR/100",
         "nota": "Producto no oficial. Red colaborativa Meteoclimatic. Se usa una selección filtrada de estaciones para evitar saturación visual."
     }
@@ -347,6 +357,7 @@ except Exception as e:
     print("Estaciones con datos:", len(features))
     print("Sin datos:", len(sin_datos))
     print("Sin coordenadas:", len(sin_coordenadas))
+    print("No seleccionadas:", len(no_seleccionadas))
     print("GeoJSON generado:", OUT_GEOJSON)
     print("Metadata generado:", OUT_METADATA)
 
