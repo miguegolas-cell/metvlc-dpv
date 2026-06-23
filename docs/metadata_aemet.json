@@ -2,7 +2,7 @@
   "producto": "DPV - Déficit de Presión de Vapor AEMET",
   "fuente": "AEMET últimos datos horarios",
   "url": "https://www.aemet.es/es/eltiempo/observacion/ultimosdatos_comunitat-valenciana_datos-horarios.csv?k=val&datos=det&w=0&f=temperatura&x=h24",
-  "generado_utc": "2026-06-23T17:13:09.663710+00:00",
+  "generado_utc": "2026-06-23T17:24:53.614346+00:00",
   "actualizado_aemet": "martes, 23 junio 2026 a las 18:42 hora oficial",
   "fecha_hora_aemet": "martes, 23 junio 2026 a las 18:00",
   "estaciones_csv": 43,
