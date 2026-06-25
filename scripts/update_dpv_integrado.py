@@ -53,32 +53,38 @@ def calcular_dpv(temp_c, hr):
 
 def nivel_dpv(dpv):
     if dpv is None:
-        return 'Sin datos'
-    if dpv < 0.8:
-        return 'Bajo'
-    elif dpv < 1.2:
-        return 'Moderado'
-    elif dpv < 1.6:
-        return 'Alto'
+        return "Sin datos"
+
+    if dpv < 0.5:
+        return "Aire muy húmedo"
+    elif dpv < 1.0:
+        return "Condiciones favorables"
     elif dpv < 2.0:
-        return 'Muy alto'
+        return "Equilibrio hídrico"
+    elif dpv < 3.0:
+        return "Ambiente seco"
+    elif dpv < 4.0:
+        return "Alto estrés hídrico"
     else:
-        return 'Extremo'
+        return "Extremo estrés hídrico"
 
 
 def color_dpv(dpv):
     if dpv is None:
-        return '#9aa3aa'
-    if dpv < 0.8:
-        return '#2b83ba'
-    elif dpv < 1.2:
-        return '#abdda4'
-    elif dpv < 1.6:
-        return '#fdae61'
+        return "#9e9e9e"
+
+    if dpv < 0.5:
+        return "#2166ac"   # Azul oscuro
+    elif dpv < 1.0:
+        return "#67a9cf"   # Azul claro
     elif dpv < 2.0:
-        return '#f46d43'
+        return "#1a9850"   # Verde
+    elif dpv < 3.0:
+        return "#fdae61"   # Naranja
+    elif dpv < 4.0:
+        return "#f46d43"   # Rojo anaranjado
     else:
-        return '#d7191c'
+        return "#a50026"   # Rojo oscuro
 
 
 def normalizar_clave(texto):
