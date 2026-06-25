@@ -1,0 +1,65 @@
+name: Actualizar DPV Integrado
+
+on:
+  schedule:
+    # Tres veces al día durante horario de verano peninsular:
+    # 10:21 UTC = 12:21 hora peninsular
+    # 14:21 UTC = 16:21 hora peninsular
+    # 16:21 UTC = 18:21 hora peninsular
+    - cron: "21 10,14,16 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  actualizar-dpv-integrado:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Actualizar DPV AEMET
+        run: python scripts/update_dpv_aemet.py
+
+      - name: Actualizar DPV AVAMET
+        run: python scripts/update_dpv.py
+
+      - name: Actualizar DPV Meteoclimatic
+        run: python scripts/update_dpv_meteoclimatic.py
+
+      - name: Generar DPV integrado
+        run: python scripts/update_dpv_integrado.py
+
+      - name: Guardar resultados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add docs/dpv_aemet.geojson docs/metadata_aemet.json
+          git add docs/dpv.geojson docs/metadata.json
+          git add docs/dpv_meteoclimatic.geojson docs/metadata_meteoclimatic.json
+          git add docs/dpv_integrado.geojson docs/metadata_integrado.json
+
+          if ! git diff --staged --quiet; then
+            git commit -m "Actualiza DPV integrado"
+            git push
+          else
+            echo "Sin cambios que guardar"
+          fi
