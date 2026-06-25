@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -9,43 +10,182 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <style>
-    html, body { margin:0; padding:0; background:#f6f9fc; font-family: Arial, Helvetica, sans-serif; color:#24313d; }
-    .page { max-width:1200px; margin:18px auto; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 8px 26px rgba(0,0,0,.14); }
-    .header { padding:22px 26px; color:#fff; background:linear-gradient(135deg,#0b2f4f 0%,#0b6fa4 62%,#ff6a2a 100%); }
-    .header h1 { margin:0; font-size:28px; line-height:1.2; }
-    .header p { margin:8px 0 0 0; font-size:15px; font-weight:600; opacity:.95; }
-    .panel { padding:14px 18px; border-bottom:1px solid #d9e5ee; background:#fbfdff; display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
-    .panel button { border:1px solid #b8d0df; background:#fff; color:#0b2f4f; border-radius:999px; padding:7px 12px; font-weight:700; cursor:pointer; }
-    .panel button.active { background:#0b6fa4; color:#fff; border-color:#0b6fa4; }
-    .meta { padding:10px 18px; font-size:13px; color:#5a6670; background:#f4f9fc; border-bottom:1px solid #d9e5ee; }
-    #map { width:100%; height:720px; }
-    .legend { background:#fff; padding:10px 12px; border-radius:10px; box-shadow:0 3px 12px rgba(0,0,0,.18); line-height:1.45; font-size:13px; }
-    .legend span { display:inline-block; width:13px; height:13px; margin-right:7px; border-radius:50%; vertical-align:-2px; border:1px solid rgba(0,0,0,.2); }
-    .popup-title { font-weight:900; color:#0b2f4f; font-size:15px; margin-bottom:6px; }
-    .popup-row { margin:3px 0; }
-    .sin-datos { color:#69737c; font-weight:800; }
-    @media(max-width:700px){ .page{margin:0;border-radius:0;} #map{height:660px;} .header h1{font-size:23px;} }
+    html, body {
+      margin:0;
+      padding:0;
+      background:#f6f9fc;
+      font-family: Arial, Helvetica, sans-serif;
+      color:#24313d;
+    }
+
+    .page {
+      max-width:1200px;
+      margin:18px auto;
+      background:#fff;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 8px 26px rgba(0,0,0,.14);
+    }
+
+    .header {
+      padding:22px 26px;
+      color:#fff;
+      background:linear-gradient(135deg,#0b2f4f 0%,#0b6fa4 62%,#ff6a2a 100%);
+    }
+
+    .header h1 {
+      margin:0;
+      font-size:28px;
+      line-height:1.2;
+    }
+
+    .header p {
+      margin:8px 0 0 0;
+      font-size:15px;
+      font-weight:600;
+      opacity:.95;
+    }
+
+    .panel {
+      padding:14px 18px;
+      border-bottom:1px solid #d9e5ee;
+      background:#fbfdff;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+    }
+
+    .panel button {
+      border:1px solid #b8d0df;
+      background:#fff;
+      color:#0b2f4f;
+      border-radius:999px;
+      padding:7px 12px;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .panel button.active {
+      background:#0b6fa4;
+      color:#fff;
+      border-color:#0b6fa4;
+    }
+
+    .meta {
+      padding:10px 18px;
+      font-size:13px;
+      color:#5a6670;
+      background:#f4f9fc;
+      border-bottom:1px solid #d9e5ee;
+      line-height:1.45;
+    }
+
+    #map {
+      width:100%;
+      height:720px;
+    }
+
+    .legend {
+      background:#fff;
+      padding:11px 13px;
+      border-radius:10px;
+      box-shadow:0 3px 12px rgba(0,0,0,.18);
+      line-height:1.45;
+      font-size:13px;
+      max-width:270px;
+    }
+
+    .legend-title {
+      font-weight:900;
+      color:#0b2f4f;
+      margin-bottom:6px;
+      font-size:14px;
+    }
+
+    .legend-item {
+      display:flex;
+      align-items:center;
+      gap:7px;
+      margin:4px 0;
+    }
+
+    .legend-color {
+      display:inline-block;
+      width:13px;
+      height:13px;
+      min-width:13px;
+      border-radius:50%;
+      border:1px solid rgba(0,0,0,.25);
+    }
+
+    .popup-title {
+      font-weight:900;
+      color:#0b2f4f;
+      font-size:15px;
+      margin-bottom:6px;
+    }
+
+    .popup-row {
+      margin:3px 0;
+    }
+
+    .sin-datos {
+      color:#69737c;
+      font-weight:800;
+    }
+
+    .dpv-nivel {
+      font-weight:800;
+      color:#0b2f4f;
+    }
+
+    @media(max-width:700px) {
+      .page {
+        margin:0;
+        border-radius:0;
+      }
+
+      #map {
+        height:660px;
+      }
+
+      .header h1 {
+        font-size:23px;
+      }
+
+      .legend {
+        max-width:240px;
+        font-size:12px;
+      }
+    }
   </style>
+
 </head>
+
 <body>
   <div class="page">
     <div class="header">
       <h1>DPV integrado MetVlc</h1>
-      <p>AEMET · AVAMET · Meteoclimatic · Estaciones sin dato visible en gris</p>
+      <p>AEMET · AVAMET · Meteoclimatic · Escala DPV orientada a estrés hídrico de la vegetación</p>
     </div>
 
-    <div class="panel">
-      <button class="active" data-fuente="Todas">Todas</button>
-      <button data-fuente="AEMET">AEMET</button>
-      <button data-fuente="AVAMET">AVAMET</button>
-      <button data-fuente="Meteoclimatic">Meteoclimatic</button>
-      <button class="active" data-estado="todos">Con datos + sin datos</button>
-      <button data-estado="con datos">Solo con datos</button>
-      <button data-estado="sin datos">Solo sin datos</button>
-    </div>
+```
+<div class="panel">
+  <button class="active" data-fuente="Todas">Todas</button>
+  <button data-fuente="AEMET">AEMET</button>
+  <button data-fuente="AVAMET">AVAMET</button>
+  <button data-fuente="Meteoclimatic">Meteoclimatic</button>
 
-    <div class="meta" id="metadata">Cargando datos...</div>
-    <div id="map"></div>
+  <button class="active" data-estado="todos">Con datos + sin datos</button>
+  <button data-estado="con datos">Solo con datos</button>
+  <button data-estado="sin datos">Solo sin datos</button>
+</div>
+
+<div class="meta" id="metadata">Cargando datos...</div>
+<div id="map"></div>
+```
+
   </div>
 
   <script>
@@ -61,7 +201,14 @@
       attribution:'© OpenStreetMap'
     });
 
-    L.control.layers({ 'Relieve': baseTopo, 'OpenStreetMap': baseOSM }, null, { collapsed:true }).addTo(map);
+    L.control.layers(
+      {
+        'Relieve': baseTopo,
+        'OpenStreetMap': baseOSM
+      },
+      null,
+      { collapsed:true }
+    ).addTo(map);
 
     let geojsonData = null;
     let layer = null;
@@ -75,12 +222,44 @@
       return 6;
     }
 
+    function colorPorDpv(dpv, estado) {
+      if (estado !== 'con datos' || dpv === null || dpv === undefined || isNaN(Number(dpv))) {
+        return '#9aa3aa';
+      }
+
+      const v = Number(dpv);
+
+      if (v < 0.5) return '#2166ac';
+      if (v < 1.0) return '#67a9cf';
+      if (v < 2.0) return '#1a9850';
+      if (v < 3.0) return '#fdae61';
+      if (v < 4.0) return '#f46d43';
+      return '#a50026';
+    }
+
+    function nivelPorDpv(dpv, estado) {
+      if (estado !== 'con datos' || dpv === null || dpv === undefined || isNaN(Number(dpv))) {
+        return 'Sin datos';
+      }
+
+      const v = Number(dpv);
+
+      if (v < 0.5) return 'Aire muy húmedo';
+      if (v < 1.0) return 'Condiciones favorables';
+      if (v < 2.0) return 'Equilibrio hídrico';
+      if (v < 3.0) return 'Ambiente seco';
+      if (v < 4.0) return 'Alto estrés hídrico';
+      return 'Extremo estrés hídrico';
+    }
+
     function estilo(feature) {
       const p = feature.properties || {};
       const sinDatos = p.estado !== 'con datos';
+      const color = colorPorDpv(p.dpv, p.estado);
+
       return {
         radius: radioPorFuente(p.fuente),
-        fillColor: p.color || (sinDatos ? '#9aa3aa' : '#cccccc'),
+        fillColor: color,
         color: sinDatos ? '#606870' : '#222',
         weight: sinDatos ? 1.2 : 1,
         opacity: 1,
@@ -91,19 +270,33 @@
     function popup(feature) {
       const p = feature.properties || {};
       const sinDatos = p.estado !== 'con datos';
+
       let html = `<div class="popup-title">${p.nombre || p.estacion}</div>`;
       html += `<div class="popup-row"><b>Fuente:</b> ${p.fuente || ''}</div>`;
-      if (p.municipio) html += `<div class="popup-row"><b>Municipio:</b> ${p.municipio}</div>`;
+
+      if (p.municipio) {
+        html += `<div class="popup-row"><b>Municipio:</b> ${p.municipio}</div>`;
+      }
+
       if (sinDatos) {
         html += `<div class="popup-row sin-datos">Sin datos disponibles</div>`;
       } else {
+        const nivel = nivelPorDpv(p.dpv, p.estado);
+
         html += `<div class="popup-row"><b>Temperatura:</b> ${p.temperatura} ºC</div>`;
         html += `<div class="popup-row"><b>Humedad:</b> ${p.humedad} %</div>`;
         html += `<div class="popup-row"><b>DPV:</b> ${p.dpv} kPa</div>`;
-        html += `<div class="popup-row"><b>Nivel:</b> ${p.nivel}</div>`;
-        if (p.actualizado) html += `<div class="popup-row"><b>Actualizado:</b> ${p.actualizado}</div>`;
+        html += `<div class="popup-row"><b>Nivel:</b> <span class="dpv-nivel">${nivel}</span></div>`;
+
+        if (p.actualizado) {
+          html += `<div class="popup-row"><b>Actualizado:</b> ${p.actualizado}</div>`;
+        }
       }
-      if (p.url) html += `<div class="popup-row"><a href="${p.url}" target="_blank" rel="noopener">Ver estación</a></div>`;
+
+      if (p.url) {
+        html += `<div class="popup-row"><a href="${p.url}" target="_blank" rel="noopener">Ver estación</a></div>`;
+      }
+
       return html;
     }
 
@@ -115,7 +308,10 @@
     }
 
     function pintar() {
-      if (layer) map.removeLayer(layer);
+      if (layer) {
+        map.removeLayer(layer);
+      }
+
       layer = L.geoJSON(geojsonData, {
         filter: filtrar,
         pointToLayer: (feature, latlng) => L.circleMarker(latlng, estilo(feature)),
@@ -124,30 +320,43 @@
 
       try {
         const bounds = layer.getBounds();
-        if (bounds.isValid()) map.fitBounds(bounds.pad(0.08));
+        if (bounds.isValid()) {
+          map.fitBounds(bounds.pad(0.08));
+        }
       } catch(e) {}
     }
 
     function formatMadrid(iso) {
       if (!iso) return '';
+
       try {
         return new Intl.DateTimeFormat('es-ES', {
-          timeZone:'Europe/Madrid', day:'2-digit', month:'2-digit', year:'numeric',
-          hour:'2-digit', minute:'2-digit'
+          timeZone:'Europe/Madrid',
+          day:'2-digit',
+          month:'2-digit',
+          year:'numeric',
+          hour:'2-digit',
+          minute:'2-digit'
         }).format(new Date(iso));
-      } catch(e) { return iso; }
+      } catch(e) {
+        return iso;
+      }
     }
 
     function pintarMetadata(meta) {
       const r = meta.resumen || {};
       const f = meta.fuentes || {};
       const partes = [];
+
       Object.keys(f).forEach(k => {
         partes.push(`${k}: ${f[k].actualizada ? 'actualizada' : 'sin dato actual'}`);
       });
+
       document.getElementById('metadata').innerHTML =
         `<b>Generado:</b> ${formatMadrid(meta.generado_utc)} hora peninsular · ` +
-        `<b>Total:</b> ${r.total || 0} · <b>Con datos:</b> ${r.con_datos || 0} · <b>Sin datos:</b> ${r.sin_datos || 0}<br>` +
+        `<b>Total:</b> ${r.total || 0} · ` +
+        `<b>Con datos:</b> ${r.con_datos || 0} · ` +
+        `<b>Sin datos:</b> ${r.sin_datos || 0}<br>` +
         partes.join(' · ');
     }
 
@@ -170,6 +379,7 @@
     });
 
     const version = new Date().getTime();
+
     Promise.all([
       fetch('dpv_integrado.geojson?v=' + version).then(r => r.json()),
       fetch('metadata_integrado.json?v=' + version).then(r => r.json())
@@ -183,20 +393,54 @@
     });
 
     const legend = L.control({position:'bottomright'});
+
     legend.onAdd = function() {
       const div = L.DomUtil.create('div','legend');
+
       div.innerHTML = `
-        <b>DPV</b><br>
-        <span style="background:#2b83ba"></span>Bajo<br>
-        <span style="background:#abdda4"></span>Moderado<br>
-        <span style="background:#fdae61"></span>Alto<br>
-        <span style="background:#f46d43"></span>Muy alto<br>
-        <span style="background:#d7191c"></span>Extremo<br>
-        <span style="background:#9aa3aa"></span>Sin datos
+        <div class="legend-title">Escala DPV</div>
+
+        <div class="legend-item">
+          <span class="legend-color" style="background:#2166ac"></span>
+          <span>0 - 0,5 kPa · Aire muy húmedo</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color" style="background:#67a9cf"></span>
+          <span>0,5 - 1 kPa · Favorable</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color" style="background:#1a9850"></span>
+          <span>1 - 2 kPa · Equilibrio</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color" style="background:#fdae61"></span>
+          <span>2 - 3 kPa · Ambiente seco</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color" style="background:#f46d43"></span>
+          <span>3 - 4 kPa · Alto estrés</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color" style="background:#a50026"></span>
+          <span>≥ 4 kPa · Extremo</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color" style="background:#9aa3aa"></span>
+          <span>Sin datos</span>
+        </div>
       `;
+
       return div;
     };
+
     legend.addTo(map);
   </script>
+
 </body>
 </html>
