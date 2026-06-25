@@ -6,48 +6,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.21960000000000002,
-          39.652499999999996
-        ]
-      },
-      "properties": {
-        "municipio": "Sagunt",
-        "estacion": "SaguntPuerto de Sagunto",
-        "nombre_avamet": "Sagunt Puerto de Sagunto",
-        "temperatura": 24.1,
-        "humedad": 69.0,
-        "dpv": 0.93,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "fuente": "AVAMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.3049,
-          39.6467
-        ]
-      },
-      "properties": {
-        "municipio": "Puçol",
-        "estacion": "PuçolUrbanización Alfinach",
-        "nombre_avamet": "Puçol Urbanización Alfinach",
-        "temperatura": 24.1,
-        "humedad": 73.0,
-        "dpv": 0.81,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "fuente": "AVAMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -0.4602,
           39.590900000000005
         ]
@@ -56,12 +14,14 @@
         "municipio": "Bétera",
         "estacion": "Bétera",
         "nombre_avamet": "Bétera",
-        "temperatura": 25.3,
-        "humedad": 61.0,
-        "dpv": 1.26,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 32.1,
+        "humedad": 32.0,
+        "dpv": 3.25,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -77,12 +37,14 @@
         "municipio": "Llíria",
         "estacion": "Llíria",
         "nombre_avamet": "Llíria",
-        "temperatura": 26.2,
-        "humedad": 63.0,
-        "dpv": 1.26,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 31.7,
+        "humedad": 32.0,
+        "dpv": 3.18,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -98,12 +60,14 @@
         "municipio": "Manises",
         "estacion": "Manisesla Presa",
         "nombre_avamet": "Manises la Presa",
-        "temperatura": 26.9,
-        "humedad": 62.0,
-        "dpv": 1.35,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 32.8,
+        "humedad": 34.0,
+        "dpv": 3.28,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -119,12 +83,14 @@
         "municipio": "TorrentAv. al Vedat",
         "estacion": "TorrentAv. al Vedat",
         "nombre_avamet": "Torrent Av. al Vedat",
-        "temperatura": 25.5,
-        "humedad": 68.0,
-        "dpv": 1.04,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 31.5,
+        "humedad": 32.0,
+        "dpv": 3.14,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -140,12 +106,14 @@
         "municipio": "Sueca",
         "estacion": "Sueca",
         "nombre_avamet": "Sueca centre",
-        "temperatura": 26.2,
-        "humedad": 73.0,
-        "dpv": 0.92,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "fuente": "AVAMET"
+        "temperatura": 30.7,
+        "humedad": 34.0,
+        "dpv": 2.91,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -161,33 +129,14 @@
         "municipio": "Alzira",
         "estacion": "AlziraAjuntament",
         "nombre_avamet": "Alzira Ajuntament",
-        "temperatura": 25.9,
-        "humedad": 69.0,
-        "dpv": 1.04,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.44980000000000003,
-          39.121900000000004
-        ]
-      },
-      "properties": {
-        "municipio": "Carcaixent",
-        "estacion": "CarcaixentAjuntament",
-        "nombre_avamet": "Carcaixent Ajuntament",
-        "temperatura": 26.4,
-        "humedad": 65.0,
-        "dpv": 1.2,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 31.9,
+        "humedad": 34.0,
+        "dpv": 3.12,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -203,12 +152,14 @@
         "municipio": "Carlet",
         "estacion": "Carlet",
         "nombre_avamet": "Carlet",
-        "temperatura": 27.4,
-        "humedad": 63.0,
-        "dpv": 1.35,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 32.2,
+        "humedad": 34.0,
+        "dpv": 3.17,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -224,12 +175,14 @@
         "municipio": "Sumacàrcer",
         "estacion": "Sumacàrcer",
         "nombre_avamet": "Sumacàrcer",
-        "temperatura": 27.7,
-        "humedad": 62.0,
-        "dpv": 1.41,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 34.2,
+        "humedad": 40.0,
+        "dpv": 3.23,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -245,12 +198,14 @@
         "municipio": "Gandia",
         "estacion": "GandiaAjuntament",
         "nombre_avamet": "Gandia Ajuntament",
-        "temperatura": 24.7,
-        "humedad": 73.0,
-        "dpv": 0.84,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "fuente": "AVAMET"
+        "temperatura": 28.7,
+        "humedad": 31.0,
+        "dpv": 2.72,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -266,12 +221,14 @@
         "municipio": "Oliva",
         "estacion": "OlivaClub Nàutic",
         "nombre_avamet": "Oliva Club Nàutic",
-        "temperatura": 22.9,
-        "humedad": 77.0,
-        "dpv": 0.64,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "fuente": "AVAMET"
+        "temperatura": 26.8,
+        "humedad": 27.0,
+        "dpv": 2.57,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -287,12 +244,14 @@
         "municipio": "Tavernes de la Valldigna",
         "estacion": "Tavernes de la ValldignaSequers",
         "nombre_avamet": "Tavernes de la Valldigna Sequers",
-        "temperatura": 25.3,
-        "humedad": 72.0,
-        "dpv": 0.9,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "fuente": "AVAMET"
+        "temperatura": 29.3,
+        "humedad": 32.0,
+        "dpv": 2.77,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -308,12 +267,14 @@
         "municipio": "Barx",
         "estacion": "Barx",
         "nombre_avamet": "Barx",
-        "temperatura": 22.9,
-        "humedad": 76.0,
-        "dpv": 0.67,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "fuente": "AVAMET"
+        "temperatura": 28.6,
+        "humedad": 29.0,
+        "dpv": 2.78,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -329,12 +290,14 @@
         "municipio": "Xàtiva",
         "estacion": "Xàtivacentre",
         "nombre_avamet": "Xàtiva centre",
-        "temperatura": 26.9,
-        "humedad": 59.0,
-        "dpv": 1.45,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 35.2,
+        "humedad": 36.0,
+        "dpv": 3.64,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -350,12 +313,14 @@
         "municipio": "Canals",
         "estacion": "CanalsIES Sivera Font",
         "nombre_avamet": "Canals IES Sivera Font",
-        "temperatura": 27.3,
-        "humedad": 62.0,
-        "dpv": 1.38,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 35.6,
+        "humedad": 37.0,
+        "dpv": 3.66,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -371,12 +336,14 @@
         "municipio": "Montesa",
         "estacion": "MontesaAjuntament",
         "nombre_avamet": "Montesa Ajuntament",
-        "temperatura": 25.7,
-        "humedad": 65.0,
-        "dpv": 1.16,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 34.3,
+        "humedad": 35.0,
+        "dpv": 3.52,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -392,12 +359,14 @@
         "municipio": "Moixent",
         "estacion": "Moixentla Foia",
         "nombre_avamet": "Moixent la Foia",
-        "temperatura": 25.9,
-        "humedad": 69.0,
-        "dpv": 1.04,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 33.8,
+        "humedad": 36.0,
+        "dpv": 3.37,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -413,12 +382,14 @@
         "municipio": "la Font de la Figuera",
         "estacion": "la Font de la Figuera les Pebraes",
         "nombre_avamet": "la Font de la Figuera les Pebraes",
-        "temperatura": 22.9,
-        "humedad": 72.0,
-        "dpv": 0.78,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "fuente": "AVAMET"
+        "temperatura": 31.4,
+        "humedad": 30.0,
+        "dpv": 3.22,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -434,33 +405,14 @@
         "municipio": "Ontinyent",
         "estacion": "OntinyentIES Jaume I",
         "nombre_avamet": "Ontinyent IES Jaume I",
-        "temperatura": 26.3,
-        "humedad": 66.0,
-        "dpv": 1.16,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.5243500000000001,
-          38.835597222222226
-        ]
-      },
-      "properties": {
-        "municipio": "Albaida",
-        "estacion": "AlbaidaIES J. Segrelles",
-        "nombre_avamet": "Albaida IES J. Segrelles",
-        "temperatura": 25.7,
-        "humedad": 70.0,
-        "dpv": 0.99,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "fuente": "AVAMET"
+        "temperatura": 34.5,
+        "humedad": 36.0,
+        "dpv": 3.5,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -476,12 +428,14 @@
         "municipio": "Bocairent",
         "estacion": "Bocairentels Vilars",
         "nombre_avamet": "Bocairent els Vilars",
-        "temperatura": 23.1,
-        "humedad": 68.0,
-        "dpv": 0.9,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "fuente": "AVAMET"
+        "temperatura": 31.9,
+        "humedad": 30.0,
+        "dpv": 3.31,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -497,12 +451,14 @@
         "municipio": "Llutxent",
         "estacion": "LlutxentAjuntament",
         "nombre_avamet": "Llutxent Ajuntament",
-        "temperatura": 24.9,
-        "humedad": 72.0,
-        "dpv": 0.88,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "fuente": "AVAMET"
+        "temperatura": 31.4,
+        "humedad": 33.0,
+        "dpv": 3.08,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -518,12 +474,14 @@
         "municipio": "Quatretonda",
         "estacion": "Quatretonda",
         "nombre_avamet": "Quatretonda Ajuntament",
-        "temperatura": 26.0,
-        "humedad": 5.0,
-        "dpv": 3.19,
+        "temperatura": 32.7,
+        "humedad": 35.0,
+        "dpv": 3.21,
         "nivel": "Muy alto",
         "color": "#d7191c",
-        "fuente": "AVAMET"
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -539,12 +497,14 @@
         "municipio": "Fontanars",
         "estacion": "Fontanarspoble",
         "nombre_avamet": "Fontanars poble",
-        "temperatura": 22.9,
-        "humedad": 72.0,
-        "dpv": 0.78,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "fuente": "AVAMET"
+        "temperatura": 32.8,
+        "humedad": 32.0,
+        "dpv": 3.38,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -559,13 +519,15 @@
       "properties": {
         "municipio": "Enguera",
         "estacion": "EngueraEl Transformador",
-        "nombre_avamet": "Enguera El Transformador",
-        "temperatura": 22.1,
-        "humedad": 81.0,
-        "dpv": 0.51,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "fuente": "AVAMET"
+        "nombre_avamet": "Énguera El Transformador",
+        "temperatura": 31.6,
+        "humedad": 32.0,
+        "dpv": 3.16,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -581,33 +543,14 @@
         "municipio": "Anna",
         "estacion": "Anna",
         "nombre_avamet": "Anna",
-        "temperatura": 27.1,
-        "humedad": 69.0,
-        "dpv": 1.11,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.6618888888888889,
-          39.04422222222222
-        ]
-      },
-      "properties": {
-        "municipio": "Chella",
-        "estacion": "Chella",
-        "nombre_avamet": "Chella",
-        "temperatura": 26.1,
-        "humedad": 62.0,
-        "dpv": 1.28,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 36.4,
+        "humedad": 40.0,
+        "dpv": 3.64,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -623,33 +566,14 @@
         "municipio": "BicorpEcomuseo",
         "estacion": "BicorpEcomuseo",
         "nombre_avamet": "Bicorp Ecomuseo",
-        "temperatura": 24.4,
-        "humedad": 4.0,
-        "dpv": 2.93,
+        "temperatura": 32.1,
+        "humedad": 8.0,
+        "dpv": 4.4,
         "nivel": "Muy alto",
         "color": "#d7191c",
-        "fuente": "AVAMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7728166666666667,
-          39.237430555555555
-        ]
-      },
-      "properties": {
-        "municipio": "Millares",
-        "estacion": "Millares",
-        "nombre_avamet": "Millares",
-        "temperatura": 25.7,
-        "humedad": 65.0,
-        "dpv": 1.16,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -665,12 +589,14 @@
         "municipio": "Cortes de Pallás",
         "estacion": "Cortes de PallásAyuntamiento",
         "nombre_avamet": "Cortes de Pallás Ayuntamiento",
-        "temperatura": 18.6,
-        "humedad": 23.0,
-        "dpv": 1.65,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "fuente": "AVAMET"
+        "temperatura": 32.2,
+        "humedad": 32.0,
+        "dpv": 3.27,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -686,54 +612,14 @@
         "municipio": "Dos Aguas",
         "estacion": "Dos Aguas",
         "nombre_avamet": "Dos Aguas",
-        "temperatura": 24.8,
-        "humedad": 61.0,
-        "dpv": 1.22,
+        "temperatura": 20.0,
+        "humedad": 44.0,
+        "dpv": 1.31,
         "nivel": "Moderado",
         "color": "#fdae61",
-        "fuente": "AVAMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7906,
-          39.419399999999996
-        ]
-      },
-      "properties": {
-        "municipio": "Buñol",
-        "estacion": "Buñol",
-        "nombre_avamet": "Buñol",
-        "temperatura": 24.8,
-        "humedad": 65.0,
-        "dpv": 1.1,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7211,
-          39.4778
-        ]
-      },
-      "properties": {
-        "municipio": "Chiva",
-        "estacion": "Chiva",
-        "nombre_avamet": "Chiva",
-        "temperatura": 24.1,
-        "humedad": 70.0,
-        "dpv": 0.9,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "fuente": "AVAMET"
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -749,12 +635,14 @@
         "municipio": "Requena",
         "estacion": "Requena",
         "nombre_avamet": "Requena Casas del Río",
-        "temperatura": 26.1,
-        "humedad": 54.0,
-        "dpv": 1.56,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "fuente": "AVAMET"
+        "temperatura": 34.4,
+        "humedad": 34.0,
+        "dpv": 3.59,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -770,12 +658,14 @@
         "municipio": "Utiel",
         "estacion": "UtielLa TorreCoop. S.Antonio",
         "nombre_avamet": "Utiel La Torre Coop. S.Antonio",
-        "temperatura": 23.9,
-        "humedad": 56.0,
-        "dpv": 1.31,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 32.4,
+        "humedad": 32.0,
+        "dpv": 3.31,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -791,12 +681,14 @@
         "municipio": "Sinarcas",
         "estacion": "SinarcasLa Raílla",
         "nombre_avamet": "Sinarcas La Raílla",
-        "temperatura": 24.1,
-        "humedad": 61.0,
-        "dpv": 1.17,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 30.7,
+        "humedad": 30.0,
+        "dpv": 3.09,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -812,12 +704,14 @@
         "municipio": "Camporrobles",
         "estacion": "CamporroblesAyuntamiento",
         "nombre_avamet": "Camporrobles Ayuntamiento",
-        "temperatura": 22.3,
-        "humedad": 9.0,
-        "dpv": 2.45,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "fuente": "AVAMET"
+        "temperatura": 30.9,
+        "humedad": 24.0,
+        "dpv": 3.39,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -833,12 +727,14 @@
         "municipio": "Cofrentes",
         "estacion": "Cofrentes",
         "nombre_avamet": "Cofrentes",
-        "temperatura": 24.6,
-        "humedad": 63.0,
-        "dpv": 1.14,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 32.9,
+        "humedad": 33.0,
+        "dpv": 3.35,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -854,12 +750,14 @@
         "municipio": "Jalance",
         "estacion": "Jalance",
         "nombre_avamet": "Jalance",
-        "temperatura": 26.3,
-        "humedad": 55.0,
-        "dpv": 1.54,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "fuente": "AVAMET"
+        "temperatura": 35.5,
+        "humedad": 34.0,
+        "dpv": 3.81,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -875,96 +773,14 @@
         "municipio": "Ayora",
         "estacion": "AyoraSan Benito",
         "nombre_avamet": "Ayora San Benito",
-        "temperatura": 25.8,
-        "humedad": 60.0,
-        "dpv": 1.33,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.985,
-          39.7481
-        ]
-      },
-      "properties": {
-        "municipio": "Chelva",
-        "estacion": "Chelva",
-        "nombre_avamet": "Chelva",
-        "temperatura": 25.3,
-        "humedad": 57.0,
-        "dpv": 1.39,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.8914,
-          39.6586
-        ]
-      },
-      "properties": {
-        "municipio": "Chulilla",
-        "estacion": "Chulilla",
-        "nombre_avamet": "Chulilla",
-        "temperatura": 24.8,
-        "humedad": 61.0,
-        "dpv": 1.22,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.909088888888889,
-          39.620666666666665
-        ]
-      },
-      "properties": {
-        "municipio": "Sot de Chera",
-        "estacion": "Sot de Chera",
-        "nombre_avamet": "Sot de Chera",
-        "temperatura": 25.3,
-        "humedad": 61.0,
-        "dpv": 1.26,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.9734027777777778,
-          39.593561111111114
-        ]
-      },
-      "properties": {
-        "municipio": "Chera",
-        "estacion": "Chera",
-        "nombre_avamet": "Chera",
-        "temperatura": 23.7,
-        "humedad": 63.0,
-        "dpv": 1.08,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 34.7,
+        "humedad": 34.0,
+        "dpv": 3.65,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -979,13 +795,15 @@
       "properties": {
         "municipio": "Alpuente",
         "estacion": "Alpuente",
-        "nombre_avamet": "Alpuente La Torre",
-        "temperatura": 22.2,
-        "humedad": 44.0,
-        "dpv": 1.5,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "nombre_avamet": "Alpuente",
+        "temperatura": 28.9,
+        "humedad": 28.0,
+        "dpv": 2.87,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -1001,12 +819,14 @@
         "municipio": "Titaguas",
         "estacion": "TitaguasCosmofísica",
         "nombre_avamet": "Titaguas Cosmofísica",
-        "temperatura": 23.6,
-        "humedad": 55.0,
-        "dpv": 1.31,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "fuente": "AVAMET"
+        "temperatura": 29.7,
+        "humedad": 29.0,
+        "dpv": 2.96,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -1022,33 +842,14 @@
         "municipio": "Aras de los Olmos",
         "estacion": "Aras de los Olmos",
         "nombre_avamet": "Aras de los Olmos",
-        "temperatura": 24.6,
-        "humedad": 47.0,
-        "dpv": 1.64,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "fuente": "AVAMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.285122222222222,
-          40.059977777777775
-        ]
-      },
-      "properties": {
-        "municipio": "Ademuz",
-        "estacion": "AdemuzIES Ademuz",
-        "nombre_avamet": "Ademuz IES Ademuz",
-        "temperatura": 26.4,
-        "humedad": 44.0,
-        "dpv": 1.93,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "fuente": "AVAMET"
+        "temperatura": 30.9,
+        "humedad": 30.0,
+        "dpv": 3.13,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -1064,12 +865,14 @@
         "municipio": "Castielfabib",
         "estacion": "Castielfabib",
         "nombre_avamet": "Castielfabib",
-        "temperatura": 25.6,
-        "humedad": 38.0,
-        "dpv": 2.04,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "fuente": "AVAMET"
+        "temperatura": 32.5,
+        "humedad": 31.0,
+        "dpv": 3.37,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     },
     {
@@ -1085,12 +888,14 @@
         "municipio": "Puebla de San Miguel",
         "estacion": "Puebla de San Miguel",
         "nombre_avamet": "Puebla de San Miguel",
-        "temperatura": 23.6,
-        "humedad": 39.0,
-        "dpv": 1.78,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "fuente": "AVAMET"
+        "temperatura": 30.2,
+        "humedad": 29.0,
+        "dpv": 3.05,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "fuente": "AVAMET",
+        "fuente_detalle": "AVAMET - Associació Valenciana de Meteorologia",
+        "uso": "Divulgativo no comercial"
       }
     }
   ]

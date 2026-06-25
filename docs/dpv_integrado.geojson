@@ -1,0 +1,1853 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.285122222222222,
+          40.059977777777775
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "AdemuzIES Ademuz",
+        "nombre": "AdemuzIES Ademuz",
+        "municipio": "Ademuz",
+        "estado": "sin datos",
+        "temperatura": null,
+        "humedad": null,
+        "dpv": null,
+        "nivel": "Sin datos",
+        "color": "#9aa3aa",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.481,
+          38.3452
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Alacant/Alicante",
+        "nombre": "Alacant/Alicante",
+        "municipio": "Alacant/Alicante",
+        "estado": "con datos",
+        "temperatura": 31.9,
+        "humedad": 45.0,
+        "dpv": 2.6,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.41,
+          39.39
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Albal",
+        "nombre": "Albal",
+        "municipio": "Albal",
+        "estado": "con datos",
+        "temperatura": 29.6,
+        "humedad": 54.0,
+        "dpv": 1.91,
+        "nivel": "Muy alto",
+        "color": "#f46d43",
+        "actualizado": "25-06-2026 14:48 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046470A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.39,
+          39.2
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Albalat de la Ribera",
+        "nombre": "Albalat de la Ribera",
+        "municipio": "Albalat de la Ribera",
+        "estado": "con datos",
+        "temperatura": 30.3,
+        "humedad": 55.0,
+        "dpv": 1.94,
+        "nivel": "Muy alto",
+        "color": "#f46d43",
+        "actualizado": "25-06-2026 14:48 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046687A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.52,
+          39.13
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Alberic - Nord",
+        "nombre": "Alberic - Nord",
+        "municipio": "Alberic",
+        "estado": "con datos",
+        "temperatura": 33.8,
+        "humedad": 39.0,
+        "dpv": 3.21,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:47 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046260B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4737,
+          38.6987
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Alcoi/Alcoy",
+        "nombre": "Alcoi/Alcoy",
+        "municipio": "Alcoi/Alcoy",
+        "estado": "con datos",
+        "temperatura": 33.0,
+        "humedad": 28.0,
+        "dpv": 3.62,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5582,
+          38.2822
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Alicante-Elche Aeropuerto",
+        "nombre": "Alicante-Elche Aeropuerto",
+        "municipio": "Alicante-Elche",
+        "estado": "con datos",
+        "temperatura": 30.1,
+        "humedad": 53.0,
+        "dpv": 2.01,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.29,
+          38.92
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Almiserà",
+        "nombre": "Almiserà",
+        "municipio": "Almiserà",
+        "estado": "con datos",
+        "temperatura": 31.4,
+        "humedad": 55.0,
+        "dpv": 2.07,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:50 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046726A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4430222222222222,
+          39.15194722222222
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "AlziraAjuntament",
+        "nombre": "AlziraAjuntament",
+        "municipio": "Alzira",
+        "estado": "con datos",
+        "temperatura": 31.9,
+        "humedad": 34.0,
+        "dpv": 3.12,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6476388888888889,
+          39.01931388888889
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "Anna",
+        "nombre": "Anna",
+        "municipio": "Anna",
+        "estado": "con datos",
+        "temperatura": 36.4,
+        "humedad": 40.0,
+        "dpv": 3.64,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.102363888888889,
+          38.92916944444444
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "AyoraSan Benito",
+        "nombre": "AyoraSan Benito",
+        "municipio": "Ayora",
+        "estado": "con datos",
+        "temperatura": 34.7,
+        "humedad": 34.0,
+        "dpv": 3.65,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3014,
+          39.0139
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "Barx",
+        "nombre": "Barx",
+        "municipio": "Barx",
+        "estado": "con datos",
+        "temperatura": 28.6,
+        "humedad": 29.0,
+        "dpv": 2.78,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.42,
+          39.02
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Barxeta",
+        "nombre": "Barxeta",
+        "municipio": "Barxeta",
+        "estado": "con datos",
+        "temperatura": 31.5,
+        "humedad": 46.0,
+        "dpv": 2.5,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:48 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046667A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1225,
+          38.5411
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Benidorm",
+        "nombre": "Benidorm",
+        "municipio": "Benidorm",
+        "estado": "con datos",
+        "temperatura": 33.0,
+        "humedad": 41.0,
+        "dpv": 2.97,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.45,
+          38.95
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Benigànim",
+        "nombre": "Benigànim",
+        "municipio": "Benigànim",
+        "estado": "con datos",
+        "temperatura": 32.9,
+        "humedad": 50.0,
+        "dpv": 2.5,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:48 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046830A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.53,
+          39.21
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Benimodo",
+        "nombre": "Benimodo",
+        "municipio": "Benimodo",
+        "estado": "con datos",
+        "temperatura": 31.6,
+        "humedad": 53.0,
+        "dpv": 2.18,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:56 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046291B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7879,
+          39.1317
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "BicorpEcomuseo",
+        "nombre": "BicorpEcomuseo",
+        "municipio": "Bicorp",
+        "estado": "con datos",
+        "temperatura": 32.1,
+        "humedad": 8.0,
+        "dpv": 4.4,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7906,
+          39.4194
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "Buñol",
+        "nombre": "Buñol",
+        "municipio": "Buñol",
+        "estado": "sin datos",
+        "temperatura": null,
+        "humedad": null,
+        "dpv": null,
+        "nivel": "Sin datos",
+        "color": "#9aa3aa",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4602,
+          39.590900000000005
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "Bétera",
+        "nombre": "Bétera",
+        "municipio": "Bétera",
+        "estado": "con datos",
+        "temperatura": 32.1,
+        "humedad": 32.0,
+        "dpv": 3.25,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3957,
+          39.6487
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "CamporroblesAyuntamiento",
+        "nombre": "CamporroblesAyuntamiento",
+        "municipio": "Camporrobles",
+        "estado": "con datos",
+        "temperatura": 30.9,
+        "humedad": 24.0,
+        "dpv": 3.39,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4489,
+          39.1217
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Carcaixent",
+        "nombre": "Carcaixent",
+        "municipio": "Carcaixent",
+        "estado": "sin datos",
+        "temperatura": null,
+        "humedad": null,
+        "dpv": null,
+        "nivel": "Sin datos",
+        "color": "#9aa3aa",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5076138888888889,
+          39.229400000000005
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "Carlet",
+        "nombre": "Carlet",
+        "municipio": "Carlet",
+        "estado": "con datos",
+        "temperatura": 32.2,
+        "humedad": 34.0,
+        "dpv": 3.17,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1917,
+          40.5028
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Castellfort",
+        "nombre": "Castellfort",
+        "municipio": "Castellfort",
+        "estado": "con datos",
+        "temperatura": 27.0,
+        "humedad": 32.0,
+        "dpv": 2.42,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.51,
+          39.08
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Castelló",
+        "nombre": "Castelló",
+        "municipio": "Castelló",
+        "estado": "con datos",
+        "temperatura": 35.9,
+        "humedad": 35.0,
+        "dpv": 3.84,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:47 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046270B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.065,
+          39.956
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Castelló - Almassora",
+        "nombre": "Castelló - Almassora",
+        "municipio": "Castelló/Almassora",
+        "estado": "con datos",
+        "temperatura": 32.2,
+        "humedad": 39.0,
+        "dpv": 2.93,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9967,
+          39.7494
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Chelva",
+        "nombre": "Chelva",
+        "municipio": "Chelva",
+        "estado": "con datos",
+        "temperatura": 33.7,
+        "humedad": 31.0,
+        "dpv": 3.61,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.68,
+          39.49
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Cheste",
+        "nombre": "Cheste",
+        "municipio": "Cheste",
+        "estado": "con datos",
+        "temperatura": 31.7,
+        "humedad": 37.0,
+        "dpv": 2.95,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:48 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046380A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0617,
+          39.232800000000005
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "Cofrentes",
+        "nombre": "Cofrentes",
+        "municipio": "Cofrentes",
+        "estado": "con datos",
+        "temperatura": 32.9,
+        "humedad": 33.0,
+        "dpv": 3.35,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9408,
+          39.2456
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "Cortes de PallásAyuntamiento",
+        "nombre": "Cortes de PallásAyuntamiento",
+        "municipio": "Cortes de Pallás",
+        "estado": "con datos",
+        "temperatura": 32.2,
+        "humedad": 32.0,
+        "dpv": 3.27,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.23,
+          39.19
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Cullera - Dosser",
+        "nombre": "Cullera - Dosser",
+        "municipio": "Cullera",
+        "estado": "con datos",
+        "temperatura": 29.1,
+        "humedad": 73.0,
+        "dpv": 1.09,
+        "nivel": "Moderado",
+        "color": "#abdda4",
+        "actualizado": "25-06-2026 14:50 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046400D"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7986,
+          39.2898
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "Dos Aguas",
+        "nombre": "Dos Aguas",
+        "municipio": "Dos Aguas",
+        "estado": "con datos",
+        "temperatura": 20.0,
+        "humedad": 44.0,
+        "dpv": 1.31,
+        "nivel": "Alto",
+        "color": "#fdae61",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.28,
+          39.27
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "El Perelló",
+        "nombre": "El Perelló",
+        "municipio": "El Perelló",
+        "estado": "con datos",
+        "temperatura": 28.5,
+        "humedad": 73.0,
+        "dpv": 1.05,
+        "nivel": "Moderado",
+        "color": "#abdda4",
+        "actualizado": "25-06-2026 14:47 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046420A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3,
+          39.59
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "El Puig de Santa Maria",
+        "nombre": "El Puig de Santa Maria",
+        "municipio": "El Puig de Santa Maria",
+        "estado": "con datos",
+        "temperatura": 29.9,
+        "humedad": 60.0,
+        "dpv": 1.69,
+        "nivel": "Muy alto",
+        "color": "#f46d43",
+        "actualizado": "25-06-2026 14:49 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046540A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8256166666666667,
+          38.95743333333333
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "EngueraEl Transformador",
+        "nombre": "EngueraEl Transformador",
+        "municipio": "Enguera",
+        "estado": "con datos",
+        "temperatura": 31.6,
+        "humedad": 32.0,
+        "dpv": 3.16,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.27,
+          39.72
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Faura",
+        "nombre": "Faura",
+        "municipio": "Faura",
+        "estado": "con datos",
+        "temperatura": 31.8,
+        "humedad": 56.0,
+        "dpv": 2.07,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:35 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046512A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7851555555555555,
+          38.78516666666666
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "Fontanarspoble",
+        "nombre": "Fontanarspoble",
+        "municipio": "Fontanars dels Alforins",
+        "estado": "con datos",
+        "temperatura": 32.8,
+        "humedad": 32.0,
+        "dpv": 3.38,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1792694444444444,
+          38.96594166666667
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "GandiaAjuntament",
+        "nombre": "GandiaAjuntament",
+        "municipio": "Gandia",
+        "estado": "con datos",
+        "temperatura": 28.7,
+        "humedad": 31.0,
+        "dpv": 2.72,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.32,
+          39.68
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Gilet",
+        "nombre": "Gilet",
+        "municipio": "Gilet",
+        "estado": "con datos",
+        "temperatura": 31.2,
+        "humedad": 50.0,
+        "dpv": 2.27,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:50 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046149A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1631,
+          38.789
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Jávea/ Xàbia",
+        "nombre": "Jávea/ Xàbia",
+        "municipio": "Jávea/Xàbia",
+        "estado": "con datos",
+        "temperatura": 29.6,
+        "humedad": 53.0,
+        "dpv": 1.95,
+        "nivel": "Muy alto",
+        "color": "#f46d43",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.55,
+          38.91
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "L'Olleria - Ajuntament",
+        "nombre": "L'Olleria - Ajuntament",
+        "municipio": "L'Olleria",
+        "estado": "con datos",
+        "temperatura": 31.6,
+        "humedad": 47.0,
+        "dpv": 2.46,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:43 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046850B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.42,
+          38.9
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "La Pobla del Duc",
+        "nombre": "La Pobla del Duc",
+        "municipio": "La Pobla del Duc",
+        "estado": "con datos",
+        "temperatura": 30.8,
+        "humedad": 54.0,
+        "dpv": 2.04,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:47 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046840A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5972,
+          39.6289
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Llíria",
+        "nombre": "Llíria",
+        "municipio": "Llíria",
+        "estado": "con datos",
+        "temperatura": 34.2,
+        "humedad": 31.0,
+        "dpv": 3.71,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.52,
+          39.14
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Massalavés",
+        "nombre": "Massalavés",
+        "municipio": "Massalavés",
+        "estado": "con datos",
+        "temperatura": 33.6,
+        "humedad": 46.0,
+        "dpv": 2.81,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:47 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046292A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1394,
+          38.95
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Miramar",
+        "nombre": "Miramar",
+        "municipio": "Miramar",
+        "estado": "con datos",
+        "temperatura": 30.2,
+        "humedad": 57.0,
+        "dpv": 1.85,
+        "nivel": "Muy alto",
+        "color": "#f46d43",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0989,
+          40.6197
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Morella",
+        "nombre": "Morella",
+        "municipio": "Morella",
+        "estado": "con datos",
+        "temperatura": 28.8,
+        "humedad": 40.0,
+        "dpv": 2.38,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1194,
+          38.919
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Oliva",
+        "nombre": "Oliva",
+        "municipio": "Oliva",
+        "estado": "con datos",
+        "temperatura": 28.5,
+        "humedad": 68.0,
+        "dpv": 1.25,
+        "nivel": "Alto",
+        "color": "#fdae61",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5961111111111111,
+          38.82222222222222
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "OntinyentIES Jaume I",
+        "nombre": "OntinyentIES Jaume I",
+        "municipio": "Ontinyent",
+        "estado": "con datos",
+        "temperatura": 34.5,
+        "humedad": 36.0,
+        "dpv": 3.5,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.75,
+          39.6
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Pedralba - Serretilla",
+        "nombre": "Pedralba - Serretilla",
+        "municipio": "Pedralba",
+        "estado": "con datos",
+        "temperatura": 33.2,
+        "humedad": 37.0,
+        "dpv": 3.2,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:48 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046164C"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3697,
+          39.1964
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Polinyà de Xúquer",
+        "nombre": "Polinyà de Xúquer",
+        "municipio": "Polinyà de Xúquer",
+        "estado": "con datos",
+        "temperatura": 31.2,
+        "humedad": 49.0,
+        "dpv": 2.32,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1416638888888888,
+          40.04433611111111
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "Puebla de San Miguel",
+        "nombre": "Puebla de San Miguel",
+        "municipio": "Puebla de San Miguel",
+        "estado": "con datos",
+        "temperatura": 30.2,
+        "humedad": 29.0,
+        "dpv": 3.05,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3049,
+          39.6467
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "PuçolUrbanización Alfinach",
+        "nombre": "PuçolUrbanización Alfinach",
+        "municipio": "Puçol",
+        "estado": "sin datos",
+        "temperatura": null,
+        "humedad": null,
+        "dpv": null,
+        "nivel": "Sin datos",
+        "color": "#9aa3aa",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3997333333333334,
+          38.94472222222222
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "Quatretonda",
+        "nombre": "Quatretonda",
+        "municipio": "Quatretonda",
+        "estado": "con datos",
+        "temperatura": 32.7,
+        "humedad": 35.0,
+        "dpv": 3.21,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.74,
+          39.12
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Quesa - EcoCampingQuesa",
+        "nombre": "Quesa - EcoCampingQuesa",
+        "municipio": "Quesa",
+        "estado": "con datos",
+        "temperatura": 31.7,
+        "humedad": 41.0,
+        "dpv": 2.76,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:47 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046824A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.080833333333333,
+          39.48861111111111
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "Requena",
+        "nombre": "Requena",
+        "municipio": "Requena",
+        "estado": "con datos",
+        "temperatura": 34.4,
+        "humedad": 34.0,
+        "dpv": 3.59,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7222,
+          38.0886
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Rojales",
+        "nombre": "Rojales",
+        "municipio": "Rojales",
+        "estado": "con datos",
+        "temperatura": 31.0,
+        "humedad": 52.0,
+        "dpv": 2.16,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4894,
+          39.8519
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Segorbe",
+        "nombre": "Segorbe",
+        "municipio": "Segorbe",
+        "estado": "sin datos",
+        "temperatura": null,
+        "humedad": null,
+        "dpv": null,
+        "nivel": "Sin datos",
+        "color": "#9aa3aa",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2291500000000002,
+          39.733069444444446
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "SinarcasLa Raílla",
+        "nombre": "SinarcasLa Raílla",
+        "municipio": "Sinarcas",
+        "estado": "con datos",
+        "temperatura": 30.7,
+        "humedad": 30.0,
+        "dpv": 3.09,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3828,
+          39.2786
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Sollana",
+        "nombre": "Sollana",
+        "municipio": "Sollana",
+        "estado": "con datos",
+        "temperatura": 30.4,
+        "humedad": 60.0,
+        "dpv": 1.74,
+        "nivel": "Muy alto",
+        "color": "#f46d43",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.909088888888889,
+          39.620666666666665
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "Sot de Chera",
+        "nombre": "Sot de Chera",
+        "municipio": "Sot de Chera",
+        "estado": "sin datos",
+        "temperatura": null,
+        "humedad": null,
+        "dpv": null,
+        "nivel": "Sin datos",
+        "color": "#9aa3aa",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3111638888888888,
+          39.2026
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "Sueca",
+        "nombre": "Sueca",
+        "municipio": "Sueca",
+        "estado": "con datos",
+        "temperatura": 30.7,
+        "humedad": 34.0,
+        "dpv": 2.91,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0836,
+          39.8667
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "TitaguasCosmofísica",
+        "nombre": "TitaguasCosmofísica",
+        "municipio": "Titaguas",
+        "estado": "con datos",
+        "temperatura": 29.7,
+        "humedad": 29.0,
+        "dpv": 2.96,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.26,
+          40.09
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Torrebaja",
+        "nombre": "Torrebaja",
+        "municipio": "Torrebaja",
+        "estado": "con datos",
+        "temperatura": 32.9,
+        "humedad": 26.0,
+        "dpv": 3.7,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:45 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046143A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.47775,
+          39.42858333333333
+        ]
+      },
+      "properties": {
+        "fuente": "AVAMET",
+        "estacion": "TorrentAv. al Vedat",
+        "nombre": "TorrentAv. al Vedat",
+        "municipio": "Torrent",
+        "estado": "con datos",
+        "temperatura": 31.5,
+        "humedad": 32.0,
+        "dpv": 3.14,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.59,
+          39.14
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Tous",
+        "nombre": "Tous",
+        "municipio": "Tous",
+        "estado": "con datos",
+        "temperatura": 32.6,
+        "humedad": 52.0,
+        "dpv": 2.36,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:49 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046269A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.72,
+          39.36
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Turís - Greenval",
+        "nombre": "Turís - Greenval",
+        "municipio": "Turís",
+        "estado": "con datos",
+        "temperatura": 30.6,
+        "humedad": 48.0,
+        "dpv": 2.28,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:42 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046389A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3763,
+          39.4699
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "València",
+        "nombre": "València",
+        "municipio": "València",
+        "estado": "con datos",
+        "temperatura": 30.9,
+        "humedad": 49.0,
+        "dpv": 2.28,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.21,
+          38.88
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Vilallonga/Villalonga-Aj.",
+        "nombre": "Vilallonga/Villalonga-Aj.",
+        "municipio": "Vilallonga/Villalonga",
+        "estado": "con datos",
+        "temperatura": 33.3,
+        "humedad": 42.0,
+        "dpv": 2.97,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:37 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046720C"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.62,
+          39.57
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Vilamarxant - Aj.",
+        "nombre": "Vilamarxant - Aj.",
+        "municipio": "Vilamarxant",
+        "estado": "con datos",
+        "temperatura": 32.3,
+        "humedad": 42.0,
+        "dpv": 2.8,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:47 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046191D"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2578,
+          40.4272
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Villafranca del Cid/Vilafranca",
+        "nombre": "Villafranca del Cid/Vilafranca",
+        "municipio": "Villafranca del Cid/Vilafranca",
+        "estado": "con datos",
+        "temperatura": 27.9,
+        "humedad": 34.0,
+        "dpv": 2.48,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8657,
+          38.6373
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Villena",
+        "nombre": "Villena",
+        "municipio": "Villena",
+        "estado": "con datos",
+        "temperatura": 32.8,
+        "humedad": 30.0,
+        "dpv": 3.48,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.48,
+          40.5436
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Vinaròs-Viveros Alcanar",
+        "nombre": "Vinaròs-Viveros Alcanar",
+        "municipio": "Vinaròs/Alcanar",
+        "estado": "con datos",
+        "temperatura": 34.0,
+        "humedad": 44.0,
+        "dpv": 2.98,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.22,
+          39.01
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Xeresa",
+        "nombre": "Xeresa",
+        "municipio": "Xeresa",
+        "estado": "con datos",
+        "temperatura": 29.8,
+        "humedad": 56.0,
+        "dpv": 1.85,
+        "nivel": "Muy alto",
+        "color": "#f46d43",
+        "actualizado": "25-06-2026 14:48 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046790A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.42,
+          39.46
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "Xirivella",
+        "nombre": "Xirivella",
+        "municipio": "Xirivella",
+        "estado": "con datos",
+        "temperatura": 33.0,
+        "humedad": 33.0,
+        "dpv": 3.37,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:50 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046950B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5156,
+          38.989
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Xàtiva",
+        "nombre": "Xàtiva",
+        "municipio": "Xàtiva",
+        "estado": "con datos",
+        "temperatura": 35.8,
+        "humedad": 29.0,
+        "dpv": 4.17,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0758,
+          39.0922
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "Zarra",
+        "nombre": "Zarra",
+        "municipio": "Zarra",
+        "estado": "con datos",
+        "temperatura": 33.1,
+        "humedad": 19.0,
+        "dpv": 4.1,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7,
+          39.7
+        ]
+      },
+      "properties": {
+        "fuente": "Meteoclimatic",
+        "estacion": "casinos",
+        "nombre": "casinos",
+        "municipio": "casinos",
+        "estado": "con datos",
+        "temperatura": 32.2,
+        "humedad": 31.0,
+        "dpv": 3.32,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "25-06-2026 14:58 UTC",
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046171A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0414,
+          38.4011
+        ]
+      },
+      "properties": {
+        "fuente": "AEMET",
+        "estacion": "el Pinós/Pinoso",
+        "nombre": "el Pinós/Pinoso",
+        "municipio": "el Pinós/Pinoso",
+        "estado": "con datos",
+        "temperatura": 32.2,
+        "humedad": 29.0,
+        "dpv": 3.41,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "actualizado": "",
+        "url": ""
+      }
+    }
+  ]
+}

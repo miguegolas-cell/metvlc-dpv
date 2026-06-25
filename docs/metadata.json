@@ -1,22 +1,38 @@
 {
   "producto": "DPV - Déficit de Presión de Vapor",
   "fuente": "AVAMET MXO MeteoXarxaOnline",
+  "fuente_entidad": "AVAMET - Associació Valenciana de Meteorologia",
   "url": "https://www.avamet.org/mxo-mxo.php?territori=p46",
-  "generado_utc": "2026-06-03T11:16:18.057897+00:00",
+  "uso": "Divulgativo no comercial",
+  "generado_utc": "2026-06-25T15:14:26.542695+00:00",
   "estaciones_base": 63,
-  "estaciones_con_datos": 52,
+  "estaciones_con_datos": 39,
   "estaciones_sin_datos": [
+    "SaguntPuerto de Sagunto",
+    "PuçolUrbanización Alfinach",
     "ValènciaMicalet",
     "Picassent Terrabona",
     "CulleraAjuntament",
+    "CarcaixentAjuntament",
     "Alberic",
     "Polinyà de Xúquer Muntanyeta de la Font AEMET",
     "XeracoAyuntamiento",
     "Vilallonganorte",
+    "AlbaidaIES J. Segrelles",
     "Aielo de Malferitcentro",
     "BenigànimIES les Foies",
+    "Chella",
     "QuesaHotel La Rocha",
-    "Chestecentre"
+    "Millares",
+    "Buñol",
+    "Chiva",
+    "Chestecentre",
+    "Chelva",
+    "Chulilla",
+    "Sot de Chera",
+    "Chera",
+    "AdemuzIES Ademuz"
   ],
-  "formula": "DPV = es - ea; es = 0.6108 * exp((17.27*T)/(T+237.3)); ea = es * HR/100"
+  "formula": "DPV = es - ea; es = 0.6108 * exp((17.27*T)/(T+237.3)); ea = es * HR/100",
+  "nota": "Cálculo y visualización realizados por MetVLC a partir de datos publicados por AVAMET."
 }
