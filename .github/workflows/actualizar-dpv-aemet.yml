@@ -1,12 +1,7 @@
 name: Actualizar DPV AEMET
 
 on:
-  schedule:
-    # Tres veces al día durante horario de verano peninsular:
-    # 10:00 UTC = 12:00 hora peninsular
-    # 14:00 UTC = 16:00 hora peninsular
-    # 16:00 UTC = 18:00 hora peninsular
-    - cron: "3 10,14,16 * * *"
+  
 
   workflow_dispatch:
 
