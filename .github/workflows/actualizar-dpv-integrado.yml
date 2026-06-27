@@ -36,26 +36,67 @@ jobs:
           pip install -r requirements.txt
 
       - name: Actualizar DPV AEMET
-        run: python scripts/update_dpv_aemet.py
+        run: |
+          echo "======================================"
+          echo "Actualizando DPV AEMET"
+          echo "======================================"
+
+          if python scripts/update_dpv_aemet.py; then
+            echo "AEMET actualizado correctamente"
+          else
+            echo "::warning::AEMET ha fallado. Se mantiene la última versión disponible."
+          fi
 
       - name: Actualizar DPV AVAMET
-        run: python scripts/update_dpv.py
+        run: |
+          echo "======================================"
+          echo "Actualizando DPV AVAMET"
+          echo "======================================"
+
+          if python scripts/update_dpv.py; then
+            echo "AVAMET actualizado correctamente"
+          else
+            echo "::warning::AVAMET ha fallado. Se mantiene la última versión disponible."
+          fi
 
       - name: Actualizar DPV Meteoclimatic
-        run: python scripts/update_dpv_meteoclimatic.py
+        run: |
+          echo "======================================"
+          echo "Actualizando DPV Meteoclimatic"
+          echo "======================================"
+
+          if python scripts/update_dpv_meteoclimatic.py; then
+            echo "Meteoclimatic actualizado correctamente"
+          else
+            echo "::warning::Meteoclimatic ha fallado. Se mantiene la última versión disponible."
+          fi
 
       - name: Generar DPV integrado
-        run: python scripts/update_dpv_integrado.py
+        run: |
+          echo "======================================"
+          echo "Generando DPV integrado"
+          echo "======================================"
+
+          python scripts/update_dpv_integrado.py
 
       - name: Guardar resultados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add docs/dpv_aemet.geojson docs/metadata_aemet.json
-          git add docs/dpv.geojson docs/metadata.json
-          git add docs/dpv_meteoclimatic.geojson docs/metadata_meteoclimatic.json
-          git add docs/dpv_integrado.geojson docs/metadata_integrado.json
+          echo "Añadiendo archivos generados..."
+
+          git add docs/dpv_aemet.geojson 2>/dev/null || true
+          git add docs/metadata_aemet.json 2>/dev/null || true
+
+          git add docs/dpv.geojson 2>/dev/null || true
+          git add docs/metadata.json 2>/dev/null || true
+
+          git add docs/dpv_meteoclimatic.geojson 2>/dev/null || true
+          git add docs/metadata_meteoclimatic.json 2>/dev/null || true
+
+          git add docs/dpv_integrado.geojson 2>/dev/null || true
+          git add docs/metadata_integrado.json 2>/dev/null || true
 
           if ! git diff --staged --quiet; then
             git commit -m "Actualiza DPV integrado"
