@@ -2,14 +2,14 @@
   "producto": "DPV - Déficit de Presión de Vapor Meteoclimatic",
   "fuente": "Meteoclimatic RSS",
   "url": "https://www.meteoclimatic.net/feed/rss/ESPVA46000000",
-  "generado_utc": "2026-06-28T15:43:58.904544+00:00",
-  "rss_pubDate": "Sun, 28 Jun 2026 15:43:58 +0000",
-  "estaciones_rss": 162,
+  "generado_utc": "2026-06-28T17:36:55.235300+00:00",
+  "rss_pubDate": "Sun, 28 Jun 2026 17:36:54 +0000",
+  "estaciones_rss": 163,
   "estaciones_seleccionadas": 50,
   "estaciones_con_datos": 49,
   "estaciones_sin_datos": [],
   "estaciones_sin_coordenadas": [],
-  "estaciones_no_seleccionadas": 113,
+  "estaciones_no_seleccionadas": 114,
   "formula": "DPV = es - ea; es = 0.6108 * exp((17.27*T)/(T+237.3)); ea = es * HR/100",
   "nota": "Producto no oficial. Red colaborativa Meteoclimatic. Se usa una selección filtrada de estaciones para evitar saturación visual."
 }
