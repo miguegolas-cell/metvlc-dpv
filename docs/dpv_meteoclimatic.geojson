@@ -12,13 +12,13 @@
       },
       "properties": {
         "estacion": "Albal",
-        "temperatura": 27.6,
-        "humedad": 76.0,
-        "dpv": 0.89,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "actualizado": "27-06-2026 17:17 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:17:00 +0000",
+        "temperatura": 28.3,
+        "humedad": 74.0,
+        "dpv": 1.0,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "actualizado": "28-06-2026 11:33 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:33:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046470A"
       }
@@ -34,13 +34,13 @@
       },
       "properties": {
         "estacion": "Albalat de la Ribera",
-        "temperatura": 27.9,
-        "humedad": 72.0,
-        "dpv": 1.05,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "actualizado": "27-06-2026 17:18 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:18:00 +0000",
+        "temperatura": 28.2,
+        "humedad": 76.0,
+        "dpv": 0.92,
+        "nivel": "Bajo",
+        "color": "#2b83ba",
+        "actualizado": "28-06-2026 11:33 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:33:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046687A"
       }
@@ -56,13 +56,13 @@
       },
       "properties": {
         "estacion": "Alberic - Nord",
-        "temperatura": 29.1,
-        "humedad": 69.0,
-        "dpv": 1.25,
+        "temperatura": 30.0,
+        "humedad": 68.0,
+        "dpv": 1.36,
         "nivel": "Moderado",
         "color": "#fdae61",
-        "actualizado": "27-06-2026 17:17 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:17:00 +0000",
+        "actualizado": "28-06-2026 11:32 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:32:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046260B"
       }
@@ -78,13 +78,13 @@
       },
       "properties": {
         "estacion": "Almiserà",
-        "temperatura": 28.7,
-        "humedad": 74.0,
-        "dpv": 1.02,
+        "temperatura": 30.2,
+        "humedad": 72.0,
+        "dpv": 1.2,
         "nivel": "Moderado",
         "color": "#fdae61",
-        "actualizado": "27-06-2026 17:20 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:20:00 +0000",
+        "actualizado": "28-06-2026 11:35 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:35:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046726A"
       }
@@ -100,13 +100,13 @@
       },
       "properties": {
         "estacion": "Alzira - La Casella",
-        "temperatura": 29.7,
-        "humedad": 63.0,
-        "dpv": 1.54,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "actualizado": "27-06-2026 17:17 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:17:00 +0000",
+        "temperatura": 28.2,
+        "humedad": 73.0,
+        "dpv": 1.03,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "actualizado": "28-06-2026 11:33 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:33:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046600E"
       }
@@ -122,13 +122,13 @@
       },
       "properties": {
         "estacion": "Anna",
-        "temperatura": 32.6,
-        "humedad": 60.0,
-        "dpv": 1.97,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "actualizado": "27-06-2026 17:18 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:18:02 +0000",
+        "temperatura": 31.2,
+        "humedad": 67.0,
+        "dpv": 1.5,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "actualizado": "28-06-2026 11:33 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:33:50 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046820A"
       }
@@ -144,13 +144,13 @@
       },
       "properties": {
         "estacion": "Barxeta",
-        "temperatura": 30.2,
-        "humedad": 63.0,
-        "dpv": 1.59,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "actualizado": "27-06-2026 17:18 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:18:00 +0000",
+        "temperatura": 29.6,
+        "humedad": 65.0,
+        "dpv": 1.45,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "actualizado": "28-06-2026 11:33 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:33:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046667A"
       }
@@ -166,13 +166,13 @@
       },
       "properties": {
         "estacion": "Benigànim",
-        "temperatura": 30.4,
-        "humedad": 73.0,
-        "dpv": 1.17,
+        "temperatura": 31.7,
+        "humedad": 68.0,
+        "dpv": 1.5,
         "nivel": "Moderado",
         "color": "#fdae61",
-        "actualizado": "27-06-2026 17:19 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:19:00 +0000",
+        "actualizado": "28-06-2026 11:33 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:33:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046830A"
       }
@@ -188,13 +188,13 @@
       },
       "properties": {
         "estacion": "Benimodo",
-        "temperatura": 29.0,
-        "humedad": 75.0,
-        "dpv": 1.0,
+        "temperatura": 29.7,
+        "humedad": 71.0,
+        "dpv": 1.21,
         "nivel": "Moderado",
         "color": "#fdae61",
-        "actualizado": "27-06-2026 17:26 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:26:02 +0000",
+        "actualizado": "28-06-2026 11:41 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:41:02 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046291B"
       }
@@ -210,13 +210,13 @@
       },
       "properties": {
         "estacion": "Bétera - Centro",
-        "temperatura": 29.1,
-        "humedad": 67.0,
-        "dpv": 1.33,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "actualizado": "27-06-2026 17:18 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:18:00 +0000",
+        "temperatura": 30.6,
+        "humedad": 61.0,
+        "dpv": 1.71,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "actualizado": "28-06-2026 11:33 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:33:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046117F"
       }
@@ -232,13 +232,13 @@
       },
       "properties": {
         "estacion": "Buñol - C.Cid",
-        "temperatura": 30.2,
-        "humedad": 48.0,
-        "dpv": 2.23,
+        "temperatura": 31.3,
+        "humedad": 49.0,
+        "dpv": 2.33,
         "nivel": "Alto",
         "color": "#f46d43",
-        "actualizado": "27-06-2026 17:15 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:15:00 +0000",
+        "actualizado": "28-06-2026 11:35 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:35:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046360A"
       }
@@ -254,13 +254,13 @@
       },
       "properties": {
         "estacion": "Canals",
-        "temperatura": 30.9,
-        "humedad": 60.0,
-        "dpv": 1.79,
+        "temperatura": 31.1,
+        "humedad": 61.0,
+        "dpv": 1.76,
         "nivel": "Alto",
         "color": "#f46d43",
-        "actualizado": "27-06-2026 17:17 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:17:00 +0000",
+        "actualizado": "28-06-2026 11:32 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:32:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046650C"
       }
@@ -276,13 +276,13 @@
       },
       "properties": {
         "estacion": "Carcaixent - Muntanyeta",
-        "temperatura": 31.4,
-        "humedad": 66.0,
-        "dpv": 1.56,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "actualizado": "27-06-2026 17:17 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:17:00 +0000",
+        "temperatura": 30.7,
+        "humedad": 73.0,
+        "dpv": 1.19,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "actualizado": "28-06-2026 11:32 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:32:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046740D"
       }
@@ -298,13 +298,13 @@
       },
       "properties": {
         "estacion": "casinos",
-        "temperatura": 29.2,
-        "humedad": 52.0,
-        "dpv": 1.95,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "actualizado": "27-06-2026 17:28 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:28:34 +0000",
+        "temperatura": 31.7,
+        "humedad": 46.0,
+        "dpv": 2.52,
+        "nivel": "Muy alto",
+        "color": "#d7191c",
+        "actualizado": "28-06-2026 11:44 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:44:35 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046171A"
       }
@@ -320,13 +320,13 @@
       },
       "properties": {
         "estacion": "Castelló",
-        "temperatura": 31.3,
-        "humedad": 62.0,
-        "dpv": 1.74,
+        "temperatura": 30.8,
+        "humedad": 65.0,
+        "dpv": 1.55,
         "nivel": "Alto",
         "color": "#f46d43",
-        "actualizado": "27-06-2026 17:17 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:17:00 +0000",
+        "actualizado": "28-06-2026 11:32 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:32:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046270B"
       }
@@ -342,13 +342,13 @@
       },
       "properties": {
         "estacion": "Cheste",
-        "temperatura": 29.8,
-        "humedad": 58.0,
-        "dpv": 1.76,
+        "temperatura": 31.3,
+        "humedad": 54.0,
+        "dpv": 2.1,
         "nivel": "Alto",
         "color": "#f46d43",
-        "actualizado": "27-06-2026 17:18 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:18:00 +0000",
+        "actualizado": "28-06-2026 11:33 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:33:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046380A"
       }
@@ -364,13 +364,13 @@
       },
       "properties": {
         "estacion": "Chiva - Cumbres Calicanto",
-        "temperatura": 28.4,
-        "humedad": 65.0,
-        "dpv": 1.35,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "actualizado": "27-06-2026 17:28 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:28:44 +0000",
+        "temperatura": 29.8,
+        "humedad": 60.0,
+        "dpv": 1.68,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "actualizado": "28-06-2026 11:44 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:44:44 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046370G"
       }
@@ -386,13 +386,13 @@
       },
       "properties": {
         "estacion": "Cullera - Dosser",
-        "temperatura": 26.9,
-        "humedad": 84.0,
-        "dpv": 0.57,
+        "temperatura": 25.9,
+        "humedad": 87.0,
+        "dpv": 0.43,
         "nivel": "Bajo",
         "color": "#2b83ba",
-        "actualizado": "27-06-2026 17:20 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:20:00 +0000",
+        "actualizado": "28-06-2026 11:35 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:35:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046400D"
       }
@@ -408,37 +408,15 @@
       },
       "properties": {
         "estacion": "El Perelló",
-        "temperatura": 27.5,
-        "humedad": 78.0,
-        "dpv": 0.81,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "actualizado": "27-06-2026 17:17 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:17:00 +0000",
-        "fuente": "Meteoclimatic",
-        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046420A"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.3,
-          39.59
-        ]
-      },
-      "properties": {
-        "estacion": "El Puig de Santa Maria",
         "temperatura": 27.6,
         "humedad": 77.0,
         "dpv": 0.85,
         "nivel": "Bajo",
         "color": "#2b83ba",
-        "actualizado": "27-06-2026 17:19 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:19:00 +0000",
+        "actualizado": "28-06-2026 11:32 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:32:00 +0000",
         "fuente": "Meteoclimatic",
-        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046540A"
+        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046420A"
       }
     },
     {
@@ -452,13 +430,13 @@
       },
       "properties": {
         "estacion": "Faura",
-        "temperatura": 29.1,
-        "humedad": 76.0,
-        "dpv": 0.97,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "actualizado": "27-06-2026 17:05 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:05:00 +0000",
+        "temperatura": 29.2,
+        "humedad": 73.0,
+        "dpv": 1.09,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "actualizado": "28-06-2026 11:20 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:20:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046512A"
       }
@@ -474,13 +452,13 @@
       },
       "properties": {
         "estacion": "Font de la F. - Carrascal",
-        "temperatura": 30.8,
-        "humedad": 62.0,
-        "dpv": 1.69,
+        "temperatura": 30.3,
+        "humedad": 60.0,
+        "dpv": 1.73,
         "nivel": "Alto",
         "color": "#f46d43",
-        "actualizado": "27-06-2026 17:19 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:19:00 +0000",
+        "actualizado": "28-06-2026 11:34 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:34:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046630B"
       }
@@ -496,13 +474,13 @@
       },
       "properties": {
         "estacion": "Fontanars dels Alforins",
-        "temperatura": 29.3,
-        "humedad": 60.0,
-        "dpv": 1.63,
+        "temperatura": 29.4,
+        "humedad": 57.0,
+        "dpv": 1.76,
         "nivel": "Alto",
         "color": "#f46d43",
-        "actualizado": "27-06-2026 17:16 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:16:00 +0000",
+        "actualizado": "28-06-2026 11:30 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:30:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046635B"
       }
@@ -518,13 +496,13 @@
       },
       "properties": {
         "estacion": "Gandia",
-        "temperatura": 27.7,
-        "humedad": 77.0,
-        "dpv": 0.85,
+        "temperatura": 28.1,
+        "humedad": 78.0,
+        "dpv": 0.84,
         "nivel": "Bajo",
         "color": "#2b83ba",
-        "actualizado": "27-06-2026 17:16 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:16:30 +0000",
+        "actualizado": "28-06-2026 11:31 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:31:31 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046700B"
       }
@@ -540,13 +518,13 @@
       },
       "properties": {
         "estacion": "Gilet",
-        "temperatura": 28.7,
-        "humedad": 71.0,
-        "dpv": 1.14,
+        "temperatura": 29.5,
+        "humedad": 70.0,
+        "dpv": 1.24,
         "nivel": "Moderado",
         "color": "#fdae61",
-        "actualizado": "27-06-2026 17:20 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:20:00 +0000",
+        "actualizado": "28-06-2026 11:35 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:35:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046149A"
       }
@@ -562,13 +540,13 @@
       },
       "properties": {
         "estacion": "L'Olleria - Ajuntament",
-        "temperatura": 29.4,
-        "humedad": 64.0,
-        "dpv": 1.48,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "actualizado": "27-06-2026 17:13 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:13:00 +0000",
+        "temperatura": 29.6,
+        "humedad": 63.0,
+        "dpv": 1.53,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "actualizado": "28-06-2026 11:28 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:28:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046850B"
       }
@@ -584,13 +562,13 @@
       },
       "properties": {
         "estacion": "La Pobla del Duc",
-        "temperatura": 28.1,
-        "humedad": 73.0,
-        "dpv": 1.03,
+        "temperatura": 30.3,
+        "humedad": 66.0,
+        "dpv": 1.47,
         "nivel": "Moderado",
         "color": "#fdae61",
-        "actualizado": "27-06-2026 17:17 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:17:11 +0000",
+        "actualizado": "28-06-2026 11:32 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:32:04 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046840A"
       }
@@ -606,13 +584,13 @@
       },
       "properties": {
         "estacion": "Llíria",
-        "temperatura": 29.4,
+        "temperatura": 31.3,
         "humedad": 62.0,
-        "dpv": 1.56,
+        "dpv": 1.74,
         "nivel": "Alto",
         "color": "#f46d43",
-        "actualizado": "27-06-2026 17:18 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:18:00 +0000",
+        "actualizado": "28-06-2026 11:33 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:33:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046160A"
       }
@@ -628,13 +606,13 @@
       },
       "properties": {
         "estacion": "Massalavés",
-        "temperatura": 28.6,
+        "temperatura": 30.1,
         "humedad": 74.0,
-        "dpv": 1.02,
+        "dpv": 1.11,
         "nivel": "Moderado",
         "color": "#fdae61",
-        "actualizado": "27-06-2026 17:17 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:17:00 +0000",
+        "actualizado": "28-06-2026 11:32 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:32:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046292A"
       }
@@ -650,37 +628,15 @@
       },
       "properties": {
         "estacion": "Moixent - Cumbres",
-        "temperatura": 27.7,
-        "humedad": 69.0,
-        "dpv": 1.15,
+        "temperatura": 27.8,
+        "humedad": 67.0,
+        "dpv": 1.23,
         "nivel": "Moderado",
         "color": "#fdae61",
-        "actualizado": "27-06-2026 17:17 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:17:00 +0000",
+        "actualizado": "28-06-2026 11:33 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:33:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046640B"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.65,
-          38.95
-        ]
-      },
-      "properties": {
-        "estacion": "Montesa",
-        "temperatura": 30.8,
-        "humedad": 57.0,
-        "dpv": 1.91,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "actualizado": "27-06-2026 17:15 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:15:05 +0000",
-        "fuente": "Meteoclimatic",
-        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046692A"
       }
     },
     {
@@ -694,13 +650,13 @@
       },
       "properties": {
         "estacion": "Oliva Nova",
-        "temperatura": 26.6,
-        "humedad": 82.0,
-        "dpv": 0.63,
+        "temperatura": 27.3,
+        "humedad": 81.0,
+        "dpv": 0.69,
         "nivel": "Bajo",
         "color": "#2b83ba",
-        "actualizado": "27-06-2026 17:20 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:20:00 +0000",
+        "actualizado": "28-06-2026 11:35 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:35:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046780B"
       }
@@ -716,13 +672,13 @@
       },
       "properties": {
         "estacion": "Ontinyent - Alba",
-        "temperatura": 31.3,
-        "humedad": 61.0,
-        "dpv": 1.78,
+        "temperatura": 31.0,
+        "humedad": 63.0,
+        "dpv": 1.66,
         "nivel": "Alto",
         "color": "#f46d43",
-        "actualizado": "27-06-2026 17:20 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:20:00 +0000",
+        "actualizado": "28-06-2026 11:34 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:34:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046870J"
       }
@@ -738,37 +694,15 @@
       },
       "properties": {
         "estacion": "Pedralba - Serretilla",
-        "temperatura": 30.7,
-        "humedad": 56.0,
-        "dpv": 1.94,
+        "temperatura": 32.2,
+        "humedad": 53.0,
+        "dpv": 2.26,
         "nivel": "Alto",
         "color": "#f46d43",
-        "actualizado": "27-06-2026 17:18 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:18:00 +0000",
+        "actualizado": "28-06-2026 11:33 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:33:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046164C"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.4,
-          38.96
-        ]
-      },
-      "properties": {
-        "estacion": "Quatretonda",
-        "temperatura": 30.5,
-        "humedad": 67.0,
-        "dpv": 1.44,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "actualizado": "27-06-2026 16:59 UTC",
-        "pubDate": "Sat, 27 Jun 2026 16:59:00 +0000",
-        "fuente": "Meteoclimatic",
-        "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046837A"
       }
     },
     {
@@ -782,13 +716,13 @@
       },
       "properties": {
         "estacion": "Quesa - EcoCampingQuesa",
-        "temperatura": 28.6,
-        "humedad": 63.0,
-        "dpv": 1.45,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "actualizado": "27-06-2026 17:17 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:17:00 +0000",
+        "temperatura": 30.2,
+        "humedad": 56.0,
+        "dpv": 1.89,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "actualizado": "28-06-2026 11:32 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:32:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046824A"
       }
@@ -804,13 +738,13 @@
       },
       "properties": {
         "estacion": "Sagunt - Port de Sagunt",
-        "temperatura": 27.3,
-        "humedad": 77.0,
-        "dpv": 0.83,
+        "temperatura": 27.7,
+        "humedad": 78.0,
+        "dpv": 0.82,
         "nivel": "Bajo",
         "color": "#2b83ba",
-        "actualizado": "27-06-2026 17:18 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:18:00 +0000",
+        "actualizado": "28-06-2026 11:33 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:33:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046520D"
       }
@@ -826,13 +760,13 @@
       },
       "properties": {
         "estacion": "Sueca",
-        "temperatura": 30.7,
-        "humedad": 65.0,
-        "dpv": 1.55,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "actualizado": "27-06-2026 17:19 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:19:00 +0000",
+        "temperatura": 30.4,
+        "humedad": 68.0,
+        "dpv": 1.39,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "actualizado": "28-06-2026 11:35 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:35:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046410A"
       }
@@ -848,13 +782,13 @@
       },
       "properties": {
         "estacion": "Tavernes de la Valldigna",
-        "temperatura": 27.2,
-        "humedad": 77.0,
-        "dpv": 0.83,
+        "temperatura": 27.4,
+        "humedad": 76.0,
+        "dpv": 0.88,
         "nivel": "Bajo",
         "color": "#2b83ba",
-        "actualizado": "27-06-2026 17:19 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:19:00 +0000",
+        "actualizado": "28-06-2026 11:34 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:34:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046115B"
       }
@@ -870,13 +804,13 @@
       },
       "properties": {
         "estacion": "Torrebaja",
-        "temperatura": 32.7,
-        "humedad": 39.0,
-        "dpv": 3.02,
+        "temperatura": 33.3,
+        "humedad": 28.0,
+        "dpv": 3.68,
         "nivel": "Muy alto",
         "color": "#d7191c",
-        "actualizado": "27-06-2026 17:15 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:15:00 +0000",
+        "actualizado": "28-06-2026 11:30 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:30:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046143A"
       }
@@ -892,13 +826,13 @@
       },
       "properties": {
         "estacion": "Torrent - Av. Al Vedat",
-        "temperatura": 28.1,
-        "humedad": 74.0,
-        "dpv": 0.99,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
-        "actualizado": "27-06-2026 17:28 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:28:30 +0000",
+        "temperatura": 29.8,
+        "humedad": 64.0,
+        "dpv": 1.51,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "actualizado": "28-06-2026 11:44 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:44:46 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046900C"
       }
@@ -914,13 +848,13 @@
       },
       "properties": {
         "estacion": "Tous",
-        "temperatura": 29.6,
+        "temperatura": 30.8,
         "humedad": 67.0,
-        "dpv": 1.37,
+        "dpv": 1.47,
         "nivel": "Moderado",
         "color": "#fdae61",
-        "actualizado": "27-06-2026 17:19 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:19:00 +0000",
+        "actualizado": "28-06-2026 11:34 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:34:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046269A"
       }
@@ -936,13 +870,13 @@
       },
       "properties": {
         "estacion": "Turís - Greenval",
-        "temperatura": 28.7,
-        "humedad": 67.0,
-        "dpv": 1.3,
-        "nivel": "Moderado",
-        "color": "#fdae61",
-        "actualizado": "27-06-2026 17:12 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:12:00 +0000",
+        "temperatura": 29.8,
+        "humedad": 63.0,
+        "dpv": 1.55,
+        "nivel": "Alto",
+        "color": "#f46d43",
+        "actualizado": "28-06-2026 11:32 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:32:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046389A"
       }
@@ -963,8 +897,8 @@
         "dpv": 1.15,
         "nivel": "Moderado",
         "color": "#fdae61",
-        "actualizado": "27-06-2026 17:19 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:19:22 +0000",
+        "actualizado": "28-06-2026 11:32 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:32:17 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046021B"
       }
@@ -980,13 +914,13 @@
       },
       "properties": {
         "estacion": "Vilallonga/Villalonga-Aj.",
-        "temperatura": 29.3,
-        "humedad": 66.0,
-        "dpv": 1.39,
+        "temperatura": 28.9,
+        "humedad": 69.0,
+        "dpv": 1.23,
         "nivel": "Moderado",
         "color": "#fdae61",
-        "actualizado": "27-06-2026 17:08 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:08:00 +0000",
+        "actualizado": "28-06-2026 11:23 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:23:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046720C"
       }
@@ -1002,13 +936,13 @@
       },
       "properties": {
         "estacion": "Vilamarxant - Aj.",
-        "temperatura": 29.7,
-        "humedad": 59.0,
-        "dpv": 1.71,
+        "temperatura": 30.3,
+        "humedad": 61.0,
+        "dpv": 1.68,
         "nivel": "Alto",
         "color": "#f46d43",
-        "actualizado": "27-06-2026 17:18 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:18:00 +0000",
+        "actualizado": "28-06-2026 11:33 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:33:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046191D"
       }
@@ -1024,13 +958,13 @@
       },
       "properties": {
         "estacion": "Xàtiva - Ajuntament",
-        "temperatura": 32.9,
-        "humedad": 64.0,
-        "dpv": 1.8,
-        "nivel": "Alto",
-        "color": "#f46d43",
-        "actualizado": "27-06-2026 17:17 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:17:00 +0000",
+        "temperatura": 30.8,
+        "humedad": 69.0,
+        "dpv": 1.38,
+        "nivel": "Moderado",
+        "color": "#fdae61",
+        "actualizado": "28-06-2026 11:32 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:32:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046800F"
       }
@@ -1046,13 +980,13 @@
       },
       "properties": {
         "estacion": "Xeresa",
-        "temperatura": 27.6,
-        "humedad": 76.0,
-        "dpv": 0.89,
+        "temperatura": 28.0,
+        "humedad": 77.0,
+        "dpv": 0.87,
         "nivel": "Bajo",
         "color": "#2b83ba",
-        "actualizado": "27-06-2026 17:18 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:18:00 +0000",
+        "actualizado": "28-06-2026 11:33 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:33:00 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046790A"
       }
@@ -1068,13 +1002,13 @@
       },
       "properties": {
         "estacion": "Xirivella",
-        "temperatura": 29.8,
-        "humedad": 59.0,
-        "dpv": 1.72,
+        "temperatura": 32.0,
+        "humedad": 52.0,
+        "dpv": 2.28,
         "nivel": "Alto",
         "color": "#f46d43",
-        "actualizado": "27-06-2026 17:20 UTC",
-        "pubDate": "Sat, 27 Jun 2026 17:20:26 +0000",
+        "actualizado": "28-06-2026 11:40 UTC",
+        "pubDate": "Sun, 28 Jun 2026 11:40:26 +0000",
         "fuente": "Meteoclimatic",
         "url": "http://www.meteoclimatic.net/perfil/ESPVA4600000046950B"
       }
