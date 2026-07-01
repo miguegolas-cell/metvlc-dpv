@@ -6,6 +6,26 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -1.2866,
+          40.0613
+        ]
+      },
+      "properties": {
+        "estacion": "Ademuz",
+        "provincia": "València/Valencia",
+        "temperatura": 32.9,
+        "humedad": 32.0,
+        "dpv": 3.4,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "fuente": "AEMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -0.481,
           38.3452
         ]
@@ -66,6 +86,26 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -0.3017,
+          39.0133
+        ]
+      },
+      "properties": {
+        "estacion": "Barx",
+        "provincia": "València/Valencia",
+        "temperatura": 34.2,
+        "humedad": 50.0,
+        "dpv": 2.69,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "fuente": "AEMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -0.7056,
           39.9117
         ]
@@ -78,6 +118,26 @@
         "dpv": 4.03,
         "nivel": "Extremo",
         "color": "#d7191c",
+        "fuente": "AEMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1225,
+          38.5411
+        ]
+      },
+      "properties": {
+        "estacion": "Benidorm",
+        "provincia": "Alacant/Alicante",
+        "temperatura": 30.6,
+        "humedad": 64.0,
+        "dpv": 1.58,
+        "nivel": "Alto",
+        "color": "#fdae61",
         "fuente": "AEMET"
       }
     },
@@ -286,6 +346,26 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -0.7222,
+          38.0886
+        ]
+      },
+      "properties": {
+        "estacion": "Rojales",
+        "provincia": "Alacant/Alicante",
+        "temperatura": 32.2,
+        "humedad": 49.0,
+        "dpv": 2.45,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "fuente": "AEMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -0.3828,
           39.2786
         ]
@@ -356,6 +436,26 @@
         "temperatura": 28.2,
         "humedad": 34.0,
         "dpv": 2.52,
+        "nivel": "Extremo",
+        "color": "#d7191c",
+        "fuente": "AEMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8657,
+          38.6373
+        ]
+      },
+      "properties": {
+        "estacion": "Villena",
+        "provincia": "Alacant/Alicante",
+        "temperatura": 34.9,
+        "humedad": 30.0,
+        "dpv": 3.91,
         "nivel": "Extremo",
         "color": "#d7191c",
         "fuente": "AEMET"
