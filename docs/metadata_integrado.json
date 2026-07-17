@@ -1,25 +1,25 @@
 {
   "producto": "DPV Integrado MetVlc",
   "descripcion": "Visor integrado con estaciones seleccionadas de AEMET, AVAMET y Meteoclimatic. Las estaciones sin dato actual se mantienen en gris.",
-  "generado_utc": "2026-07-17T11:44:49.441914+00:00",
+  "generado_utc": "2026-07-17T15:43:33.877100+00:00",
   "modo_sin_datos": "Opción A: si no hay dato actual, la estación aparece como Sin datos.",
   "max_edad_horas_fuente": 12,
   "fuentes": {
     "AEMET": {
       "actualizada": true,
-      "generado_utc": "2026-07-17T11:42:46.114439+00:00",
-      "edad_horas": 0.03,
+      "generado_utc": "2026-07-17T15:43:30.158609+00:00",
+      "edad_horas": 0.0,
       "features_disponibles": 22
     },
     "AVAMET": {
       "actualizada": true,
-      "generado_utc": "2026-07-17T08:46:40.805684+00:00",
-      "edad_horas": 2.97,
-      "features_disponibles": 72
+      "generado_utc": "2026-07-17T15:43:32.661038+00:00",
+      "edad_horas": 0.0,
+      "features_disponibles": 73
     },
     "Meteoclimatic": {
       "actualizada": true,
-      "generado_utc": "2026-07-17T11:44:49.374295+00:00",
+      "generado_utc": "2026-07-17T15:43:33.813376+00:00",
       "edad_horas": 0.0,
       "features_disponibles": 50
     }
