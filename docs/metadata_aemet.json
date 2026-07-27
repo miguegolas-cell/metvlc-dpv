@@ -2,11 +2,11 @@
   "producto": "DPV - Déficit de Presión de Vapor AEMET",
   "fuente": "AEMET últimos datos horarios",
   "url": "https://www.aemet.es/es/eltiempo/observacion/ultimosdatos_comunitat-valenciana_datos-horarios.csv?k=val&datos=det&w=0&f=temperatura&x=h24",
-  "generado_utc": "2026-07-26T17:18:08.794999+00:00",
-  "actualizado_aemet": "domingo, 26 julio 2026 a las 18:42 hora oficial",
-  "fecha_hora_aemet": "domingo, 26 julio 2026 a las 18:00",
+  "generado_utc": "2026-07-27T13:22:42.063225+00:00",
+  "actualizado_aemet": "lunes, 27 julio 2026 a las 14:42 hora oficial",
+  "fecha_hora_aemet": "lunes, 27 julio 2026 a las 14:00",
   "estaciones_csv": 43,
-  "estaciones_con_datos": 27,
+  "estaciones_con_datos": 28,
   "estaciones_sin_datos": [
     "Atzeneta del Maestrat",
     "Bicorp",
@@ -22,8 +22,7 @@
     "Sagunt/Sagunto",
     "Segorbe",
     "Torreblanca",
-    "Turís",
-    "Utiel"
+    "Turís"
   ],
   "estaciones_sin_coordenadas": [],
   "columnas_detectadas": [
