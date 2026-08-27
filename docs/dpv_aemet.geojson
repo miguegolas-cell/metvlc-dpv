@@ -13,11 +13,11 @@
       "properties": {
         "estacion": "Alacant/Alicante",
         "provincia": "Alacant/Alicante",
-        "temperatura": 29.3,
-        "humedad": 59.0,
-        "dpv": 1.67,
-        "nivel": "Muy alto",
-        "color": "#f46d43",
+        "temperatura": 26.3,
+        "humedad": 77.0,
+        "dpv": 0.79,
+        "nivel": "Bajo",
+        "color": "#2b83ba",
         "fuente": "AEMET"
       }
     },
@@ -33,11 +33,11 @@
       "properties": {
         "estacion": "Alcoi/Alcoy",
         "provincia": "Alacant/Alicante",
-        "temperatura": 28.6,
-        "humedad": 42.0,
-        "dpv": 2.27,
-        "nivel": "Extremo",
-        "color": "#d7191c",
+        "temperatura": 26.5,
+        "humedad": 56.0,
+        "dpv": 1.52,
+        "nivel": "Alto",
+        "color": "#fdae61",
         "fuente": "AEMET"
       }
     },
@@ -53,11 +53,11 @@
       "properties": {
         "estacion": "Alicante-Elche Aeropuerto",
         "provincia": "Alacant/Alicante",
-        "temperatura": 29.4,
-        "humedad": 59.0,
-        "dpv": 1.68,
-        "nivel": "Muy alto",
-        "color": "#f46d43",
+        "temperatura": 26.5,
+        "humedad": 74.0,
+        "dpv": 0.9,
+        "nivel": "Moderado",
+        "color": "#abdda4",
         "fuente": "AEMET"
       }
     },
@@ -66,36 +66,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.1225,
-          38.5411
+          -0.7056,
+          39.9117
         ]
       },
       "properties": {
-        "estacion": "Benidorm",
-        "provincia": "Alacant/Alicante",
-        "temperatura": 28.6,
-        "humedad": 69.0,
-        "dpv": 1.21,
-        "nivel": "Alto",
-        "color": "#fdae61",
-        "fuente": "AEMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.4489,
-          39.1217
-        ]
-      },
-      "properties": {
-        "estacion": "Carcaixent",
-        "provincia": "València/Valencia",
-        "temperatura": 33.1,
-        "humedad": 35.0,
-        "dpv": 3.29,
+        "estacion": "Bejís",
+        "provincia": "Castelló/Castellón",
+        "temperatura": 24.1,
+        "humedad": 27.0,
+        "dpv": 2.19,
         "nivel": "Extremo",
         "color": "#d7191c",
         "fuente": "AEMET"
@@ -113,11 +93,11 @@
       "properties": {
         "estacion": "Castellfort",
         "provincia": "Castelló/Castellón",
-        "temperatura": 22.9,
-        "humedad": 68.0,
-        "dpv": 0.89,
-        "nivel": "Moderado",
-        "color": "#abdda4",
+        "temperatura": 21.4,
+        "humedad": 30.0,
+        "dpv": 1.78,
+        "nivel": "Muy alto",
+        "color": "#f46d43",
         "fuente": "AEMET"
       }
     },
@@ -133,11 +113,11 @@
       "properties": {
         "estacion": "Castelló - Almassora",
         "provincia": "Castelló/Castellón",
-        "temperatura": 30.3,
-        "humedad": 59.0,
-        "dpv": 1.77,
-        "nivel": "Muy alto",
-        "color": "#f46d43",
+        "temperatura": 27.1,
+        "humedad": 68.0,
+        "dpv": 1.15,
+        "nivel": "Moderado",
+        "color": "#abdda4",
         "fuente": "AEMET"
       }
     },
@@ -153,9 +133,9 @@
       "properties": {
         "estacion": "Chelva",
         "provincia": "València/Valencia",
-        "temperatura": 29.7,
-        "humedad": 55.0,
-        "dpv": 1.88,
+        "temperatura": 24.4,
+        "humedad": 37.0,
+        "dpv": 1.93,
         "nivel": "Muy alto",
         "color": "#f46d43",
         "fuente": "AEMET"
@@ -173,9 +153,9 @@
       "properties": {
         "estacion": "el Pinós/Pinoso",
         "provincia": "Alacant/Alicante",
-        "temperatura": 29.7,
+        "temperatura": 27.1,
         "humedad": 39.0,
-        "dpv": 2.54,
+        "dpv": 2.19,
         "nivel": "Extremo",
         "color": "#d7191c",
         "fuente": "AEMET"
@@ -193,11 +173,11 @@
       "properties": {
         "estacion": "Jávea/ Xàbia",
         "provincia": "Alacant/Alicante",
-        "temperatura": 29.7,
-        "humedad": 50.0,
-        "dpv": 2.09,
-        "nivel": "Extremo",
-        "color": "#d7191c",
+        "temperatura": 25.9,
+        "humedad": 78.0,
+        "dpv": 0.74,
+        "nivel": "Bajo",
+        "color": "#2b83ba",
         "fuente": "AEMET"
       }
     },
@@ -213,9 +193,9 @@
       "properties": {
         "estacion": "Llíria",
         "provincia": "València/Valencia",
-        "temperatura": 30.8,
-        "humedad": 47.0,
-        "dpv": 2.35,
+        "temperatura": 28.2,
+        "humedad": 33.0,
+        "dpv": 2.56,
         "nivel": "Extremo",
         "color": "#d7191c",
         "fuente": "AEMET"
@@ -233,11 +213,11 @@
       "properties": {
         "estacion": "Miramar",
         "provincia": "València/Valencia",
-        "temperatura": 33.1,
-        "humedad": 42.0,
-        "dpv": 2.93,
-        "nivel": "Extremo",
-        "color": "#d7191c",
+        "temperatura": 29.0,
+        "humedad": 62.0,
+        "dpv": 1.52,
+        "nivel": "Alto",
+        "color": "#fdae61",
         "fuente": "AEMET"
       }
     },
@@ -253,9 +233,29 @@
       "properties": {
         "estacion": "Morella",
         "provincia": "Castelló/Castellón",
-        "temperatura": 23.5,
-        "humedad": 66.0,
-        "dpv": 0.98,
+        "temperatura": 23.3,
+        "humedad": 34.0,
+        "dpv": 1.89,
+        "nivel": "Muy alto",
+        "color": "#f46d43",
+        "fuente": "AEMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7677,
+          38.385
+        ]
+      },
+      "properties": {
+        "estacion": "Novelda",
+        "provincia": "Alacant/Alicante",
+        "temperatura": 26.6,
+        "humedad": 68.0,
+        "dpv": 1.11,
         "nivel": "Moderado",
         "color": "#abdda4",
         "fuente": "AEMET"
@@ -273,11 +273,11 @@
       "properties": {
         "estacion": "Oliva",
         "provincia": "València/Valencia",
-        "temperatura": 32.2,
-        "humedad": 42.0,
-        "dpv": 2.79,
-        "nivel": "Extremo",
-        "color": "#d7191c",
+        "temperatura": 29.0,
+        "humedad": 63.0,
+        "dpv": 1.48,
+        "nivel": "Alto",
+        "color": "#fdae61",
         "fuente": "AEMET"
       }
     },
@@ -293,51 +293,11 @@
       "properties": {
         "estacion": "Polinyà de Xúquer",
         "provincia": "València/Valencia",
-        "temperatura": 30.2,
-        "humedad": 57.0,
-        "dpv": 1.85,
-        "nivel": "Muy alto",
-        "color": "#f46d43",
-        "fuente": "AEMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7222,
-          38.0886
-        ]
-      },
-      "properties": {
-        "estacion": "Rojales",
-        "provincia": "Alacant/Alicante",
-        "temperatura": 29.4,
-        "humedad": 57.0,
-        "dpv": 1.76,
-        "nivel": "Muy alto",
-        "color": "#f46d43",
-        "fuente": "AEMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.4894,
-          39.8519
-        ]
-      },
-      "properties": {
-        "estacion": "Segorbe",
-        "provincia": "Castelló/Castellón",
-        "temperatura": 27.8,
-        "humedad": 51.0,
-        "dpv": 1.83,
-        "nivel": "Muy alto",
-        "color": "#f46d43",
+        "temperatura": 24.2,
+        "humedad": 88.0,
+        "dpv": 0.36,
+        "nivel": "Bajo",
+        "color": "#2b83ba",
         "fuente": "AEMET"
       }
     },
@@ -353,11 +313,31 @@
       "properties": {
         "estacion": "Sollana",
         "provincia": "València/Valencia",
-        "temperatura": 29.1,
-        "humedad": 72.0,
-        "dpv": 1.13,
-        "nivel": "Moderado",
-        "color": "#abdda4",
+        "temperatura": 27.9,
+        "humedad": 63.0,
+        "dpv": 1.39,
+        "nivel": "Alto",
+        "color": "#fdae61",
+        "fuente": "AEMET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2044,
+          39.5667
+        ]
+      },
+      "properties": {
+        "estacion": "Utiel",
+        "provincia": "València/Valencia",
+        "temperatura": 20.7,
+        "humedad": 42.0,
+        "dpv": 1.42,
+        "nivel": "Alto",
+        "color": "#fdae61",
         "fuente": "AEMET"
       }
     },
@@ -373,11 +353,11 @@
       "properties": {
         "estacion": "València",
         "provincia": "València/Valencia",
-        "temperatura": 29.6,
-        "humedad": 59.0,
-        "dpv": 1.7,
-        "nivel": "Muy alto",
-        "color": "#f46d43",
+        "temperatura": 29.0,
+        "humedad": 47.0,
+        "dpv": 2.12,
+        "nivel": "Extremo",
+        "color": "#d7191c",
         "fuente": "AEMET"
       }
     },
@@ -393,9 +373,9 @@
       "properties": {
         "estacion": "Valencia Aeropuerto",
         "provincia": "València/Valencia",
-        "temperatura": 30.6,
-        "humedad": 51.0,
-        "dpv": 2.15,
+        "temperatura": 30.2,
+        "humedad": 27.0,
+        "dpv": 3.13,
         "nivel": "Extremo",
         "color": "#d7191c",
         "fuente": "AEMET"
@@ -413,31 +393,11 @@
       "properties": {
         "estacion": "Villafranca del Cid/Vilafranca",
         "provincia": "Castelló/Castellón",
-        "temperatura": 23.9,
-        "humedad": 65.0,
-        "dpv": 1.04,
-        "nivel": "Moderado",
-        "color": "#abdda4",
-        "fuente": "AEMET"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.8657,
-          38.6373
-        ]
-      },
-      "properties": {
-        "estacion": "Villena",
-        "provincia": "Alacant/Alicante",
-        "temperatura": 28.9,
-        "humedad": 44.0,
-        "dpv": 2.23,
-        "nivel": "Extremo",
-        "color": "#d7191c",
+        "temperatura": 22.0,
+        "humedad": 28.0,
+        "dpv": 1.9,
+        "nivel": "Muy alto",
+        "color": "#f46d43",
         "fuente": "AEMET"
       }
     },
@@ -453,11 +413,11 @@
       "properties": {
         "estacion": "Vinaròs-Viveros Alcanar",
         "provincia": "Castelló/Castellón",
-        "temperatura": 30.7,
-        "humedad": 53.0,
-        "dpv": 2.08,
-        "nivel": "Extremo",
-        "color": "#d7191c",
+        "temperatura": 27.1,
+        "humedad": 62.0,
+        "dpv": 1.36,
+        "nivel": "Alto",
+        "color": "#fdae61",
         "fuente": "AEMET"
       }
     },
@@ -473,11 +433,11 @@
       "properties": {
         "estacion": "Xàtiva",
         "provincia": "València/Valencia",
-        "temperatura": 33.1,
-        "humedad": 44.0,
-        "dpv": 2.83,
-        "nivel": "Extremo",
-        "color": "#d7191c",
+        "temperatura": 28.5,
+        "humedad": 52.0,
+        "dpv": 1.87,
+        "nivel": "Muy alto",
+        "color": "#f46d43",
         "fuente": "AEMET"
       }
     },
@@ -493,11 +453,11 @@
       "properties": {
         "estacion": "Zarra",
         "provincia": "València/Valencia",
-        "temperatura": 29.9,
-        "humedad": 34.0,
-        "dpv": 2.78,
-        "nivel": "Extremo",
-        "color": "#d7191c",
+        "temperatura": 21.4,
+        "humedad": 39.0,
+        "dpv": 1.55,
+        "nivel": "Alto",
+        "color": "#fdae61",
         "fuente": "AEMET"
       }
     }
