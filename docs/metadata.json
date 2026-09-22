@@ -4,12 +4,13 @@
   "fuente_entidad": "AVAMET - Associació Valenciana de Meteorologia",
   "url": "https://www.avamet.org/mxo-mxo.php?territori=p46",
   "uso": "Divulgativo no comercial",
-  "generado_utc": "2026-09-22T14:58:35.952121+00:00",
+  "generado_utc": "2026-09-22T19:45:37.430155+00:00",
   "estaciones_base": 63,
-  "estaciones_con_datos": 43,
+  "estaciones_con_datos": 41,
   "estaciones_sin_datos": [
     "SaguntPuerto de Sagunto",
     "PuçolUrbanización Alfinach",
+    "ValènciaMicalet",
     "Picassent Terrabona",
     "CulleraAjuntament",
     "Alberic",
@@ -27,6 +28,7 @@
     "Chulilla",
     "Sot de Chera",
     "Chera",
+    "Aras de los Olmos",
     "AdemuzIES Ademuz"
   ],
   "formula": "DPV = es - ea; es = 0.6108 * exp((17.27*T)/(T+237.3)); ea = es * HR/100",
