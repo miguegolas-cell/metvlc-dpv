@@ -4,11 +4,10 @@
   "fuente_entidad": "AVAMET - Associació Valenciana de Meteorologia",
   "url": "https://www.avamet.org/mxo-mxo.php?territori=p46",
   "uso": "Divulgativo no comercial",
-  "generado_utc": "2026-09-24T15:10:28.558127+00:00",
+  "generado_utc": "2026-09-24T20:00:24.297707+00:00",
   "estaciones_base": 63,
-  "estaciones_con_datos": 41,
+  "estaciones_con_datos": 42,
   "estaciones_sin_datos": [
-    "SaguntPuerto de Sagunto",
     "PuçolUrbanización Alfinach",
     "ValènciaMicalet",
     "Picassent Terrabona",
