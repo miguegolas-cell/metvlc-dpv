@@ -1,15 +1,28 @@
 from pathlib import Path
 from datetime import datetime, timezone
 import csv
+import os
+import time
+from difflib import SequenceMatcher
+from datetime import timedelta
 import io
 import json
 import math
 import unicodedata
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 
 URL_AEMET = "https://www.aemet.es/es/eltiempo/observacion/ultimosdatos_comunitat-valenciana_datos-horarios.csv?k=val&datos=det&w=0&f=temperatura&x=h24"
+
+URL_OPENDATA = "https://opendata.aemet.es/opendata/api/observacion/convencional/todas"
+CSV_ALTERNATIVAS = [
+    URL_AEMET,
+    "https://www.aemet.es/es/eltiempo/observacion/ultimosdatos_comunitat-valenciana_datos-horarios.csv?k=val&datos=det&w=0",
+    "https://www.aemet.es/es/eltiempo/observacion/ultimosdatos_comunitat-valenciana_datos-horarios.csv",
+]
 
 DOCS_DIR = Path("docs")
 DOCS_DIR.mkdir(exist_ok=True)
@@ -140,174 +153,321 @@ def color_dpv(dpv):
         return "#d7191c"
 
 
-def descargar_csv_aemet():
-    headers = {
-        "User-Agent": "Mozilla/5.0 (compatible; MetVlc-DPV-AEMET/1.0; +https://metvlc.blogspot.com)"
-    }
-
-    response = requests.get(URL_AEMET, headers=headers, timeout=120)
-    response.raise_for_status()
-
-    # Forzamos latin1 para evitar problemas con acentos y símbolo de grados.
-    response.encoding = "latin1"
-
-    return response.text
 
 
-def extraer_fecha_hora(texto_csv):
-    lineas = texto_csv.splitlines()
+# ============================================================
+# Descarga y selección de observaciones AEMET
+# ============================================================
 
-    actualizado = ""
-    fecha_hora = ""
-
-    for linea in lineas[:8]:
-        if linea.startswith("Actualizado:"):
-            actualizado = linea.replace("Actualizado:", "").strip()
-        if linea.startswith("Fecha y hora:"):
-            fecha_hora = linea.replace("Fecha y hora:", "").strip()
-
-    return actualizado, fecha_hora
+CABECERAS = {
+    "User-Agent": "Mozilla/5.0 (compatible; MetVlc-DPV/2.0; +https://metvlc.blogspot.com)",
+    "Accept": "application/json,text/csv,text/plain,*/*",
+}
 
 
-def leer_datos(texto_csv):
-    lineas = texto_csv.splitlines()
-
-    idx_header = None
-    for i, linea in enumerate(lineas):
-        if "Estación" in linea or "Estacion" in linea:
-            idx_header = i
-            break
-
-    if idx_header is None:
-        raise RuntimeError("No se ha encontrado la cabecera del CSV de AEMET.")
-
-    contenido = "\n".join(lineas[idx_header:])
-    f = io.StringIO(contenido)
-
-    reader = csv.DictReader(f)
-    filas = list(reader)
-
-    if not filas:
-        raise RuntimeError("El CSV de AEMET no contiene filas de estaciones.")
-
-    print("Columnas detectadas en el CSV:")
-    for col in reader.fieldnames:
-        print(" -", repr(col))
-
-    return filas, reader.fieldnames
+def sesion_http():
+    sesion = requests.Session()
+    reintentos = Retry(
+        total=3, backoff_factor=1.5,
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=frozenset(["GET"]),
+    )
+    adaptador = HTTPAdapter(max_retries=reintentos)
+    sesion.mount("https://", adaptador)
+    sesion.mount("http://", adaptador)
+    sesion.headers.update(CABECERAS)
+    return sesion
 
 
-def main():
-    print("Descargando CSV AEMET...")
-    texto_csv = descargar_csv_aemet()
+def descargar_datos_opendata(api_key, sesion):
+    """Consulta endpoint oficial; la URL `datos` de la primera respuesta es temporal."""
+    respuesta = sesion.get(URL_OPENDATA, headers={"api_key": api_key}, timeout=60)
+    respuesta.raise_for_status()
+    descriptor = respuesta.json()
+    url_datos = descriptor.get("datos")
+    if not isinstance(url_datos, str) or not url_datos.startswith("https://"):
+        raise RuntimeError(f"AEMET OpenData no devolvió URL de datos válida: {descriptor}")
+    respuesta_datos = sesion.get(url_datos, timeout=90)
+    respuesta_datos.raise_for_status()
+    datos = respuesta_datos.json()
+    if not isinstance(datos, list) or not datos:
+        raise RuntimeError("AEMET OpenData no devolvió observaciones en formato lista.")
+    return datos
 
-    actualizado_txt, fecha_hora_txt = extraer_fecha_hora(texto_csv)
 
-    print("Actualizado AEMET:", actualizado_txt)
-    print("Fecha y hora AEMET:", fecha_hora_txt)
+def parsear_fecha_api(valor):
+    if not valor:
+        return None
+    try:
+        fecha = datetime.fromisoformat(str(valor).replace("Z", "+00:00"))
+        if fecha.tzinfo is None:
+            fecha = fecha.replace(tzinfo=timezone.utc)
+        return fecha.astimezone(timezone.utc)
+    except (TypeError, ValueError):
+        return None
 
-    filas, columnas = leer_datos(texto_csv)
 
-    primera_fila = filas[0]
+def distancia_km(lat1, lon1, lat2, lon2):
+    r = 6371.009
+    a1, a2 = math.radians(lat1), math.radians(lat2)
+    dl = math.radians(lat2 - lat1)
+    dn = math.radians(lon2 - lon1)
+    a = math.sin(dl / 2) ** 2 + math.cos(a1) * math.cos(a2) * math.sin(dn / 2) ** 2
+    return 2 * r * math.asin(min(1.0, math.sqrt(a)))
 
-    col_estacion = buscar_columna(primera_fila, ["estacion"])
-    col_provincia = buscar_columna(primera_fila, ["provincia"])
-    col_temp = buscar_columna(primera_fila, ["temperatura"])
-    col_hr = buscar_columna(primera_fila, ["humedad"])
 
-    print("Columna estación:", col_estacion)
-    print("Columna provincia:", col_provincia)
-    print("Columna temperatura:", col_temp)
-    print("Columna humedad:", col_hr)
+def seleccionar_estaciones_api(datos, ahora=None):
+    """Reutiliza las 43 estaciones configuradas para preservar la integración.
 
-    if not col_estacion:
-        raise RuntimeError("No se ha detectado la columna de estación.")
+    Cada punto de AEMET puede contener varias horas. Se usa la observación
+    válida más reciente por idema, sin sustituir una estación por otra cercana.
+    """
+    ahora = ahora or datetime.now(timezone.utc)
+    max_edad = timedelta(hours=18)
+    recientes = {}
+    for obs in datos:
+        if not isinstance(obs, dict):
+            continue
+        ident = str(obs.get("idema") or "").strip()
+        fecha = parsear_fecha_api(obs.get("fint"))
+        temp = limpiar_numero(obs.get("ta"))
+        hr = limpiar_numero(obs.get("hr"))
+        lat = limpiar_numero(obs.get("lat"))
+        lon = limpiar_numero(obs.get("lon"))
+        if not ident or fecha is None or None in (temp, hr, lat, lon):
+            continue
+        if fecha > ahora + timedelta(minutes=10) or ahora - fecha > max_edad:
+            continue
+        if not (-45 <= temp <= 55 and 0 <= hr <= 100):
+            continue
+        # Preselección espacial; la asignación fina usa las coordenadas de COORDS.
+        if not (37.5 <= lat <= 41.1 and -1.9 <= lon <= 1.0):
+            continue
+        if ident not in recientes or fecha > recientes[ident]["_fecha"]:
+            recientes[ident] = {**obs, "_fecha": fecha, "_temp": temp, "_hr": hr,
+                                "_lat": lat, "_lon": lon, "_id": ident}
 
-    if not col_temp:
-        raise RuntimeError("No se ha detectado la columna de temperatura.")
+    # Coincidencias de nombre y proximidad. Asignación uno a uno por idema.
+    candidatos = []
+    for nombre, (lat_t, lon_t) in COORDS.items():
+        nombre_norm = normalizar_texto(nombre).replace("/", " ").replace("-", " ")
+        for ident, obs in recientes.items():
+            dist = distancia_km(lat_t, lon_t, obs["_lat"], obs["_lon"])
+            if dist > 15:
+                continue
+            estacion_norm = normalizar_texto(obs.get("ubi", "")).replace("/", " ").replace("-", " ")
+            similitud = SequenceMatcher(None, nombre_norm, estacion_norm).ratio()
+            # Impedir asignar una estación diferente únicamente porque está cerca.
+            if similitud < 0.43 and dist > 3.0:
+                continue
+            puntuacion = dist - 12 * similitud
+            if nombre_norm == estacion_norm:
+                puntuacion -= 50
+            candidatos.append((puntuacion, dist, nombre, ident))
 
-    if not col_hr:
-        raise RuntimeError("No se ha detectado la columna de humedad.")
+    candidatos.sort()
+    elegidos, usados = {}, set()
+    for _, dist, nombre, ident in candidatos:
+        if nombre not in elegidos and ident not in usados:
+            elegidos[nombre] = recientes[ident]
+            usados.add(ident)
 
     features = []
-    sin_coordenadas = []
-    sin_datos = []
-
-    for row in filas:
-        estacion = str(row.get(col_estacion, "")).strip()
-        provincia = str(row.get(col_provincia, "")).strip() if col_provincia else ""
-
-        temp = limpiar_numero(row.get(col_temp))
-        hr = limpiar_numero(row.get(col_hr))
-
-        if estacion not in COORDS:
-            sin_coordenadas.append(estacion)
-            continue
-
-        if temp is None or hr is None:
-            sin_datos.append(estacion)
-            continue
-
-        lat, lon = COORDS[estacion]
+    for nombre, obs in elegidos.items():
+        temp, hr = obs["_temp"], obs["_hr"]
         dpv = calcular_dpv(temp, hr)
-
         features.append({
             "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [lon, lat]
-            },
+            "geometry": {"type": "Point", "coordinates": [obs["_lon"], obs["_lat"]]},
             "properties": {
-                "estacion": estacion,
-                "provincia": provincia,
+                "estacion": nombre,
+                "provincia": "",
                 "temperatura": round(temp, 1),
                 "humedad": round(hr, 0),
                 "dpv": round(dpv, 2),
                 "nivel": nivel_dpv(dpv),
                 "color": color_dpv(dpv),
-                "fuente": "AEMET"
-            }
+                "fuente": "AEMET",
+                "idema": obs["_id"],
+                "fecha_observacion_utc": obs["_fecha"].isoformat(),
+                "estacion_aemet": str(obs.get("ubi") or nombre),
+            },
         })
-
-    geojson = {
-        "type": "FeatureCollection",
-        "features": features
-    }
-
-    OUT_GEOJSON.write_text(
-        json.dumps(geojson, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
-
-    metadata = {
-        "producto": "DPV - Déficit de Presión de Vapor AEMET",
-        "fuente": "AEMET últimos datos horarios",
-        "url": URL_AEMET,
-        "generado_utc": datetime.now(timezone.utc).isoformat(),
-        "actualizado_aemet": actualizado_txt,
-        "fecha_hora_aemet": fecha_hora_txt,
-        "estaciones_csv": len(filas),
+    features.sort(key=lambda f: f["properties"]["estacion"])
+    sin_coordenadas = sorted(set(COORDS) - set(elegidos))
+    ultima = max((obs["_fecha"] for obs in elegidos.values()), default=None)
+    info = {
+        "estaciones_csv": len(recientes),
         "estaciones_con_datos": len(features),
+        "estaciones_sin_datos": [],
+        "estaciones_sin_coordenadas": sin_coordenadas,
+        "columnas_detectadas": ["idema", "ubi", "fint", "lat", "lon", "ta", "hr"],
+        "columna_temperatura_usada": "ta",
+        "columna_humedad_usada": "hr",
+        "fecha_hora_aemet": ultima.isoformat() if ultima else "",
+        "actualizado_aemet": ultima.isoformat() if ultima else "",
+        "fuente_tecnica": "AEMET OpenData / observacion/convencional/todas",
+        "url": URL_OPENDATA,
+        "observaciones_recientes_con_temp_y_hr": len(recientes),
+    }
+    return features, info
+
+
+def descargar_csv_aemet(sesion):
+    errores = []
+    for url in CSV_ALTERNATIVAS:
+        try:
+            print(f"Probando CSV público: {url}")
+            respuesta = sesion.get(url, timeout=45)
+            respuesta.raise_for_status()
+            respuesta.encoding = "latin-1"
+            texto = respuesta.text
+            # Evitar guardar páginas HTML de error como si fueran datos.
+            if "<html" in texto[:500].lower() or "<!doctype" in texto[:500].lower():
+                raise ValueError("AEMET devolvió HTML en lugar de CSV")
+            if "Estación" not in texto and "Estacion" not in texto:
+                raise ValueError("No se encontró la cabecera de estaciones")
+            return texto, url
+        except (requests.RequestException, ValueError) as error:
+            errores.append(f"{url}: {error}")
+    raise RuntimeError("No se pudo descargar el CSV de AEMET:\n" + "\n".join(errores))
+
+
+def extraer_fecha_hora(texto_csv):
+    actualizado, fecha_hora = "", ""
+    for linea in texto_csv.splitlines()[:12]:
+        linea = linea.strip().strip('"')
+        if linea.startswith("Actualizado:"):
+            actualizado = linea.partition(":")[2].strip()
+        if linea.startswith("Fecha y hora:"):
+            fecha_hora = linea.partition(":")[2].strip()
+    return actualizado, fecha_hora
+
+
+def leer_datos(texto_csv):
+    lineas = texto_csv.replace("\ufeff", "").splitlines()
+    idx_header = next((i for i, lin in enumerate(lineas) if "Estación" in lin or "Estacion" in lin), None)
+    if idx_header is None:
+        raise RuntimeError("No se encontró cabecera en CSV de AEMET")
+    muestra = "\n".join(lineas[idx_header:idx_header+6])
+    try:
+        dialecto = csv.Sniffer().sniff(muestra, delimiters=",;\t")
+        separador = dialecto.delimiter
+    except csv.Error:
+        separador = ","
+    reader = csv.DictReader(io.StringIO("\n".join(lineas[idx_header:])), delimiter=separador)
+    filas = list(reader)
+    if not filas or not reader.fieldnames:
+        raise RuntimeError("CSV sin filas o columnas")
+    print("Columnas CSV:", reader.fieldnames)
+    return filas, reader.fieldnames
+
+
+def seleccionar_estaciones_csv(texto):
+    filas, columnas = leer_datos(texto)
+    primera = filas[0]
+    col_estacion = buscar_columna(primera, ["estacion"])
+    col_provincia = buscar_columna(primera, ["provincia"])
+    col_temp = buscar_columna(primera, ["temperatura", "temp.", "temp"])
+    col_hr = buscar_columna(primera, ["humedad", "hum.", "hum "])
+    if not all([col_estacion, col_temp, col_hr]):
+        raise RuntimeError(f"Columnas CSV incompletas: {columnas}")
+    noms_norm = {normalizar_texto(n): n for n in COORDS}
+    features, sin_coordenadas, sin_datos = [], [], []
+    for row in filas:
+        estacion_csv = str(row.get(col_estacion) or "").strip()
+        if not estacion_csv:
+            continue
+        nombre = noms_norm.get(normalizar_texto(estacion_csv))
+        if nombre is None:
+            sin_coordenadas.append(estacion_csv)
+            continue
+        temp = limpiar_numero(row.get(col_temp))
+        hr = limpiar_numero(row.get(col_hr))
+        if temp is None or hr is None or not (-45 <= temp <= 55 and 0 <= hr <= 100):
+            sin_datos.append(estacion_csv)
+            continue
+        lat, lon = COORDS[nombre]
+        dpv = calcular_dpv(temp, hr)
+        features.append({"type":"Feature", "geometry":{"type":"Point","coordinates":[lon,lat]},
+                         "properties":{"estacion":nombre, "provincia":str(row.get(col_provincia) or "") if col_provincia else "",
+                                       "temperatura":round(temp,1), "humedad":round(hr), "dpv":round(dpv,2),
+                                       "nivel":nivel_dpv(dpv), "color":color_dpv(dpv), "fuente":"AEMET"}})
+    actualizado, fecha_hora = extraer_fecha_hora(texto)
+    return features, {
+        "estaciones_csv": len(filas), "estaciones_con_datos": len(features),
         "estaciones_sin_datos": sin_datos,
         "estaciones_sin_coordenadas": sin_coordenadas,
         "columnas_detectadas": columnas,
         "columna_temperatura_usada": col_temp,
         "columna_humedad_usada": col_hr,
-        "formula": "DPV = es - ea; es = 0.6108 * exp((17.27*T)/(T+237.3)); ea = es * HR/100",
-        "nota": "Coordenadas aproximadas/manuales asociadas a las estaciones AEMET."
+        "actualizado_aemet": actualizado,
+        "fecha_hora_aemet": fecha_hora,
+        "fuente_tecnica": "CSV público AEMET",
     }
 
-    OUT_METADATA.write_text(
-        json.dumps(metadata, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
 
-    print(f"Estaciones CSV: {len(filas)}")
-    print(f"Estaciones con datos: {len(features)}")
-    print(f"Sin datos: {len(sin_datos)}")
-    print(f"Sin coordenadas: {len(sin_coordenadas)}")
-    print(f"GeoJSON generado: {OUT_GEOJSON}")
-    print(f"Metadata generado: {OUT_METADATA}")
+def guardar_json_atomico(ruta, datos):
+    temporal = ruta.with_suffix(ruta.suffix + ".tmp")
+    temporal.write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
+    temporal.replace(ruta)
+
+
+def main():
+    sesion = sesion_http()
+    api_key = os.environ.get("AEMET_API_KEY", "").strip()
+    errores = []
+    features = []
+    info = {}
+
+    if api_key:
+        try:
+            print("Consultando AEMET OpenData (fuente prioritaria)...")
+            datos = descargar_datos_opendata(api_key, sesion)
+            features, info = seleccionar_estaciones_api(datos)
+            print(f"OpenData: {len(features)} estaciones válidas de {len(COORDS)} previstas")
+        except Exception as error:
+            errores.append(f"OpenData: {error}")
+            print(f"::warning::AEMET OpenData falló: {error}")
+    else:
+        print("::warning::AEMET_API_KEY no configurada; intentando CSV público.")
+
+    min_estaciones = max(1, int(os.getenv("AEMET_MIN_ESTACIONES", "12")))
+    if len(features) < min_estaciones:
+        if features:
+            errores.append(f"OpenData devolvió solo {len(features)} estaciones, mínimo {min_estaciones}")
+        try:
+            texto, url_csv = descargar_csv_aemet(sesion)
+            features_csv, info_csv = seleccionar_estaciones_csv(texto)
+            info_csv["url"] = url_csv
+            if len(features_csv) >= min_estaciones:
+                features, info = features_csv, info_csv
+            else:
+                errores.append(f"CSV: {len(features_csv)} estaciones, mínimo {min_estaciones}")
+        except Exception as error:
+            errores.append(f"CSV: {error}")
+            print(f"::warning::CSV AEMET falló: {error}")
+
+    if len(features) < min_estaciones:
+        raise RuntimeError(
+            f"AEMET sin datos suficientes ({len(features)}/{min_estaciones}). "
+            "No se sobrescriben los GeoJSON anteriores. "
+            "Revisa la clave AEMET_API_KEY en Secrets > Actions.\n" + "\n".join(errores)
+        )
+
+    metadata = {
+        "producto": "DPV - Déficit de Presión de Vapor AEMET",
+        "fuente": "AEMET últimos datos horarios",
+        "generado_utc": datetime.now(timezone.utc).isoformat(),
+        **info,
+        "formula": "DPV = es - ea; es = 0.6108 * exp((17.27*T)/(T+237.3)); ea = es * HR/100",
+        "nota": "En OpenData, coordenadas oficiales reportadas por AEMET; correspondencia con estaciones originales por nombre y proximidad.",
+    }
+    geojson = {"type": "FeatureCollection", "features": features}
+    guardar_json_atomico(OUT_GEOJSON, geojson)
+    guardar_json_atomico(OUT_METADATA, metadata)
+    print(f"OK AEMET: {len(features)} estaciones | origen={info.get('fuente_tecnica')}")
+    print(f"GeoJSON: {OUT_GEOJSON} | Metadata: {OUT_METADATA}")
 
 
 if __name__ == "__main__":
