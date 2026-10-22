@@ -2,12 +2,8 @@ name: Actualizar DPV Integrado
 
 on:
   schedule:
-    # Tres veces al día durante horario de verano peninsular:
-    # 10:21 UTC = 12:21 hora peninsular
-    # 14:21 UTC = 16:21 hora peninsular
-    # 16:21 UTC = 18:21 hora peninsular
+    # UTC: en verano peninsular 12:21, 16:21 y 18:21; en invierno una hora menos.
     - cron: "21 10,14,16 * * *"
-
   workflow_dispatch:
 
 permissions:
@@ -16,10 +12,13 @@ permissions:
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
+concurrency:
+  group: metvlc-dpv-integrado
+  cancel-in-progress: false
+
 jobs:
   actualizar-dpv-integrado:
     runs-on: ubuntu-latest
-
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
@@ -28,7 +27,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
+          cache: pip
 
       - name: Instalar dependencias
         run: |
@@ -36,71 +35,62 @@ jobs:
           pip install -r requirements.txt
 
       - name: Actualizar DPV AEMET
-        run: |
-          echo "======================================"
-          echo "Actualizando DPV AEMET"
-          echo "======================================"
-
-          if python scripts/update_dpv_aemet.py; then
-            echo "AEMET actualizado correctamente"
-          else
-            echo "::warning::AEMET ha fallado. Se mantiene la última versión disponible."
-          fi
+        id: aemet
+        continue-on-error: true
+        env:
+          AEMET_API_KEY: ${{ secrets.AEMET_API_KEY }}
+        run: python scripts/update_dpv_aemet.py
 
       - name: Actualizar DPV AVAMET
-        run: |
-          echo "======================================"
-          echo "Actualizando DPV AVAMET"
-          echo "======================================"
-
-          if python scripts/update_dpv.py; then
-            echo "AVAMET actualizado correctamente"
-          else
-            echo "::warning::AVAMET ha fallado. Se mantiene la última versión disponible."
-          fi
+        id: avamet
+        continue-on-error: true
+        run: python scripts/update_dpv.py
 
       - name: Actualizar DPV Meteoclimatic
-        run: |
-          echo "======================================"
-          echo "Actualizando DPV Meteoclimatic"
-          echo "======================================"
-
-          if python scripts/update_dpv_meteoclimatic.py; then
-            echo "Meteoclimatic actualizado correctamente"
-          else
-            echo "::warning::Meteoclimatic ha fallado. Se mantiene la última versión disponible."
-          fi
+        id: meteoclimatic
+        continue-on-error: true
+        run: python scripts/update_dpv_meteoclimatic.py
 
       - name: Generar DPV integrado
-        run: |
-          echo "======================================"
-          echo "Generando DPV integrado"
-          echo "======================================"
-
-          python scripts/update_dpv_integrado.py
+        id: integrado
+        run: python scripts/update_dpv_integrado.py
 
       - name: Guardar resultados
+        if: steps.integrado.outcome == 'success'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          echo "Añadiendo archivos generados..."
-
-          git add docs/dpv_aemet.geojson 2>/dev/null || true
-          git add docs/metadata_aemet.json 2>/dev/null || true
-
-          git add docs/dpv.geojson 2>/dev/null || true
-          git add docs/metadata.json 2>/dev/null || true
-
-          git add docs/dpv_meteoclimatic.geojson 2>/dev/null || true
-          git add docs/metadata_meteoclimatic.json 2>/dev/null || true
-
-          git add docs/dpv_integrado.geojson 2>/dev/null || true
-          git add docs/metadata_integrado.json 2>/dev/null || true
-
+          git add docs/dpv_aemet.geojson docs/metadata_aemet.json 2>/dev/null || true
+          git add docs/dpv.geojson docs/metadata.json 2>/dev/null || true
+          git add docs/dpv_meteoclimatic.geojson docs/metadata_meteoclimatic.json 2>/dev/null || true
+          git add docs/dpv_integrado.geojson docs/metadata_integrado.json 2>/dev/null || true
           if ! git diff --staged --quiet; then
             git commit -m "Actualiza DPV integrado"
             git push
           else
             echo "Sin cambios que guardar"
+          fi
+
+      - name: Comprobar fuentes y notificar fallos
+        if: always()
+        env:
+          AEMET_RESULT: ${{ steps.aemet.outcome }}
+          AVAMET_RESULT: ${{ steps.avamet.outcome }}
+          METEO_RESULT: ${{ steps.meteoclimatic.outcome }}
+          INTEGRADO_RESULT: ${{ steps.integrado.outcome }}
+        run: |
+          {
+            echo "## Actualización MetVlc DPV"
+            echo "| Fuente | Resultado |"
+            echo "|---|---|"
+            echo "| AEMET | $AEMET_RESULT |"
+            echo "| AVAMET | $AVAMET_RESULT |"
+            echo "| Meteoclimatic | $METEO_RESULT |"
+            echo "| Integrado | $INTEGRADO_RESULT |"
+            echo ""
+            echo "Si una fuente falla se conserva el último archivo válido y se marca la ejecución como fallida."
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [[ "$AEMET_RESULT" != "success" || "$AVAMET_RESULT" != "success" || "$METEO_RESULT" != "success" || "$INTEGRADO_RESULT" != "success" ]]; then
+            echo "::error::Una o más fuentes DPV no se han actualizado. Revisa el resumen y los logs."
+            exit 1
           fi
