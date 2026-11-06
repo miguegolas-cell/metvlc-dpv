@@ -13,14 +13,14 @@
       "properties": {
         "estacion": "Ademuz",
         "provincia": "",
-        "temperatura": 15.4,
-        "humedad": 57.0,
-        "dpv": 0.75,
+        "temperatura": 10.8,
+        "humedad": 77.0,
+        "dpv": 0.3,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8381X",
-        "fecha_observacion_utc": "2026-11-05T16:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T12:00:00+00:00",
         "estacion_aemet": "ADEMUZ"
       }
     },
@@ -36,14 +36,14 @@
       "properties": {
         "estacion": "Alacant/Alicante",
         "provincia": "",
-        "temperatura": 19.7,
-        "humedad": 77.0,
-        "dpv": 0.53,
+        "temperatura": 18.9,
+        "humedad": 72.0,
+        "dpv": 0.61,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8025",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "ALICANTE"
       }
     },
@@ -59,14 +59,14 @@
       "properties": {
         "estacion": "Alcoi/Alcoy",
         "provincia": "",
-        "temperatura": 14.8,
-        "humedad": 87.0,
-        "dpv": 0.22,
+        "temperatura": 15.7,
+        "humedad": 68.0,
+        "dpv": 0.57,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8059C",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "ALCOY"
       }
     },
@@ -82,14 +82,14 @@
       "properties": {
         "estacion": "Alicante-Elche Aeropuerto",
         "provincia": "",
-        "temperatura": 20.3,
-        "humedad": 77.0,
-        "dpv": 0.55,
+        "temperatura": 19.7,
+        "humedad": 71.0,
+        "dpv": 0.67,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8019",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "ALICANTE-ELCHE/AEROPUERTO"
       }
     },
@@ -105,14 +105,14 @@
       "properties": {
         "estacion": "Atzeneta del Maestrat",
         "provincia": "",
-        "temperatura": 15.2,
-        "humedad": 82.0,
-        "dpv": 0.31,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
+        "temperatura": 18.9,
+        "humedad": 50.0,
+        "dpv": 1.09,
+        "nivel": "Moderado",
+        "color": "#abdda4",
         "fuente": "AEMET",
         "idema": "8492X",
-        "fecha_observacion_utc": "2026-11-05T14:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T14:00:00+00:00",
         "estacion_aemet": "ATZENETA DEL MAESTRAT"
       }
     },
@@ -128,14 +128,14 @@
       "properties": {
         "estacion": "Barx",
         "provincia": "",
-        "temperatura": 15.6,
-        "humedad": 89.0,
-        "dpv": 0.19,
+        "temperatura": 16.8,
+        "humedad": 71.0,
+        "dpv": 0.55,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8072Y",
-        "fecha_observacion_utc": "2026-11-05T16:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T16:00:00+00:00",
         "estacion_aemet": "BARX"
       }
     },
@@ -151,14 +151,14 @@
       "properties": {
         "estacion": "Bejís",
         "provincia": "",
-        "temperatura": 13.9,
-        "humedad": 72.0,
-        "dpv": 0.44,
+        "temperatura": 14.6,
+        "humedad": 63.0,
+        "dpv": 0.61,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8433X",
-        "fecha_observacion_utc": "2026-11-05T16:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T16:00:00+00:00",
         "estacion_aemet": "BEJÍS"
       }
     },
@@ -174,14 +174,14 @@
       "properties": {
         "estacion": "Benidorm",
         "provincia": "",
-        "temperatura": 20.8,
-        "humedad": 70.0,
-        "dpv": 0.74,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
+        "temperatura": 19.7,
+        "humedad": 65.0,
+        "dpv": 0.8,
+        "nivel": "Moderado",
+        "color": "#abdda4",
         "fuente": "AEMET",
         "idema": "8036Y",
-        "fecha_observacion_utc": "2026-11-05T16:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T16:00:00+00:00",
         "estacion_aemet": "BENIDORM (PARC LES FOIETES)"
       }
     },
@@ -197,14 +197,14 @@
       "properties": {
         "estacion": "Bicorp",
         "provincia": "",
-        "temperatura": 18.8,
-        "humedad": 70.0,
-        "dpv": 0.65,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
+        "temperatura": 21.8,
+        "humedad": 37.0,
+        "dpv": 1.65,
+        "nivel": "Muy alto",
+        "color": "#f46d43",
         "fuente": "AEMET",
         "idema": "8270X",
-        "fecha_observacion_utc": "2026-11-05T14:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T14:00:00+00:00",
         "estacion_aemet": "BICORP"
       }
     },
@@ -220,14 +220,14 @@
       "properties": {
         "estacion": "Carcaixent",
         "provincia": "",
-        "temperatura": 16.3,
-        "humedad": 87.0,
-        "dpv": 0.24,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
+        "temperatura": 17.1,
+        "humedad": 56.0,
+        "dpv": 0.86,
+        "nivel": "Moderado",
+        "color": "#abdda4",
         "fuente": "AEMET",
         "idema": "8300X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "CARCAIXENT"
       }
     },
@@ -243,14 +243,14 @@
       "properties": {
         "estacion": "Castellfort",
         "provincia": "",
-        "temperatura": 7.8,
-        "humedad": 97.0,
-        "dpv": 0.03,
+        "temperatura": 10.0,
+        "humedad": 82.0,
+        "dpv": 0.22,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "9563X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T16:00:00+00:00",
         "estacion_aemet": "CASTELLFORT"
       }
     },
@@ -266,14 +266,14 @@
       "properties": {
         "estacion": "Castelló - Almassora",
         "provincia": "",
-        "temperatura": 16.4,
-        "humedad": 85.0,
-        "dpv": 0.28,
+        "temperatura": 17.4,
+        "humedad": 78.0,
+        "dpv": 0.44,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8500A",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "CASTELLÓN-ALMASSORA"
       }
     },
@@ -289,14 +289,14 @@
       "properties": {
         "estacion": "Chelva",
         "provincia": "",
-        "temperatura": 13.6,
-        "humedad": 86.0,
-        "dpv": 0.22,
+        "temperatura": 15.3,
+        "humedad": 62.0,
+        "dpv": 0.66,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8395X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "CHELVA"
       }
     },
@@ -312,14 +312,14 @@
       "properties": {
         "estacion": "Elx/Elche",
         "provincia": "",
-        "temperatura": 20.2,
-        "humedad": 72.0,
-        "dpv": 0.66,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
+        "temperatura": 24.2,
+        "humedad": 37.0,
+        "dpv": 1.9,
+        "nivel": "Muy alto",
+        "color": "#f46d43",
         "fuente": "AEMET",
         "idema": "8018X",
-        "fecha_observacion_utc": "2026-11-05T16:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T12:00:00+00:00",
         "estacion_aemet": "ELCHE/ALTABIX"
       }
     },
@@ -335,14 +335,14 @@
       "properties": {
         "estacion": "Fontanars dels Alforins",
         "provincia": "",
-        "temperatura": 17.4,
-        "humedad": 59.0,
-        "dpv": 0.81,
-        "nivel": "Moderado",
-        "color": "#abdda4",
+        "temperatura": 19.8,
+        "humedad": 40.0,
+        "dpv": 1.39,
+        "nivel": "Alto",
+        "color": "#fdae61",
         "fuente": "AEMET",
         "idema": "8005X",
-        "fecha_observacion_utc": "2026-11-05T14:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T14:00:00+00:00",
         "estacion_aemet": "FONTANARS - CASA DELS CUPS"
       }
     },
@@ -358,14 +358,14 @@
       "properties": {
         "estacion": "Jalance",
         "provincia": "",
-        "temperatura": 19.1,
-        "humedad": 44.0,
-        "dpv": 1.24,
-        "nivel": "Alto",
-        "color": "#fdae61",
+        "temperatura": 17.9,
+        "humedad": 47.0,
+        "dpv": 1.09,
+        "nivel": "Moderado",
+        "color": "#abdda4",
         "fuente": "AEMET",
         "idema": "8193E",
-        "fecha_observacion_utc": "2026-11-05T16:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T16:00:00+00:00",
         "estacion_aemet": "JALANCE"
       }
     },
@@ -381,14 +381,14 @@
       "properties": {
         "estacion": "Jávea/ Xàbia",
         "provincia": "",
-        "temperatura": 17.1,
-        "humedad": 90.0,
-        "dpv": 0.2,
+        "temperatura": 15.5,
+        "humedad": 84.0,
+        "dpv": 0.28,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8050X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "JÁVEA  AYUNTAMIENTO"
       }
     },
@@ -404,14 +404,14 @@
       "properties": {
         "estacion": "La Pobla de Benifassà-Fredes",
         "provincia": "",
-        "temperatura": 7.8,
-        "humedad": 99.0,
-        "dpv": 0.01,
+        "temperatura": 9.0,
+        "humedad": 81.0,
+        "dpv": 0.22,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8520X",
-        "fecha_observacion_utc": "2026-11-05T15:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T15:00:00+00:00",
         "estacion_aemet": "FREDES"
       }
     },
@@ -427,14 +427,14 @@
       "properties": {
         "estacion": "Llíria",
         "provincia": "",
-        "temperatura": 15.0,
-        "humedad": 86.0,
-        "dpv": 0.24,
+        "temperatura": 15.8,
+        "humedad": 72.0,
+        "dpv": 0.5,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8409X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "LLIRIA"
       }
     },
@@ -450,14 +450,14 @@
       "properties": {
         "estacion": "Miramar",
         "provincia": "",
-        "temperatura": 17.8,
-        "humedad": 85.0,
-        "dpv": 0.31,
+        "temperatura": 18.1,
+        "humedad": 72.0,
+        "dpv": 0.58,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8058Y",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "MIRAMAR"
       }
     },
@@ -473,14 +473,14 @@
       "properties": {
         "estacion": "Montanejos",
         "provincia": "",
-        "temperatura": 14.1,
-        "humedad": 84.0,
-        "dpv": 0.26,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
+        "temperatura": 18.9,
+        "humedad": 44.0,
+        "dpv": 1.22,
+        "nivel": "Alto",
+        "color": "#fdae61",
         "fuente": "AEMET",
         "idema": "8472A",
-        "fecha_observacion_utc": "2026-11-05T14:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T14:00:00+00:00",
         "estacion_aemet": "ARENOS-PANTANO"
       }
     },
@@ -496,14 +496,14 @@
       "properties": {
         "estacion": "Morella",
         "provincia": "",
-        "temperatura": 9.5,
-        "humedad": 93.0,
-        "dpv": 0.08,
+        "temperatura": 11.0,
+        "humedad": 84.0,
+        "dpv": 0.21,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "9562X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T16:00:00+00:00",
         "estacion_aemet": "MORELLA - PASEO ALAMEDA"
       }
     },
@@ -519,14 +519,14 @@
       "properties": {
         "estacion": "Novelda",
         "provincia": "",
-        "temperatura": 19.3,
-        "humedad": 75.0,
-        "dpv": 0.56,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
+        "temperatura": 19.7,
+        "humedad": 65.0,
+        "dpv": 0.8,
+        "nivel": "Moderado",
+        "color": "#abdda4",
         "fuente": "AEMET",
         "idema": "8013X",
-        "fecha_observacion_utc": "2026-11-05T16:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T16:00:00+00:00",
         "estacion_aemet": "NOVELDA"
       }
     },
@@ -542,14 +542,14 @@
       "properties": {
         "estacion": "Oliva",
         "provincia": "",
-        "temperatura": 17.8,
-        "humedad": 84.0,
-        "dpv": 0.33,
+        "temperatura": 17.7,
+        "humedad": 71.0,
+        "dpv": 0.59,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8058X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "OLIVA"
       }
     },
@@ -565,14 +565,14 @@
       "properties": {
         "estacion": "Ontinyent",
         "provincia": "",
-        "temperatura": 18.3,
-        "humedad": 79.0,
-        "dpv": 0.44,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
+        "temperatura": 19.3,
+        "humedad": 49.0,
+        "dpv": 1.14,
+        "nivel": "Moderado",
+        "color": "#abdda4",
         "fuente": "AEMET",
         "idema": "8283X",
-        "fecha_observacion_utc": "2026-11-05T15:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T15:00:00+00:00",
         "estacion_aemet": "ONTINYENT"
       }
     },
@@ -588,14 +588,14 @@
       "properties": {
         "estacion": "Orihuela",
         "provincia": "",
-        "temperatura": 21.1,
-        "humedad": 73.0,
-        "dpv": 0.68,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
+        "temperatura": 21.3,
+        "humedad": 60.0,
+        "dpv": 1.01,
+        "nivel": "Moderado",
+        "color": "#abdda4",
         "fuente": "AEMET",
         "idema": "7244X",
-        "fecha_observacion_utc": "2026-11-05T16:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T16:00:00+00:00",
         "estacion_aemet": "ORIHUELA DESAMPARADOS"
       }
     },
@@ -611,14 +611,14 @@
       "properties": {
         "estacion": "Pego",
         "provincia": "",
-        "temperatura": 17.7,
-        "humedad": 83.0,
-        "dpv": 0.34,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
+        "temperatura": 20.3,
+        "humedad": 65.0,
+        "dpv": 0.83,
+        "nivel": "Moderado",
+        "color": "#abdda4",
         "fuente": "AEMET",
         "idema": "8057C",
-        "fecha_observacion_utc": "2026-11-05T15:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T15:00:00+00:00",
         "estacion_aemet": "PEGO"
       }
     },
@@ -634,14 +634,14 @@
       "properties": {
         "estacion": "Polinyà de Xúquer",
         "provincia": "",
-        "temperatura": 15.5,
-        "humedad": 93.0,
-        "dpv": 0.12,
+        "temperatura": 16.0,
+        "humedad": 79.0,
+        "dpv": 0.38,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8325X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "POLINYA"
       }
     },
@@ -657,14 +657,14 @@
       "properties": {
         "estacion": "Rojales",
         "provincia": "",
-        "temperatura": 20.4,
-        "humedad": 75.0,
-        "dpv": 0.6,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
+        "temperatura": 20.5,
+        "humedad": 63.0,
+        "dpv": 0.89,
+        "nivel": "Moderado",
+        "color": "#abdda4",
         "fuente": "AEMET",
         "idema": "7261X",
-        "fecha_observacion_utc": "2026-11-05T16:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T16:00:00+00:00",
         "estacion_aemet": "ROJALES  EL MOLINO"
       }
     },
@@ -680,14 +680,14 @@
       "properties": {
         "estacion": "Sagunt/Sagunto",
         "provincia": "",
-        "temperatura": 18.0,
-        "humedad": 77.0,
-        "dpv": 0.47,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
+        "temperatura": 20.6,
+        "humedad": 55.0,
+        "dpv": 1.09,
+        "nivel": "Moderado",
+        "color": "#abdda4",
         "fuente": "AEMET",
         "idema": "8446Y",
-        "fecha_observacion_utc": "2026-11-05T16:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T12:00:00+00:00",
         "estacion_aemet": "SAGUNTO (MONTIVER PONTAZGO - SEMIAUTOMATICA)"
       }
     },
@@ -703,14 +703,14 @@
       "properties": {
         "estacion": "Segorbe",
         "provincia": "",
-        "temperatura": 14.1,
-        "humedad": 89.0,
+        "temperatura": 11.4,
+        "humedad": 87.0,
         "dpv": 0.18,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8439X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "SEGORBE  MASIA HOYA"
       }
     },
@@ -726,14 +726,14 @@
       "properties": {
         "estacion": "Sollana",
         "provincia": "",
-        "temperatura": 16.9,
-        "humedad": 88.0,
-        "dpv": 0.23,
+        "temperatura": 16.8,
+        "humedad": 81.0,
+        "dpv": 0.36,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8328X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "SOLLANA"
       }
     },
@@ -749,14 +749,14 @@
       "properties": {
         "estacion": "Torreblanca",
         "provincia": "",
-        "temperatura": 16.5,
-        "humedad": 82.0,
-        "dpv": 0.34,
+        "temperatura": 17.2,
+        "humedad": 73.0,
+        "dpv": 0.53,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8503Y",
-        "fecha_observacion_utc": "2026-11-05T16:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T16:00:00+00:00",
         "estacion_aemet": "TORREBLANCA AYUNTAMIENTO (C.AGRARIA LOCAL)"
       }
     },
@@ -772,14 +772,14 @@
       "properties": {
         "estacion": "Turís",
         "provincia": "",
-        "temperatura": 18.8,
-        "humedad": 70.0,
-        "dpv": 0.65,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
+        "temperatura": 21.0,
+        "humedad": 52.0,
+        "dpv": 1.19,
+        "nivel": "Moderado",
+        "color": "#abdda4",
         "fuente": "AEMET",
         "idema": "8337X",
-        "fecha_observacion_utc": "2026-11-05T15:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T15:00:00+00:00",
         "estacion_aemet": "TURIS"
       }
     },
@@ -795,14 +795,14 @@
       "properties": {
         "estacion": "Utiel",
         "provincia": "",
-        "temperatura": 13.2,
-        "humedad": 63.0,
-        "dpv": 0.56,
+        "temperatura": 13.6,
+        "humedad": 55.0,
+        "dpv": 0.7,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8309X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "UTIEL  LA CUBERA"
       }
     },
@@ -818,14 +818,14 @@
       "properties": {
         "estacion": "Valencia Aeropuerto",
         "provincia": "",
-        "temperatura": 17.4,
-        "humedad": 79.0,
-        "dpv": 0.42,
+        "temperatura": 17.8,
+        "humedad": 67.0,
+        "dpv": 0.67,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8414A",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "VALENCIA/AEROPUERTO"
       }
     },
@@ -841,14 +841,14 @@
       "properties": {
         "estacion": "València",
         "provincia": "",
-        "temperatura": 17.8,
-        "humedad": 80.0,
-        "dpv": 0.41,
+        "temperatura": 18.0,
+        "humedad": 70.0,
+        "dpv": 0.62,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8416",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "VALENCIA DT"
       }
     },
@@ -864,14 +864,14 @@
       "properties": {
         "estacion": "Villafranca del Cid/Vilafranca",
         "provincia": "",
-        "temperatura": 8.6,
-        "humedad": 98.0,
-        "dpv": 0.02,
+        "temperatura": 9.3,
+        "humedad": 89.0,
+        "dpv": 0.13,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8489X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "VILLAFRANCA"
       }
     },
@@ -887,14 +887,14 @@
       "properties": {
         "estacion": "Villena",
         "provincia": "",
-        "temperatura": 16.9,
-        "humedad": 77.0,
-        "dpv": 0.44,
-        "nivel": "Bajo",
-        "color": "#2b83ba",
+        "temperatura": 19.7,
+        "humedad": 49.0,
+        "dpv": 1.17,
+        "nivel": "Moderado",
+        "color": "#abdda4",
         "fuente": "AEMET",
         "idema": "8008Y",
-        "fecha_observacion_utc": "2026-11-05T16:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T16:00:00+00:00",
         "estacion_aemet": "VILLENA"
       }
     },
@@ -910,14 +910,14 @@
       "properties": {
         "estacion": "Vinaròs-Viveros Alcanar",
         "provincia": "",
-        "temperatura": 15.6,
-        "humedad": 90.0,
-        "dpv": 0.18,
+        "temperatura": 15.4,
+        "humedad": 80.0,
+        "dpv": 0.35,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8518X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "VINARÒS-VIVEROS ALCANAR"
       }
     },
@@ -933,14 +933,14 @@
       "properties": {
         "estacion": "Xàtiva",
         "provincia": "",
-        "temperatura": 16.5,
-        "humedad": 84.0,
-        "dpv": 0.3,
+        "temperatura": 17.8,
+        "humedad": 65.0,
+        "dpv": 0.71,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8293X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "XÁTIVA"
       }
     },
@@ -956,14 +956,14 @@
       "properties": {
         "estacion": "Zarra",
         "provincia": "",
-        "temperatura": 13.4,
-        "humedad": 46.0,
-        "dpv": 0.83,
-        "nivel": "Moderado",
-        "color": "#abdda4",
+        "temperatura": 13.9,
+        "humedad": 51.0,
+        "dpv": 0.78,
+        "nivel": "Bajo",
+        "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "8203O",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "EVC_ZARRA"
       }
     },
@@ -979,14 +979,14 @@
       "properties": {
         "estacion": "el Pinós/Pinoso",
         "provincia": "",
-        "temperatura": 15.3,
-        "humedad": 83.0,
-        "dpv": 0.3,
+        "temperatura": 16.0,
+        "humedad": 64.0,
+        "dpv": 0.65,
         "nivel": "Bajo",
         "color": "#2b83ba",
         "fuente": "AEMET",
         "idema": "7247X",
-        "fecha_observacion_utc": "2026-11-05T17:00:00+00:00",
+        "fecha_observacion_utc": "2026-11-06T17:00:00+00:00",
         "estacion_aemet": "PINOSO"
       }
     }
