@@ -1,8 +1,8 @@
 {
   "producto": "DPV - Déficit de Presión de Vapor AEMET",
   "fuente": "AEMET últimos datos horarios",
-  "generado_utc": "2026-11-10T17:54:01.211178+00:00",
-  "estaciones_csv": 98,
+  "generado_utc": "2026-11-11T17:54:45.331111+00:00",
+  "estaciones_csv": 97,
   "estaciones_con_datos": 43,
   "estaciones_sin_datos": [],
   "estaciones_sin_coordenadas": [],
@@ -17,11 +17,11 @@
   ],
   "columna_temperatura_usada": "ta",
   "columna_humedad_usada": "hr",
-  "fecha_hora_aemet": "2026-11-10T17:00:00+00:00",
-  "actualizado_aemet": "2026-11-10T17:00:00+00:00",
+  "fecha_hora_aemet": "2026-11-11T17:00:00+00:00",
+  "actualizado_aemet": "2026-11-11T17:00:00+00:00",
   "fuente_tecnica": "AEMET OpenData / observacion/convencional/todas",
   "url": "https://opendata.aemet.es/opendata/api/observacion/convencional/todas",
-  "observaciones_recientes_con_temp_y_hr": 98,
+  "observaciones_recientes_con_temp_y_hr": 97,
   "formula": "DPV = es - ea; es = 0.6108 * exp((17.27*T)/(T+237.3)); ea = es * HR/100",
   "nota": "En OpenData, coordenadas oficiales reportadas por AEMET; correspondencia con estaciones originales por nombre y proximidad."
 }
